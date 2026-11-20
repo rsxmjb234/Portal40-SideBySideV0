@@ -1,7 +1,7 @@
 # Report 2: Hospital volume by assigning authority
 
 **Prototype:** [https://main.d3pz3oj6iuj9t4.amplifyapp.com/#hosp-report](https://main.d3pz3oj6iuj9t4.amplifyapp.com/#hosp-report)
-**SQL file:** [`SQLExamples/reportonhospitals.sql`](https://github.com/rsxmjb234/NyecPortal2/blob/main/SQLExamples/reportonhospitals.sql)
+**SQL file:** [`SQLExamples/reportonhospitals.sql`](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/SQLExamples/reportonhospitals.sql)
 **Part of:** [IN-3737](https://nyec.atlassian.net/browse/IN-3737), reports that let QEs understand the volume of data in PDR by assigning authority.
 
 ## What we want
@@ -163,6 +163,6 @@ ORDER BY total_docs DESC, h.assigning_authority ASC, h.organization_name ASC;
 - The date range text on the page is typed in by hand in the prototype. In production it
   must be computed from the snapshot date the query used.
 - Security, authentication and hosting are out of scope here. Developers will decide those.
-- All report SQL lives in [`SQLExamples/`](https://github.com/rsxmjb234/NyecPortal2/tree/main/SQLExamples). Page code is
-  [`build_home.py`](https://github.com/rsxmjb234/NyecPortal2/blob/main/build_home.py); data loaders are
-  [`build_reports.py`](https://github.com/rsxmjb234/NyecPortal2/blob/main/build_reports.py).
+- All report SQL lives in [`SQLExamples/`](https://github.com/rsxmjb234/Portal40-SideBySideV0/tree/main/SQLExamples). Page code is
+  [`build_home.py`](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/build_home.py); data loaders are
+  [`build_reports.py`](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/build_reports.py).

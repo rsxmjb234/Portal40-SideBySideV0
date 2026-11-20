@@ -145,7 +145,7 @@ deploy_amplify.ps1
 ```
 
 ### 7. Update old repo
-In the original `NyecPortal2` repo:
+In the original `Portal40-SideBySideV0` repo:
 - Replace `build_home.py` to generate a simple index.html that says "This project has moved to [new URL]" with a link.
 - Commit, push, deploy to the old Amplify app one last time.
 

@@ -1,7 +1,7 @@
 # Report 1: Volume by QE, highest level
 
 **Prototype:** [https://main.d3pz3oj6iuj9t4.amplifyapp.com/#volume-reports](https://main.d3pz3oj6iuj9t4.amplifyapp.com/#volume-reports) (first card under "Understand Volume")
-**SQL file:** [`SQLExamples/DailyVolumeByQE-28Day-SingleSnapshot-ExcludeOrphans.sql`](https://github.com/rsxmjb234/NyecPortal2/blob/main/SQLExamples/DailyVolumeByQE-28Day-SingleSnapshot-ExcludeOrphans.sql)
+**SQL file:** [`SQLExamples/DailyVolumeByQE-28Day-SingleSnapshot-ExcludeOrphans.sql`](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/SQLExamples/DailyVolumeByQE-28Day-SingleSnapshot-ExcludeOrphans.sql)
 **Part of:** [IN-3737](https://nyec.atlassian.net/browse/IN-3737), reports that let QEs understand the volume of data in PDR by assigning authority.
 
 ## What we want
@@ -203,6 +203,6 @@ ORDER BY date ASC, qe ASC;
 - The date range text on the page is typed in by hand in the prototype. In production it
   must be computed from the snapshot date the query used.
 - Security, authentication and hosting are out of scope here. Developers will decide those.
-- All report SQL lives in [`SQLExamples/`](https://github.com/rsxmjb234/NyecPortal2/tree/main/SQLExamples). Page code is
-  [`build_home.py`](https://github.com/rsxmjb234/NyecPortal2/blob/main/build_home.py); data loaders are
-  [`build_reports.py`](https://github.com/rsxmjb234/NyecPortal2/blob/main/build_reports.py).
+- All report SQL lives in [`SQLExamples/`](https://github.com/rsxmjb234/Portal40-SideBySideV0/tree/main/SQLExamples). Page code is
+  [`build_home.py`](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/build_home.py); data loaders are
+  [`build_reports.py`](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/build_reports.py).

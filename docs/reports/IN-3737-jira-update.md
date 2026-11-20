@@ -10,28 +10,28 @@ Build set of reports letting QE's understand volume of data in PDR by Assigning 
 authority (AA), so the QE can see who is sending, who is not, and who is not yet registered.
 
 **Prototype (working example):** [https://main.d3pz3oj6iuj9t4.amplifyapp.com](https://main.d3pz3oj6iuj9t4.amplifyapp.com) , see the "Understand Volume" section.
-**Source and specs:** [https://github.com/rsxmjb234/NyecPortal2](https://github.com/rsxmjb234/NyecPortal2) , start at
-[`docs/reports/README.md`](https://github.com/rsxmjb234/NyecPortal2/blob/main/docs/reports/README.md).
+**Source and specs:** [https://github.com/rsxmjb234/Portal40-SideBySideV0](https://github.com/rsxmjb234/Portal40-SideBySideV0) , start at
+[`docs/reports/README.md`](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/docs/reports/README.md).
 
 ### Reports
 
 1. **Volume by QE, highest level.** CCD, TRN and LAB per QE over the last 28 days, Verato-matched
    sources only.
-   [Spec](https://github.com/rsxmjb234/NyecPortal2/blob/main/docs/reports/01-volume-by-qe.md) |
+   [Spec](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/docs/reports/01-volume-by-qe.md) |
    [Prototype](https://main.d3pz3oj6iuj9t4.amplifyapp.com/#volume-reports) |
-   [SQL](https://github.com/rsxmjb234/NyecPortal2/blob/main/SQLExamples/DailyVolumeByQE-28Day-SingleSnapshot-ExcludeOrphans.sql)
+   [SQL](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/SQLExamples/DailyVolumeByQE-28Day-SingleSnapshot-ExcludeOrphans.sql)
 2. **Hospital volume by AA.** Starts from the Salesforce hospital list, so hospitals with no data
    in PDR still appear. QE filter on top, CCD and TRN for the last 10 days. Hospitals that share
    an AA are grouped under the AA heading, and the list is sorted by AA total.
-   [Spec](https://github.com/rsxmjb234/NyecPortal2/blob/main/docs/reports/02-hospital-volume.md) |
+   [Spec](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/docs/reports/02-hospital-volume.md) |
    [Prototype](https://main.d3pz3oj6iuj9t4.amplifyapp.com/#hosp-report) |
-   [SQL](https://github.com/rsxmjb234/NyecPortal2/blob/main/SQLExamples/reportonhospitals.sql)
+   [SQL](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/SQLExamples/reportonhospitals.sql)
 3. **Non-hospital sources.** Starts from all data in PDR (hospitals excluded) and looks up the
    name and type in Salesforce. AAs missing from Salesforce are tagged "Not in SFDC". QE filter on
    top, CCD and TRN for the last 10 days.
-   [Spec](https://github.com/rsxmjb234/NyecPortal2/blob/main/docs/reports/03-non-hospital-sources.md) |
+   [Spec](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/docs/reports/03-non-hospital-sources.md) |
    [Prototype](https://main.d3pz3oj6iuj9t4.amplifyapp.com/#nonhosp-report) |
-   [SQL](https://github.com/rsxmjb234/NyecPortal2/blob/main/SQLExamples/reportonnonhospitals.sql)
+   [SQL](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/SQLExamples/reportonnonhospitals.sql)
 
 ### Rules that apply to every report
 

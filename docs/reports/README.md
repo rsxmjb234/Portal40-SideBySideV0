@@ -5,13 +5,13 @@ This folder describes what we want, with the SQL behind each prototype report.
 
 **Jira:** [IN-3737](https://nyec.atlassian.net/browse/IN-3737)
 **Prototype site:** [https://main.d3pz3oj6iuj9t4.amplifyapp.com](https://main.d3pz3oj6iuj9t4.amplifyapp.com) (see "Understand Volume")
-**Git repo:** [https://github.com/rsxmjb234/NyecPortal2](https://github.com/rsxmjb234/NyecPortal2)
+**Git repo:** [https://github.com/rsxmjb234/Portal40-SideBySideV0](https://github.com/rsxmjb234/Portal40-SideBySideV0)
 
 | # | Report | Starts from | Spec | Prototype | SQL |
 |---|---|---|---|---|---|
-| 1 | Volume by QE, highest level | Data in PDR, QEs known to Verato | [01-volume-by-qe.md](01-volume-by-qe.md) | [link](https://main.d3pz3oj6iuj9t4.amplifyapp.com/#volume-reports) | [SQL](https://github.com/rsxmjb234/NyecPortal2/blob/main/SQLExamples/DailyVolumeByQE-28Day-SingleSnapshot-ExcludeOrphans.sql) |
-| 2 | Hospital volume by AA | Salesforce hospital list | [02-hospital-volume.md](02-hospital-volume.md) | [link](https://main.d3pz3oj6iuj9t4.amplifyapp.com/#hosp-report) | [SQL](https://github.com/rsxmjb234/NyecPortal2/blob/main/SQLExamples/reportonhospitals.sql) |
-| 3 | Non-hospital sources | Data in PDR, minus hospitals | [03-non-hospital-sources.md](03-non-hospital-sources.md) | [link](https://main.d3pz3oj6iuj9t4.amplifyapp.com/#nonhosp-report) | [SQL](https://github.com/rsxmjb234/NyecPortal2/blob/main/SQLExamples/reportonnonhospitals.sql) |
+| 1 | Volume by QE, highest level | Data in PDR, QEs known to Verato | [01-volume-by-qe.md](01-volume-by-qe.md) | [link](https://main.d3pz3oj6iuj9t4.amplifyapp.com/#volume-reports) | [SQL](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/SQLExamples/DailyVolumeByQE-28Day-SingleSnapshot-ExcludeOrphans.sql) |
+| 2 | Hospital volume by AA | Salesforce hospital list | [02-hospital-volume.md](02-hospital-volume.md) | [link](https://main.d3pz3oj6iuj9t4.amplifyapp.com/#hosp-report) | [SQL](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/SQLExamples/reportonhospitals.sql) |
+| 3 | Non-hospital sources | Data in PDR, minus hospitals | [03-non-hospital-sources.md](03-non-hospital-sources.md) | [link](https://main.d3pz3oj6iuj9t4.amplifyapp.com/#nonhosp-report) | [SQL](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/SQLExamples/reportonnonhospitals.sql) |
 
 ## Shared rules
 
