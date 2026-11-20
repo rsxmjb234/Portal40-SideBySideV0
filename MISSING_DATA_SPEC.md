@@ -19,8 +19,8 @@ de-duplicating labs. This feature adds two top-bar tools: **MRN Array** and
 
 ## 0. Screenshots
 
-Images live in [`docs/missing-data/`](https://github.com/rsxmjb234/NyecPortal2/tree/main/docs/missing-data)
-(raw: `https://raw.githubusercontent.com/rsxmjb234/NyecPortal2/main/docs/missing-data/<file>`).
+Images live in [`docs/missing-data/`](https://github.com/rsxmjb234/Portal40-SideBySideV0/tree/main/docs/missing-data)
+(raw: `https://raw.githubusercontent.com/rsxmjb234/Portal40-SideBySideV0/main/docs/missing-data/<file>`).
 
 | State | Image |
 |-------|-------|
@@ -182,24 +182,24 @@ reportdate string, createdat string`. Add partitions via `MSCK REPAIR TABLE` or
 partition projection on `dt`. Enables reports by direction, QE, screen/dataType,
 day; most-reported missing elements; QE-vs-PDR gap counts.
 
-## 13. Reference implementation (this repo: `rsxmjb234/NyecPortal2`)
+## 13. Reference implementation (this repo: `rsxmjb234/Portal40-SideBySideV0`)
 
 The feature ships as a self-contained injectable widget plus the merge/parse
 support it reads from.
 
-- [`bug_widget.py`](https://github.com/rsxmjb234/NyecPortal2/blob/main/bug_widget.py)
+- [`bug_widget.py`](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/bug_widget.py)
   — the buttons, both modals, the per-row copy affordance, the client JS, and
   `inject(html)` which splices it into a finished page by string replacement
   (works regardless of the page's templating).
-- [`ccda_parse.py`](https://github.com/rsxmjb234/NyecPortal2/blob/main/ccda_parse.py)
+- [`ccda_parse.py`](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/ccda_parse.py)
   — `parse_ccd` (emits `person_key`, `mrn_list`), `load_oru_hl7` (adds the ORU
   `PID` source|MRN to `mrn_list`), and `merge_by_person` (one virtual record per
   person; de-dupes clinical items; reconciles ORU vs CCD).
-- [`build_smart.py`](https://github.com/rsxmjb234/NyecPortal2/blob/main/build_smart.py)
-  and [`build_chart.py`](https://github.com/rsxmjb234/NyecPortal2/blob/main/build_chart.py)
+- [`build_smart.py`](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/build_smart.py)
+  and [`build_chart.py`](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/build_chart.py)
   — stamp `data-view-qe` on `<body>` and `data-first/last/dob/qe/source/mrn/mrns`
   on each patient block, call `merge_by_person`, and `inject` the widget.
-- [`build_home.py`](https://github.com/rsxmjb234/NyecPortal2/blob/main/build_home.py)
+- [`build_home.py`](https://github.com/rsxmjb234/Portal40-SideBySideV0/blob/main/build_home.py)
   — sets the per-view QE (`CHART_QE=HIXNY` / `HEALTHELINK`).
 
 Porting notes for a different code base:

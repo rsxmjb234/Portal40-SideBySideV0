@@ -61,7 +61,7 @@ Listed in doc 02 so the new build does not copy them. Summary:
 
 ## 6. Reference implementation map
 
-Repo: https://github.com/rsxmjb234/NyecPortal2. Live demo: https://main.d3pz3oj6iuj9t4.amplifyapp.com.
+Repo: https://github.com/rsxmjb234/Portal40-SideBySideV0. Live demo: https://main.d3pz3oj6iuj9t4.amplifyapp.com.
 
 | File | Role |
 |------|------|
