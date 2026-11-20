@@ -1,0 +1,273 @@
+{
+ "given": "Marcus",
+ "family": "Evans",
+ "gender": "M",
+ "dob": "06/01/1950",
+ "age": 76,
+ "addr": "179 Bednar Knoll Suite 2, Bronx, NY 10467",
+ "race": "white",
+ "eth": "non-hispanic",
+ "lang": "en-US",
+ "mrn_list": [
+  {
+   "qe": "BRONX",
+   "source": "BXLEB",
+   "mrn": "515366"
+  },
+  {
+   "qe": "GRRHIO",
+   "source": "RGH",
+   "mrn": "799628"
+  },
+  {
+   "qe": "GRRHIO",
+   "source": "UR1244",
+   "mrn": "312806"
+  }
+ ],
+ "problems": [
+  {
+   "name": "Diabetes mellitus type 2 (disorder)",
+   "onset": "03/01/2012",
+   "resolved": "",
+   "status": "Active"
+  },
+  {
+   "name": "Essential hypertension (disorder)",
+   "onset": "06/15/2010",
+   "resolved": "",
+   "status": "Active"
+  },
+  {
+   "name": "Hyperlipidemia (disorder)",
+   "onset": "09/20/2011",
+   "resolved": "",
+   "status": "Active"
+  }
+ ],
+ "meds": [
+  {
+   "name": "Metformin hydrochloride 500 MG Oral Tablet",
+   "start": "04/01/2012",
+   "stop": "",
+   "code": "861007",
+   "status_code": "active",
+   "dose": "1 tablet",
+   "route": "Oral",
+   "frequency": "twice daily",
+   "prescriber": "Dr. James Okafor",
+   "refills": "5",
+   "indication": "Diabetes mellitus type 2 (disorder)",
+   "sig": "Take 1 tablet by mouth twice daily"
+  },
+  {
+   "name": "Lisinopril 20 MG Oral Tablet",
+   "start": "07/01/2010",
+   "stop": "",
+   "code": "314077",
+   "status_code": "active",
+   "dose": "1 tablet",
+   "route": "Oral",
+   "frequency": "once daily",
+   "prescriber": "Dr. James Okafor",
+   "refills": "5",
+   "indication": "Essential hypertension (disorder)",
+   "sig": "Take 1 tablet by mouth once daily"
+  },
+  {
+   "name": "Atorvastatin 40 MG Oral Tablet",
+   "start": "10/01/2011",
+   "stop": "",
+   "code": "617312",
+   "status_code": "active",
+   "dose": "1 tablet",
+   "route": "Oral",
+   "frequency": "once daily",
+   "prescriber": "Dr. James Okafor",
+   "refills": "5",
+   "indication": "Hyperlipidemia (disorder)",
+   "sig": "Take 1 tablet by mouth once daily"
+  }
+ ],
+ "labs": [
+  {
+   "panel": "Patient Health Questionnaire 2 item (PHQ-2) [Reported]",
+   "date": "06/17/2018",
+   "comps": [
+    {
+     "test": "Patient Health Questionnaire 2 item (PHQ-2) total score [Reported]",
+     "value": "0",
+     "unit": "{score}",
+     "flag": "",
+     "range": "",
+     "date": "06/17/2018",
+     "loinc": "55758-7",
+     "status_code": "completed",
+     "panel": "Patient Health Questionnaire 2 item (PHQ-2) [Reported]"
+    }
+   ]
+  },
+  {
+   "panel": "Basic metabolic panel - Blood",
+   "date": "03/15/2025",
+   "comps": [
+    {
+     "test": "Glucose [Mass/volume] in Blood",
+     "value": "81.78",
+     "unit": "mg/dL",
+     "flag": "",
+     "range": "",
+     "date": "03/15/2025",
+     "loinc": "2339-0",
+     "status_code": "completed",
+     "panel": "Basic metabolic panel - Blood"
+    },
+    {
+     "test": "Creatinine [Mass/volume] in Blood",
+     "value": "1.01",
+     "unit": "mg/dL",
+     "flag": "",
+     "range": "",
+     "date": "03/15/2025",
+     "loinc": "38483-4",
+     "status_code": "completed",
+     "panel": "Basic metabolic panel - Blood"
+    },
+    {
+     "test": "Sodium [Moles/volume] in Blood",
+     "value": "141.78",
+     "unit": "mmol/L",
+     "flag": "",
+     "range": "",
+     "date": "03/15/2025",
+     "loinc": "2947-0",
+     "status_code": "completed",
+     "panel": "Basic metabolic panel - Blood"
+    }
+   ]
+  }
+ ],
+ "imms": [
+  {
+   "name": "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose",
+   "date": "10/03/2021"
+  },
+  {
+   "name": "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose",
+   "date": "09/12/2021"
+  },
+  {
+   "name": "Influenza, seasonal, injectable, preservative free",
+   "date": "06/23/2024"
+  }
+ ],
+ "vitals": [
+  {
+   "test": "Body Height",
+   "value": "150",
+   "unit": "cm",
+   "date": "06/17/2018"
+  },
+  {
+   "test": "Pain severity - 0-10 verbal numeric rating [Score] - Reported",
+   "value": "2",
+   "unit": "{score}",
+   "date": "06/17/2018"
+  },
+  {
+   "test": "Body Weight",
+   "value": "64.5",
+   "unit": "kg",
+   "date": "06/17/2018"
+  }
+ ],
+ "procs": [
+  {
+   "name": "Physical examination procedure (procedure)",
+   "date": "12/29/2024"
+  },
+  {
+   "name": "Depression screening (procedure)",
+   "date": "12/29/2024"
+  },
+  {
+   "name": "Hemogram, automated, with red blood cells, white blood cells, hemoglobin, hematocrit, indices, platelet count, and manual white blood cell differential (procedure)",
+   "date": "12/27/2020"
+  }
+ ],
+ "encs": [
+  {
+   "name": "Emergency room admission",
+   "start": "11/02/2024",
+   "stop": "11/03/2024",
+   "facility": "Montefiore Medical Center - Emergency Department",
+   "attending": "Dr. David Rosenberg",
+   "pcp": "Dr. James Okafor",
+   "disposition": "Discharged to home",
+   "reason": "Chest pain (finding)",
+   "etype": "Emergency room admission"
+  },
+  {
+   "name": "Follow-up encounter (procedure)",
+   "start": "09/09/2024",
+   "stop": "",
+   "facility": "Hixny Cardiology Associates - Albany",
+   "attending": "Dr. Robert Feldman",
+   "pcp": "Dr. James Okafor",
+   "disposition": "",
+   "reason": "Essential hypertension (disorder)",
+   "etype": "Follow-up encounter (procedure)"
+  },
+  {
+   "name": "Hospital admission (inpatient)",
+   "start": "07/21/2024",
+   "stop": "07/25/2024",
+   "facility": "NewYork-Presbyterian / Weill Cornell",
+   "attending": "Dr. Elena Marchetti",
+   "pcp": "Dr. James Okafor",
+   "disposition": "Discharged to home health service",
+   "reason": "Chronic kidney disease stage 3 (disorder)",
+   "etype": "Hospital admission (inpatient)"
+  }
+ ],
+ "allergies": [],
+ "oru": [
+  {
+   "test": "Glucose",
+   "loinc": "2339-0",
+   "value": "81.78",
+   "unit": "mg/dL",
+   "date": "03/15/2025",
+   "flag": "Normal",
+   "range": "70-99"
+  },
+  {
+   "test": "Creatinine",
+   "loinc": "38483-4",
+   "value": "1.01",
+   "unit": "mg/dL",
+   "date": "03/15/2025",
+   "flag": "Normal",
+   "range": "0.70-1.30"
+  },
+  {
+   "test": "Sodium",
+   "loinc": "2947-0",
+   "value": "141.78",
+   "unit": "mmol/L",
+   "date": "03/15/2025",
+   "flag": "Normal",
+   "range": "136-145"
+  },
+  {
+   "test": "Hemoglobin A1c",
+   "loinc": "4548-4",
+   "value": "6.1",
+   "unit": "%",
+   "date": "03/15/2025",
+   "flag": "High",
+   "range": "4.0-5.6"
+  }
+ ],
+ "mpid": "MARCUS-GOLDEN-0001"
+}
