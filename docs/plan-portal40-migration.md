@@ -1,0 +1,172 @@
+# Plan: Migrate to Portal40-SideBySideV0
+
+## Goal
+
+Create a clean new repo with only what we're actively using. Leave behind 10,500+ files of raw materials, sub-projects, and earlier experiments. Publish the new site on Amplify. Update the old site to say "we moved."
+
+## What moves (KEEP)
+
+### Core renderers (Python)
+| File | Purpose |
+|---|---|
+| `build_home.py` | Orchestrator — builds all 5 QE views + index.html |
+| `build_smart.py` | Hixny + Healthix renderer (SMART/FHIR style) |
+| `build_chart.py` | HEALTHeLINK renderer (Fusion style) |
+| `build_bronx.py` | Bronx RHIO renderer (IMAT style) |
+| `build_healtheconn.py` | HealtheConnections renderer (HEC style) |
+| `ccda_parse.py` | Shared CCD/ORU parser + merge + dedup |
+| `bug_widget.py` | Missing-data logging widget injected into every view |
+
+### Data generation
+| File | Purpose |
+|---|---|
+| `build_marcus_bundle.py` | Generates 45 synthetic data files (15 CCD + 15 ORU + 15 TRN) |
+| `build_reports.py` | Generates hosp_data.js, nonhosp_data.js, adt_data.js from Athena JSON |
+| `ccds/` (10 XML files) | Synthea base CCD templates used by build_marcus_bundle.py |
+
+### Marcus patient data
+| Path | Files | Purpose |
+|---|---|---|
+| `marcus_bundle/hixny/` | 9 | 3 CCD + 3 ORU + 3 TRN for Hixny |
+| `marcus_bundle/healthelink/` | 9 | 3 CCD + 3 ORU + 3 TRN for HEALTHeLINK |
+| `marcus_bundle/healthix/` | 9 | 3 CCD + 3 ORU + 3 TRN for Healthix |
+| `marcus_bundle/healtheconn/` | 9 | 3 CCD + 3 ORU + 3 TRN for HealtheConnections |
+| `marcus_bundle/bronx/` | 9 | 3 CCD + 3 ORU + 3 TRN for Bronx RHIO |
+| `marcus_bundle/mpi/marcus_mpi.csv` | 1 | MPI anchor rows |
+| `marcus_bundle/README.md` | 1 | Documentation |
+
+### Athena reports (SQL + saved results)
+| Path | Purpose |
+|---|---|
+| `SQLExamples/*.sql` (4 files) | Volume, hospital, non-hospital, ADT queries |
+| `SQLExamples/*.json` (4 files) | Saved query results |
+| `athena_hello_world.py` | Athena query runner |
+| `athena.md` | Query rules |
+
+### Data files for the page
+| File | Purpose |
+|---|---|
+| `hosp_data.js` | Hospital report data |
+| `nonhosp_data.js` | Non-hospital report data |
+| `adt_data.js` | ADT report data |
+| `ChainCheetSheetTemp.csv` | Health system chain names for grouped AAs |
+
+### Deploy
+| File | Purpose |
+|---|---|
+| `deploy_amplify.ps1` | Zip + upload to Amplify |
+
+### Docs
+| Path | Purpose |
+|---|---|
+| `docs/reports/` | Report specs, Jira update text |
+| `docs/marcus-multi-qe-plan.md` | Marcus data architecture plan |
+
+### Config
+| Path | Purpose |
+|---|---|
+| `.kiro/steering/jira-access.md` | How to use Jira from Kiro |
+| `.gitignore` | Needs to be rewritten for the new repo |
+| `README.md` | Needs to be rewritten for the new repo |
+
+### Utility (keep for convenience)
+| File | Purpose |
+|---|---|
+| `_jira_api.py` | Jira REST API helper (gitignored) |
+
+## What stays behind (LEAVE)
+
+| Path | Files | Why |
+|---|---|---|
+| `PublicHealthPortal/` | 7,040 | Separate git repo, SAM/Lambda project |
+| `PublicHealthPortalDemo20/` | 3,461 | Separate git repo, older demo |
+| `QE-Example-Materials/` | 67 | Reference screenshots, not code |
+| `developer-spec/` | 24 | Design docs for the old project |
+| `_guide_assets/` | 49 | HEALTHeLINK training guide screenshots |
+| `build_cohort.py` | — | Earlier experiment |
+| `build_marcus_portal.py` | — | Earlier experiment |
+| `export_fixture.py` | — | Earlier experiment |
+| `make_person.py` | — | Earlier experiment |
+| `s3_hello_read.py` | — | S3 hello world test |
+| `_extract_pdf.py` | — | PDF extractor for training guide |
+| `_make_oru.py` | — | Old ORU generator |
+| `*.png` | many | Screenshots (gitignored) |
+| `*.pdf` | — | Training guide PDF |
+| `mcp.json` | — | Empty |
+| `marcus_bundle/ccda/` (old flat) | 0-10 | Old pre-migration structure (may be locked by OneDrive) |
+| `marcus_bundle/oru-hl7/` (old flat) | 0-10 | Old pre-migration structure |
+| `.agents/` | 14 | Workflow artifacts |
+| `.worktrees/` | — | Dead worktree from Marcus overhaul |
+
+## Steps
+
+### 1. Create the new repo
+```powershell
+mkdir Portal40-SideBySideV0
+cd Portal40-SideBySideV0
+git init
+```
+Create on GitHub as `rsxmjb234/Portal40-SideBySideV0` (public).
+
+### 2. Copy the keepers
+Copy only the files listed above. Don't copy — just enumerate them in a script so it's repeatable and nothing extra sneaks in.
+
+### 3. Write a new README.md
+- Project name: Portal 4.0 — QE PDR Viewer
+- Links: Amplify site, Jira tickets (IN-3633, IN-3737)
+- How to build: `python.exe build_home.py`
+- How to deploy: `deploy_amplify.ps1`
+- How to refresh reports: `python.exe build_reports.py`
+- How to regenerate Marcus data: `python.exe build_marcus_bundle.py`
+- Structure overview
+
+### 4. Write a new .gitignore
+- `*.xml`, `*.csv`, `*.ndjson`, `*.hl7` — generated data
+- `*.png`, `*.pdf` — screenshots
+- `*.bat` — credential scripts
+- `__pycache__/`, `.venv/`, `*.pyc`
+- Generated HTML: `index.html`, `marcus_*.html`
+- Deploy scratch: `_site/`, `site.zip`, `_dep.json`
+- `_*.py` — scratch/helper scripts (except explicitly tracked ones)
+- `.agents/`
+
+### 5. New Amplify app (or repoint existing)
+Option A: Create a new Amplify app for Portal40, get a new URL.
+Option B: Reuse the existing app ID (`d3pz3oj6iuj9t4`), just deploy from the new folder.
+
+**Recommend Option B** — keep the same URL, just deploy from the new location. Update `deploy_amplify.ps1` paths if needed.
+
+### 6. Initial commit + push + deploy
+```powershell
+git add .
+git commit -m "Portal 4.0: clean repo with 5 QE views, 4 volume reports, Marcus per-QE data"
+git push -u origin main
+deploy_amplify.ps1
+```
+
+### 7. Update old repo
+In the original `NyecPortal2` repo:
+- Replace `build_home.py` to generate a simple index.html that says "This project has moved to [new URL]" with a link.
+- Commit, push, deploy to the old Amplify app one last time.
+
+### 8. Verify
+- New Amplify site works: all 5 QE views, all 4 reports, expand-to-fullscreen
+- Old Amplify site shows the redirect message
+- New GitHub repo is public and has only the clean files
+
+## File count comparison
+| | Old repo | New repo |
+|---|---|---|
+| Total files | ~10,700+ | ~110 |
+| Python scripts | 18 | 11 |
+| Marcus data | 47 | 47 |
+| Synthea templates | 10 | 10 |
+| SQL + JSON | 8 | 8 |
+| Generated HTML | 6 | 6 (gitignored) |
+| Sub-projects | 2 (10,500 files) | 0 |
+
+## Estimated time
+- Steps 1-4: 15 minutes (scripted copy + new README/gitignore)
+- Step 5-6: 5 minutes (deploy)
+- Step 7: 5 minutes (redirect page)
+- Step 8: 5 minutes (verify)

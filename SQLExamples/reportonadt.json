@@ -1,0 +1,1701 @@
+{
+  "scanned_bytes": 51118,
+  "scanned_gb": 4.8e-05,
+  "row_count": 242,
+  "rows": [
+    {
+      "qe": "rochester",
+      "assigning_authority": "URMCEPIC",
+      "facility_id": "413",
+      "facility_name": "Strong Memorial Hospital",
+      "adt_count": "2488399"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "RPCI",
+      "facility_id": "216",
+      "facility_name": "Roswell Park Cancer Institute",
+      "adt_count": "1161179"
+    },
+    {
+      "qe": "bronx",
+      "assigning_authority": "MMC",
+      "facility_id": "1169",
+      "facility_name": "Montefiore Medical Center-Henry and Lucy Moses Div",
+      "adt_count": "688776"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "RGHS",
+      "facility_id": "411",
+      "facility_name": "Rochester General Hospital",
+      "adt_count": "684489"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "MMC",
+      "facility_id": "1305",
+      "facility_name": "Maimonides Medical Center",
+      "adt_count": "597658"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "URMCEPIC",
+      "facility_id": "409",
+      "facility_name": "Highland Hospital",
+      "adt_count": "501961"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "MSMC",
+      "facility_id": "1456",
+      "facility_name": "Mount Sinai Hospital",
+      "adt_count": "480431"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "CHSEPI",
+      "facility_id": "218",
+      "facility_name": "Sisters of Charity Hospital",
+      "adt_count": "450142"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "KHSEPI",
+      "facility_id": "207",
+      "facility_name": "Buffalo General Medical Center",
+      "adt_count": "448374"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "LIJMC",
+      "facility_id": "1630",
+      "facility_name": "Long Island Jewish Medical Center",
+      "adt_count": "422876"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "URMCEPIC",
+      "facility_id": "678",
+      "facility_name": "F.F. Thompson Hospital",
+      "adt_count": "418248"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NHSUH",
+      "facility_id": "541",
+      "facility_name": "North Shore University Hospital",
+      "adt_count": "416625"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "SIUHN",
+      "facility_id": "1740",
+      "facility_name": "Staten Island University Hosp-North",
+      "adt_count": "400044"
+    },
+    {
+      "qe": "bronx",
+      "assigning_authority": "MMC",
+      "facility_id": "3058",
+      "facility_name": "Montefiore Med Center-Jack D Weiler Hosp of A Einstein College Div",
+      "adt_count": "397573"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "UHS",
+      "facility_id": "58",
+      "facility_name": "United Health Services Hospitals Inc. - Wilson Medical Center",
+      "adt_count": "387759"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "CROUSE",
+      "facility_id": "636",
+      "facility_name": "Crouse Hospital",
+      "adt_count": "372487"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "MONTE-WP",
+      "facility_id": "1045",
+      "facility_name": "White Plains Hospital Center",
+      "adt_count": "357340"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "MVHS",
+      "facility_id": "15478",
+      "facility_name": "Wynn Hospital",
+      "adt_count": "293223"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "ECMC",
+      "facility_id": "210",
+      "facility_name": "Erie County Medical Center",
+      "adt_count": "289233"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "RVTH",
+      "facility_id": "1466",
+      "facility_name": "Mount Sinai West",
+      "adt_count": "281372"
+    },
+    {
+      "qe": "bronx",
+      "assigning_authority": "MMC",
+      "facility_id": "1168",
+      "facility_name": "Montefiore Medical Center-Wakefield Hospital",
+      "adt_count": "273093"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NUMC",
+      "facility_id": "528",
+      "facility_name": "Nassau University Medical Center",
+      "adt_count": "271596"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYUTISCH",
+      "facility_id": "1463",
+      "facility_name": "NYU Langone Hospitals",
+      "adt_count": "268985"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "KHSEPI",
+      "facility_id": "3067",
+      "facility_name": "Millard Fillmore Suburban",
+      "adt_count": "263460"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "LHH",
+      "facility_id": "1450",
+      "facility_name": "Lenox Hill Hospital",
+      "adt_count": "262994"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "MSSN",
+      "facility_id": "527",
+      "facility_name": "Mt Sinai South Nassau",
+      "adt_count": "250410"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "BURKE-REHAB-HOSP",
+      "facility_id": "1046",
+      "facility_name": "Winifred Masterson Burke Rehabilitation Hospital",
+      "adt_count": "250232"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "CHSEPI",
+      "facility_id": "583",
+      "facility_name": "Mount St Marys Hospital and Health Center",
+      "adt_count": "247993"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "OBHSBHMC",
+      "facility_id": "1286",
+      "facility_name": "Brookdale Hospital Medical Center",
+      "adt_count": "246808"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "AMHSAMCH",
+      "facility_id": "1",
+      "facility_name": "ALBANY MEDICAL CENTER HOSPITAL",
+      "adt_count": "244741"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "RGHS",
+      "facility_id": "471",
+      "facility_name": "The Unity Hospital of Rochester",
+      "adt_count": "238251"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "STLH",
+      "facility_id": "1469",
+      "facility_name": "Mount Sinai Morningside",
+      "adt_count": "236702"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "G",
+      "facility_id": "925",
+      "facility_name": "Good Samaritan Hospital Medical Center",
+      "adt_count": "232929"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "UPMCEP",
+      "facility_id": "103",
+      "facility_name": "UPMC Chautauqua at WCA",
+      "adt_count": "232687"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "CHSEPI",
+      "facility_id": "213",
+      "facility_name": "Mercy Hospital of Buffalo",
+      "adt_count": "221062"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "GARNET-HEALTH-3",
+      "facility_id": "699",
+      "facility_name": "Garnet Health Medical Center",
+      "adt_count": "218938"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "ELMHURST",
+      "facility_id": "1626",
+      "facility_name": "Elmhurst Hospital Center",
+      "adt_count": "218446"
+    },
+    {
+      "qe": "bronx",
+      "assigning_authority": "BXLEB",
+      "facility_id": "1178",
+      "facility_name": "BronxCare Hospital Center",
+      "adt_count": "218038"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "JHMC",
+      "facility_id": "1629",
+      "facility_name": "Jamaica Hospital Medical Center",
+      "adt_count": "217641"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "LIJFH",
+      "facility_id": "1638",
+      "facility_name": "Long Island Jewish Forest Hills",
+      "adt_count": "212415"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "LIH",
+      "facility_id": "1172",
+      "facility_name": "Lincoln Medical and Mental Health Center",
+      "adt_count": "208539"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "BELLEVUE",
+      "facility_id": "1438",
+      "facility_name": "Bellevue Hospital Center",
+      "adt_count": "203992"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "KCHC",
+      "facility_id": "1301",
+      "facility_name": "Kings County Hospital Center",
+      "adt_count": "200675"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "WEST-MED-CTR-3",
+      "facility_id": "1139",
+      "facility_name": "Westchester Medical Center",
+      "adt_count": "200409"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "NUV-VBMC",
+      "facility_id": "181",
+      "facility_name": "Vassar Brothers Medical Center",
+      "adt_count": "199727"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "MSHQ",
+      "facility_id": "1639",
+      "facility_name": "Mount Sinai Hospital - Mount Sinai Hospital of Queens",
+      "adt_count": "199605"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "KHSEPI",
+      "facility_id": "66",
+      "facility_name": "Olean General Hospital",
+      "adt_count": "199559"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "LIJVS",
+      "facility_id": "518",
+      "facility_name": "Long Island Jewish Valley Stream",
+      "adt_count": "197803"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "KHSEPI",
+      "facility_id": "208",
+      "facility_name": "John R. Oishei Children's Hospital",
+      "adt_count": "197560"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "WHMC",
+      "facility_id": "1318",
+      "facility_name": "Wyckoff Heights Medical Center",
+      "adt_count": "196269"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYULHLI",
+      "facility_id": "511",
+      "facility_name": "NYU Langone Hospital-Long Island",
+      "adt_count": "196246"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "CCMCN",
+      "facility_id": "18001",
+      "facility_name": "Cohen Children's Medical Center",
+      "adt_count": "195078"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "ST-LUKES-CORN",
+      "facility_id": "694",
+      "facility_name": "St Luke's Cornwall Hospital_Newburgh",
+      "adt_count": "190811"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "URMCEPIC",
+      "facility_id": "39",
+      "facility_name": "MEMORIAL HOSP OF WM F & GERTRUDE F JONES A/K/A JONES MEMORIAL HOSP",
+      "adt_count": "187727"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYULUTHERAN",
+      "facility_id": "1304",
+      "facility_name": "NYU Langone Hospital-Brooklyn",
+      "adt_count": "186781"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "FLH",
+      "facility_id": "671",
+      "facility_name": "Geneva General Hospital",
+      "adt_count": "186629"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "MONTE-NYACK",
+      "facility_id": "776",
+      "facility_name": "Montefiore Nyack",
+      "adt_count": "184390"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "JMC",
+      "facility_id": "1165",
+      "facility_name": "Jacobi Medical Center",
+      "adt_count": "178866"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "STONYBROOK",
+      "facility_id": "245",
+      "facility_name": "Stony Brook University Hospital",
+      "adt_count": "178774"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "CENTRALUS-3",
+      "facility_id": "116",
+      "facility_name": "Arnot Ogden Medical Center",
+      "adt_count": "176123"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "PBC",
+      "facility_id": "938",
+      "facility_name": "Peconic Bay Medical Center",
+      "adt_count": "175478"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "RUMC",
+      "facility_id": "1738",
+      "facility_name": "Richmond University Medical Center",
+      "adt_count": "175424"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "CHSEPI",
+      "facility_id": "292",
+      "facility_name": "Sisters of Charity Hospital - St Joseph Campus",
+      "adt_count": "171848"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "MSKCC",
+      "facility_id": "1453",
+      "facility_name": "MEMORIAL HOSPITAL FOR CANCER AND ALLIED DISEASES",
+      "adt_count": "169681"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "CHSEPI",
+      "facility_id": "267",
+      "facility_name": "Kenmore Mercy Hospital",
+      "adt_count": "169437"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "UPSTATE",
+      "facility_id": "635",
+      "facility_name": "University Hospital SUNY Health Science Center",
+      "adt_count": "164151"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "CIH",
+      "facility_id": "1294",
+      "facility_name": "South Brooklyn Health",
+      "adt_count": "160261"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "SSH",
+      "facility_id": "924",
+      "facility_name": "South Shore University Hospital",
+      "adt_count": "159858"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYPMILSTEIN",
+      "facility_id": "1464",
+      "facility_name": "New York-Presbyterian Hospital - Columbia Presbyterian Center",
+      "adt_count": "158222"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "NUV-DANBURY",
+      "facility_id": "NONNYS_2194",
+      "facility_name": "Danbury Hospital",
+      "adt_count": "157985"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "QUEENS",
+      "facility_id": "1633",
+      "facility_name": "Queens Hospital Center",
+      "adt_count": "157632"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYPHEAST",
+      "facility_id": "1458",
+      "facility_name": "New York-Presbyterian Hospital - New York Weill Cornell Center",
+      "adt_count": "157623"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "CENTRALUS-3",
+      "facility_id": "977",
+      "facility_name": "Cayuga Medical Center at Ithaca",
+      "adt_count": "157300"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "TBHC",
+      "facility_id": "1288",
+      "facility_name": "Brooklyn Hospital Center - Downtown Campus",
+      "adt_count": "155175"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "SJHHC",
+      "facility_id": "630",
+      "facility_name": "St. Joseph's Hospital Health Center",
+      "adt_count": "153303"
+    },
+    {
+      "qe": "bronx",
+      "assigning_authority": "SBH",
+      "facility_id": "1176",
+      "facility_name": "SBH Health System",
+      "adt_count": "149225"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "ELLS",
+      "facility_id": "829",
+      "facility_name": "ELLIS HOSPITAL",
+      "adt_count": "147102"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "LHGV",
+      "facility_id": "9700",
+      "facility_name": "Lenox Hill Greenwich Village",
+      "adt_count": "146274"
+    },
+    {
+      "qe": "bronx",
+      "assigning_authority": "MMC",
+      "facility_id": "1185",
+      "facility_name": "Montefiore Medical Center-Montefiore Westchester Square",
+      "adt_count": "143637"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "PLVH",
+      "facility_id": "552",
+      "facility_name": "Plainview Hospital",
+      "adt_count": "141422"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "PAPL",
+      "facility_id": "5",
+      "facility_name": "ST PETERS HOSPITAL",
+      "adt_count": "140593"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "CHSEPI",
+      "facility_id": "15464",
+      "facility_name": "Lockport Memorial Hospital, a Campus of Mount St Mary's",
+      "adt_count": "137907"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "HLM",
+      "facility_id": "1445",
+      "facility_name": "Harlem Hospital Center",
+      "adt_count": "137366"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "URMCEPIC",
+      "facility_id": "393",
+      "facility_name": "NICHOLAS H NOYES MEMORIAL HOSPITAL",
+      "adt_count": "135179"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "WOODHULL",
+      "facility_id": "1692",
+      "facility_name": "Woodhull Medical and Mental Health Center",
+      "adt_count": "135025"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "SIUPB",
+      "facility_id": "1737",
+      "facility_name": "Staten Island University Hospital Prince's Bay",
+      "adt_count": "134441"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "GUTHRIE",
+      "facility_id": "NONNYS_1722",
+      "facility_name": "Guthrie Robert Packer Hospital",
+      "adt_count": "133550"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "CHSEPI",
+      "facility_id": "1723",
+      "facility_name": "MERCY HOSPITAL - MERCY HOSPITAL ORCHARD PARK DIVISION",
+      "adt_count": "133079"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NWH",
+      "facility_id": "1117",
+      "facility_name": "Northern Westchester Hospital",
+      "adt_count": "132838"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYPQUEENS",
+      "facility_id": "1637",
+      "facility_name": "NewYork-Presbyterian/Queens",
+      "adt_count": "130076"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "BIKH",
+      "facility_id": "1324",
+      "facility_name": "Mount Sinai Brooklyn",
+      "adt_count": "122536"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "URMCEPIC",
+      "facility_id": "9531",
+      "facility_name": "URMC STRONG WEST",
+      "adt_count": "122482"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "RGHS",
+      "facility_id": "815",
+      "facility_name": "CANTON-POTSDAM HOSPITAL",
+      "adt_count": "119814"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "PH",
+      "facility_id": "1129",
+      "facility_name": "Phelps Memorial Hospital",
+      "adt_count": "118571"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "F",
+      "facility_id": "563",
+      "facility_name": "St. Francis Hospital and Heart Center",
+      "adt_count": "112315"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "OBHSIMC",
+      "facility_id": "1309",
+      "facility_name": "Interfaith Medical Center",
+      "adt_count": "112186"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "URMCEPIC",
+      "facility_id": "870",
+      "facility_name": "St. James Hospital",
+      "adt_count": "111801"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYPBMH",
+      "facility_id": "1306",
+      "facility_name": "NewYork-Presbyterian Brooklyn Methodist Hospital",
+      "adt_count": "110730"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "GFHAMHS",
+      "facility_id": "1005",
+      "facility_name": "GLENS FALLS HOSPITAL",
+      "adt_count": "109162"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "BS-GOOD-SAM-3",
+      "facility_id": "779",
+      "facility_name": "Good Samaritan Hospital of Suffern",
+      "adt_count": "108244"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "STPL",
+      "facility_id": "756",
+      "facility_name": "SAMARITAN HOSPITAL",
+      "adt_count": "108174"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "NUV-NORWALK",
+      "facility_id": "NONNYS_2196",
+      "facility_name": "Norwalk Hospital",
+      "adt_count": "106840"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "SHAMHS",
+      "facility_id": "818",
+      "facility_name": "SARATOGA HOSPITAL",
+      "adt_count": "104870"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYULICH",
+      "facility_id": "885",
+      "facility_name": "NYU Langone Hospital - Suffolk",
+      "adt_count": "101812"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "MHS-ROCH-EPIC",
+      "facility_id": "1072",
+      "facility_name": "Montefiore New Rochelle Hospital",
+      "adt_count": "101312"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "HUNT",
+      "facility_id": "913",
+      "facility_name": "Huntington Hospital",
+      "adt_count": "100495"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "RGHS",
+      "facility_id": "339",
+      "facility_name": "UNITED MEMORIAL MEDICAL CENTER NORTH STREET CAMPUS",
+      "adt_count": "100374"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "GC",
+      "facility_id": "490",
+      "facility_name": "Glen Cove Hospital",
+      "adt_count": "98984"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "KHSEPI",
+      "facility_id": "98",
+      "facility_name": "Brooks-TLC Hospital System, Inc.",
+      "adt_count": "97149"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "GUTHRIE",
+      "facility_id": "43",
+      "facility_name": "Our Lady of Lourdes Memorial Hospital",
+      "adt_count": "96858"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "SAM-MED",
+      "facility_id": "367",
+      "facility_name": "Samaritan Medical Center",
+      "adt_count": "94874"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "NUV-NORTH-DUTCH",
+      "facility_id": "192",
+      "facility_name": "Northern Dutchess Hospital",
+      "adt_count": "94499"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "NFMMC",
+      "facility_id": "574",
+      "facility_name": "Niagara Falls Memorial Medical Center",
+      "adt_count": "92665"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "SJEH",
+      "facility_id": "1635",
+      "facility_name": "St Johns Episcopal Hospital So Shore",
+      "adt_count": "91992"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYUCOBBLE",
+      "facility_id": "9753",
+      "facility_name": "NYU Langone Hospital - Joseph S. and Diane H. Steinberg Ambulatory Care Center",
+      "adt_count": "90620"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYCH",
+      "facility_id": "1293",
+      "facility_name": "Maimonides Midwood Community Hospital",
+      "adt_count": "89926"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "JONES",
+      "facility_id": "102",
+      "facility_name": "UPMC Chautauqua at WCA",
+      "adt_count": "89398"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "ST-JOHNS-RIVER-3",
+      "facility_id": "1097",
+      "facility_name": "SJRH - St Johns Division",
+      "adt_count": "88094"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "GUTHRIE",
+      "facility_id": "866",
+      "facility_name": "Corning Hospital",
+      "adt_count": "86645"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "ROME-HLTH",
+      "facility_id": "589",
+      "facility_name": "Rome Memorial Hospital Inc",
+      "adt_count": "84566"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "METROPOLITAN",
+      "facility_id": "1454",
+      "facility_name": "Metropolitan Hospital Center",
+      "adt_count": "81959"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "CVPHED",
+      "facility_id": "135",
+      "facility_name": "THE UNIVERSITY OF VERMONT HEALTH NETWORK - CHAMPLAIN VALLEY PHYSICIANS HOSPITAL",
+      "adt_count": "81275"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "AMAL",
+      "facility_id": "4",
+      "facility_name": "Samaritan Hospital - Albany Memorial Campus",
+      "adt_count": "79946"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "WEST-MIDHUDSON-3",
+      "facility_id": "180",
+      "facility_name": "Mid-Hudson Valley Division of Westchester Medical Center",
+      "adt_count": "79539"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "FHMC",
+      "facility_id": "1628",
+      "facility_name": "Flushing Hospital Medical Center",
+      "adt_count": "79191"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "M",
+      "facility_id": "513",
+      "facility_name": "Mercy Hospital",
+      "adt_count": "77914"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "UPSTATE",
+      "facility_id": "628",
+      "facility_name": "UPSTATE University Hospital at Community General",
+      "adt_count": "77593"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "FLH",
+      "facility_id": "1158",
+      "facility_name": "Soldiers and Sailors Memorial Hospital of Yates County",
+      "adt_count": "74345"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NCB",
+      "facility_id": "1186",
+      "facility_name": "North Central Bronx Hospital",
+      "adt_count": "72899"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "HAHV-KINGSTON-3",
+      "facility_id": "989",
+      "facility_name": "HealthAlliance Hospital Broadway Campus",
+      "adt_count": "72171"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "GARNET-HEALTH-3",
+      "facility_id": "971",
+      "facility_name": "Garnet Health Medical Center - Catskills",
+      "adt_count": "71502"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "OSW-HEALTH",
+      "facility_id": "727",
+      "facility_name": "Oswego Hospital",
+      "adt_count": "71280"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "UHS",
+      "facility_id": "42",
+      "facility_name": "United Health Services Hospitals Inc. - Binghamton General Hospital",
+      "adt_count": "71134"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "BRTRND",
+      "facility_id": "280",
+      "facility_name": "Bertrand Chaffee Hospital",
+      "adt_count": "69788"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "J",
+      "facility_id": "551",
+      "facility_name": "St. Joseph Hospital",
+      "adt_count": "69215"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "UHS",
+      "facility_id": "128",
+      "facility_name": "Chenango Memorial Hospital Inc",
+      "adt_count": "67311"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "S",
+      "facility_id": "943",
+      "facility_name": "St Catherine of Siena Hospital",
+      "adt_count": "65277"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "GUTHRIE",
+      "facility_id": "158",
+      "facility_name": "Guthrie Cortland Medical Center",
+      "adt_count": "65273"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "ONEIDA-HLTH",
+      "facility_id": "397",
+      "facility_name": "Oneida Health Hospital",
+      "adt_count": "65218"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "SY",
+      "facility_id": "550",
+      "facility_name": "Syosset Hospital",
+      "adt_count": "63861"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "NUV-PUTNAM",
+      "facility_id": "752",
+      "facility_name": "Putnam Hospital",
+      "adt_count": "63687"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "WCCHS",
+      "facility_id": "15620",
+      "facility_name": "Wyoming County Community Hospital",
+      "adt_count": "60603"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYPMSCHONY",
+      "facility_id": "1464",
+      "facility_name": "New York-Presbyterian Hospital - Columbia Presbyterian Center",
+      "adt_count": "59752"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYPLOWERM",
+      "facility_id": "1437",
+      "facility_name": "New York-Presbyterian/Lower Manhattan Hospital",
+      "adt_count": "58938"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYPALLEN",
+      "facility_id": "3975",
+      "facility_name": "New York-Presbyterian Hospital - Allen Hospital",
+      "adt_count": "58835"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "AUBURN-COMMUNITY",
+      "facility_id": "85",
+      "facility_name": "Auburn Community Hospital",
+      "adt_count": "57633"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "MEDINA",
+      "facility_id": "718",
+      "facility_name": "Medina Memorial Hospital",
+      "adt_count": "56430"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "MEDINA",
+      "facility_id": "718",
+      "facility_name": "MEDINA MEMORIAL HOSPITAL",
+      "adt_count": "56430"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "RGHS",
+      "facility_id": "1028",
+      "facility_name": "Newark-Wayne Community Hospital",
+      "adt_count": "54929"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "MHS-VERNON-EPIC",
+      "facility_id": "1061",
+      "facility_name": "Montefiore Mount Vernon Hospital",
+      "adt_count": "54258"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYPLAWRENCE",
+      "facility_id": "1122",
+      "facility_name": "New York-Presbyterian Westchester",
+      "adt_count": "53861"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "RGHS",
+      "facility_id": "676",
+      "facility_name": "Clifton Springs Hospital and Clinic",
+      "adt_count": "51767"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "SMHA",
+      "facility_id": "484",
+      "facility_name": "ST. MARY'S HEALTHCARE",
+      "adt_count": "51009"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "CMHAMHS",
+      "facility_id": "146",
+      "facility_name": "COLUMBIA MEMORIAL HOSPITAL",
+      "adt_count": "49698"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "MATH",
+      "facility_id": "895",
+      "facility_name": "John T Mather Memorial Hospital of Port Jefferson New York Inc",
+      "adt_count": "47185"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYPHVH",
+      "facility_id": "1039",
+      "facility_name": "NewYork-Presbyterian/Hudson Valley Hospital",
+      "adt_count": "46525"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "C",
+      "facility_id": "896",
+      "facility_name": "St. Charles Hospital",
+      "adt_count": "46314"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "BASMIBO",
+      "facility_id": "746",
+      "facility_name": "MARY IMOGENE BASSETT HOSPITAL",
+      "adt_count": "45389"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "SOUTHAMPTON",
+      "facility_id": "889",
+      "facility_name": "Stony Brook Southampton Hospital",
+      "adt_count": "43842"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "WCCHS",
+      "facility_id": "15620",
+      "facility_name": "Wyoming County Community Hospital",
+      "adt_count": "43744"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "NUV-NEW-MILFORD",
+      "facility_id": "NONNYS_2195",
+      "facility_name": "New Milford Hospital",
+      "adt_count": "40797"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "NLI",
+      "facility_id": "330",
+      "facility_name": "NATHAN LITTAUER HOSPITAL",
+      "adt_count": "39971"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "KHSEPI",
+      "facility_id": "210",
+      "facility_name": "Erie County Medical Center",
+      "adt_count": "39495"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "BS-HOSP-3",
+      "facility_id": "708",
+      "facility_name": "Bon Secours Community Hospital",
+      "adt_count": "38920"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "KHSEPI",
+      "facility_id": "BRMC",
+      "facility_name": "Bradford Regional Medical Center",
+      "adt_count": "38526"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "ST-JOS-MED-3",
+      "facility_id": "1098",
+      "facility_name": "St. Joseph's Medical Center",
+      "adt_count": "38390"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "WSTFLD",
+      "facility_id": "111",
+      "facility_name": "Westfield Memorial Hospital Inc",
+      "adt_count": "37845"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "ST-JOS-MED-2",
+      "facility_id": "1098",
+      "facility_name": "St. Joseph's Medical Center",
+      "adt_count": "37370"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "CARTHAGE-HOSP",
+      "facility_id": "379",
+      "facility_name": "Carthage Area Hospital Inc",
+      "adt_count": "36552"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "RGHS",
+      "facility_id": "804",
+      "facility_name": "Massena Hospital",
+      "adt_count": "35645"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "DMC",
+      "facility_id": "1320",
+      "facility_name": "University Hospital of Brooklyn",
+      "adt_count": "34058"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "NUV-SHARON",
+      "facility_id": "NONNYS_1805",
+      "facility_name": "Sharon Hospital",
+      "adt_count": "33230"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "BASAOFO",
+      "facility_id": "739",
+      "facility_name": "A.O. Fox Memorial Hospital",
+      "adt_count": "31846"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "BS-ST-ANTHONYS",
+      "facility_id": "704",
+      "facility_name": "St Anthony Community Hospital",
+      "adt_count": "31735"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "ADIRMED",
+      "facility_id": "324",
+      "facility_name": "ADIRONDACK MEDICAL CENTER-SARANAC LAKE SITE",
+      "adt_count": "31034"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "BASLFHO",
+      "facility_id": "362",
+      "facility_name": "LITTLE FALLS HOSPITAL",
+      "adt_count": "30752"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "CENTRALUS-3",
+      "facility_id": "858",
+      "facility_name": "Schuyler Hospital",
+      "adt_count": "30369"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "MSSN",
+      "facility_id": "9691",
+      "facility_name": "SOUTH NASSAU COMMUNITIES HOSPITAL OFF-CAMPUS EMERGENCY DEPARTMENT",
+      "adt_count": "30220"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "HSS",
+      "facility_id": "1447",
+      "facility_name": "Hospital for Special Surgery",
+      "adt_count": "29841"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "LEWIS",
+      "facility_id": "383",
+      "facility_name": "Lewis County General Hospital",
+      "adt_count": "28317"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "AHMCED",
+      "facility_id": "15485",
+      "facility_name": "Alice Hyde Medical Center - UVM",
+      "adt_count": "26251"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "UHS",
+      "facility_id": "174",
+      "facility_name": "Delaware Valley Hospital Inc",
+      "adt_count": "25769"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "MMHCS",
+      "facility_id": "718",
+      "facility_name": "MEDINA MEMORIAL HOSPITAL",
+      "adt_count": "24144"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "MMHCS",
+      "facility_id": "718",
+      "facility_name": "Medina Memorial Hospital",
+      "adt_count": "24144"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "CENTRALUS-3",
+      "facility_id": "873",
+      "facility_name": "Ira Davenport Memorial Hospital",
+      "adt_count": "22517"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "ELLENVILLE",
+      "facility_id": "1002",
+      "facility_name": "ELLENVILLE REGIONAL HOSPITAL",
+      "adt_count": "21913"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "RGHS",
+      "facility_id": "812",
+      "facility_name": "GOUVERNEUR HOSPITAL",
+      "adt_count": "21004"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "CLAX-HEP-CPSI",
+      "facility_id": "15684",
+      "facility_name": "Claxton-Hepburn Medical Campus",
+      "adt_count": "20766"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "BASCRHO",
+      "facility_id": "10216",
+      "facility_name": "Cobleskill Regional Hospital",
+      "adt_count": "20521"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "KHSEPI",
+      "facility_id": "37",
+      "facility_name": "Cuba Memorial Hospital Inc",
+      "adt_count": "19566"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "SMHA",
+      "facility_id": "482",
+      "facility_name": "ST. MARY'S HEALTHCARE - AMSTERDAM MEMORIAL CAMPUS",
+      "adt_count": "17911"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "ZHH",
+      "facility_id": "18002",
+      "facility_name": "Zucker Hillside Hospital",
+      "adt_count": "16861"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "RIVER-HOSPITAL",
+      "facility_id": "377",
+      "facility_name": "River Hospital Inc.",
+      "adt_count": "16587"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "WEST-MARIAFARERI",
+      "facility_id": "NONNYS_2374",
+      "facility_name": "Maria Fareri Childrens Hospital",
+      "adt_count": "15799"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "WEST-MIDHUDSON-2",
+      "facility_id": "180",
+      "facility_name": "Mid-Hudson Valley Division of Westchester Medical Center",
+      "adt_count": "14708"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "GARNET-HEALTH-3",
+      "facility_id": "968",
+      "facility_name": "Garnet Health Medical Center - Catskills - G. Hermann Site",
+      "adt_count": "14386"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "ECHOPED",
+      "facility_id": "303",
+      "facility_name": "THE UNIVERSITY OF VERMONT HEALTH NETWORK - ELIZABETHTOWN COMMUNITY HOSPITAL",
+      "adt_count": "13226"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "ST-JOHNS-RIVER-3",
+      "facility_id": "1124",
+      "facility_name": "SJRH - Dobbs Ferry Pavillion",
+      "adt_count": "12618"
+    },
+    {
+      "qe": "bronx",
+      "assigning_authority": "BXLEB",
+      "facility_id": "1164",
+      "facility_name": "BronxCare Hospital Center",
+      "adt_count": "12037"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "ECHTIOPED",
+      "facility_id": "309",
+      "facility_name": "The University of Vermont Health Network-Elizabethtown Community Hospital Moses Ludington",
+      "adt_count": "11584"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "ST-JOHNS-RIVER-2",
+      "facility_id": "1099",
+      "facility_name": "SJRH - Park Care Pavilion",
+      "adt_count": "11171"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "CMH",
+      "facility_id": "401",
+      "facility_name": "Community Memorial Hospital Inc",
+      "adt_count": "11097"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "BASTRHO",
+      "facility_id": "8554",
+      "facility_name": "A.O. Fox Memorial Hospital - Tri-Town Campus",
+      "adt_count": "11007"
+    },
+    {
+      "qe": "healthelink",
+      "assigning_authority": "ECMC2PART2",
+      "facility_id": "210",
+      "facility_name": "Erie County Medical Center",
+      "adt_count": "10734"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "BASOCO",
+      "facility_id": "165",
+      "facility_name": "O'CONNOR HOSPITAL",
+      "adt_count": "10602"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "WEST-MED-CTR-2",
+      "facility_id": "1139",
+      "facility_name": "Westchester Medical Center",
+      "adt_count": "10016"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "HELEN-HAYES",
+      "facility_id": "775",
+      "facility_name": "Helen Hayes Hospital",
+      "adt_count": "9748"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "BIPD",
+      "facility_id": "15437",
+      "facility_name": "Mount Sinai -  Behavioral Health Center",
+      "adt_count": "9671"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "CLIFTON-FINE",
+      "facility_id": "817",
+      "facility_name": "Clifton-Fine Hospital",
+      "adt_count": "8803"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "CAL",
+      "facility_id": "1175",
+      "facility_name": "Calvary Bronx",
+      "adt_count": "8410"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "ELIH",
+      "facility_id": "891",
+      "facility_name": "Stony Brook Eastern Long Island Hospital",
+      "adt_count": "8302"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "HAHV-MARGARET",
+      "facility_id": "170",
+      "facility_name": "Margaretville Hospital",
+      "adt_count": "7302"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYUHJD",
+      "facility_id": "1446",
+      "facility_name": "NYU Langone Orthopedic Hospital",
+      "adt_count": "6573"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "ELLS",
+      "facility_id": "848",
+      "facility_name": "ELLIS HOSPITAL - BELLEVUE WOMAN'S CARE CENTER DIVISION",
+      "adt_count": "6115"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "ST-VINCENTS-HOSP",
+      "facility_id": "1133",
+      "facility_name": "St. Joseph's MC-St. Vincent's Westchester Division",
+      "adt_count": "5339"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYPWBHC",
+      "facility_id": "1047",
+      "facility_name": "New York-Presbyterian Westchester Behavioral Health Center",
+      "adt_count": "4480"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "CARTER",
+      "facility_id": "1486",
+      "facility_name": "Henry J. Carter Specialty Hospital",
+      "adt_count": "4178"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "BS-GOOD-SAM-2",
+      "facility_id": "779",
+      "facility_name": "Good Samaritan Hospital of Suffern",
+      "adt_count": "4076"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "SRPL",
+      "facility_id": "831",
+      "facility_name": "SUNNYVIEW HOSPITAL AND REHABILITATION CENTER",
+      "adt_count": "3501"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "BURDETTBIRTH",
+      "facility_id": "756",
+      "facility_name": "SAMARITAN HOSPITAL",
+      "adt_count": "3029"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "BLYTHEDALE-CHILD",
+      "facility_id": "1138",
+      "facility_name": "Blythedale Children's Hospital",
+      "adt_count": "2741"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "MSKCC",
+      "facility_id": "10355",
+      "facility_name": "David H. Koch Center For Cancer Care",
+      "adt_count": "2721"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "CENTRALUS-3",
+      "facility_id": "118",
+      "facility_name": "St. Joseph's Hospital",
+      "adt_count": "2703"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "OSW-HEALTH",
+      "facility_id": "12",
+      "facility_name": "Lakeview Center for Mental Health and Wellness",
+      "adt_count": "2198"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "BS-HOSP-2",
+      "facility_id": "708",
+      "facility_name": "Bon Secours Community Hospital",
+      "adt_count": "2029"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "CENTRALUS-2",
+      "facility_id": "118",
+      "facility_name": "St. Joseph's Hospital",
+      "adt_count": "1198"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "RGHS",
+      "facility_id": "412",
+      "facility_name": "Unity Specialty Hospital",
+      "adt_count": "994"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "SIUH",
+      "facility_id": "1737",
+      "facility_name": "Staten Island University Hospital Prince's Bay",
+      "adt_count": "956"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "SPHPSPARC",
+      "facility_id": "9431",
+      "facility_name": "ST. PETER'S ADDICTION RECOVERY CENTER",
+      "adt_count": "923"
+    },
+    {
+      "qe": "rochester",
+      "assigning_authority": "RGHS",
+      "facility_id": "340",
+      "facility_name": "UNITED MEMORIAL MEDICAL CENTER BANK STREET CAMPUS",
+      "adt_count": "893"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "OBHSKJMC",
+      "facility_id": "1315",
+      "facility_name": "Kingsbrook Jewish Medical Village",
+      "adt_count": "790"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "CAL",
+      "facility_id": "10223",
+      "facility_name": "Calvary Hospital",
+      "adt_count": "733"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "CAL",
+      "facility_id": "10223",
+      "facility_name": "Calvary Brooklyn",
+      "adt_count": "733"
+    },
+    {
+      "qe": "healtheconnections",
+      "assigning_authority": "ST-JOHNS-RIVER-3",
+      "facility_id": "1099",
+      "facility_name": "SJRH - Park Care Pavilion",
+      "adt_count": "682"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "SPHPSPARC",
+      "facility_id": "15417",
+      "facility_name": "St. Peter's Hospital \u2013 SPARC",
+      "adt_count": "416"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "LXHH",
+      "facility_id": "1450",
+      "facility_name": "Lenox Hill Hospital",
+      "adt_count": "165"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NWHS",
+      "facility_id": "1117",
+      "facility_name": "Northern Westchester Hospital",
+      "adt_count": "88"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "NYPKOCH",
+      "facility_id": "10139",
+      "facility_name": "New York-Presbyterian David H. Koch Center",
+      "adt_count": "58"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "MSNYEE",
+      "facility_id": "1460",
+      "facility_name": "NEW YORK EYE AND EAR INFIRMARY OF MOUNT SINAI",
+      "adt_count": "58"
+    },
+    {
+      "qe": "healthix",
+      "assigning_authority": "PMHC",
+      "facility_id": "1129",
+      "facility_name": "Phelps Memorial Hospital",
+      "adt_count": "51"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "AMHSSCC",
+      "facility_id": "2",
+      "facility_name": "ALBANY MEDICAL CENTER - SOUTH CLINICAL CAMPUS",
+      "adt_count": "16"
+    },
+    {
+      "qe": "hixny",
+      "assigning_authority": "ADIRMED",
+      "facility_id": "306",
+      "facility_name": "ADIRONDACK MEDICAL CENTER-LAKE PLACID SITE",
+      "adt_count": "8"
+    }
+  ]
+}

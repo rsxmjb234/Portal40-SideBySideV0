@@ -1,0 +1,44 @@
+# Generated HTML (rebuilt by build_home.py)
+index.html
+marcus_*.html
+
+# Generated data (rebuilt by build_marcus_bundle.py / build_reports.py)
+*.xml
+*.hl7
+*.ndjson
+marcus_bundle/*/ccda/
+marcus_bundle/*/oru-hl7/
+marcus_bundle/*/trn/
+marcus_bundle/mpi/
+# Keep the Synthea base templates
+!ccds/
+
+# Deploy scratch
+_site/
+site.zip
+_dep.json
+
+# Credentials / secrets
+*.pem
+*.key
+*.bat
+.env
+*.env
+
+# Scratch scripts
+_*.py
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Workflow artifacts
+.agents/
+.worktrees/

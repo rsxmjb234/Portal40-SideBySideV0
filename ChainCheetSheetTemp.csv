@@ -1,0 +1,46 @@
+﻿QE,Assigning Authority,Best Guess Organization / Place,Confidence,Associated Facilities (from supplied list),Notes
+Bronx RHIO,MMC,Montefiore Medical Center,High,Montefiore Medical Center - Jack D. Weiler; Henry & Lucy Moses Division; Montefiore Westchester Square; Wakefield Hospital,
+HealtheConnections,CENTRALUS-2,Centralus / shared hospital feed,Low,Arnot Ogden; Cayuga Medical; Schuyler Hospital; St. Josephs,Likely interface/source label; facilities span organizations
+HealtheConnections,CENTRALUS-3,Centralus / shared hospital feed,Low,Arnot Ogden; Cayuga Medical; Schuyler Hospital; St. Josephs,Likely interface/source label; facilities span organizations
+HealtheConnections,GARNET-HEALTH-2,Garnet Health,High,Garnet Health Medical Center; Garnet Health Catskills,
+HealtheConnections,GARNET-HEALTH-3,Garnet Health,High,Garnet Health Medical Center; Garnet Health Catskills,
+HealtheConnections,GUTHRIE,Guthrie Clinic / Guthrie Healthcare System,High,Corning Hospital; Guthrie Cortland; Guthrie Lourdes,
+HealtheConnections,MVHS,Mohawk Valley Health System,High,Faxton St. Luke's; Wynn Hospital,
+HealtheConnections,OSW-HEALTH,Oswego Health,High,Lakeview Center; Oswego Hospital,
+HealtheConnections,RRH-RRH,Rochester Regional Health,Medium,Canton-Potsdam; Gouverneur; Massena,"Facilities associated with St. Lawrence Health, part of Rochester Regional Health"
+HealtheConnections,ST-JOHNS-RIVER-2,St. John's Riverside Hospital,High,SJRH Dobbs Ferry; SJRH Park Care; SJRH St. Johns,
+HealtheConnections,ST-JOHNS-RIVER-3,St. John's Riverside Hospital,High,SJRH Dobbs Ferry; SJRH Park Care; SJRH St. Johns,
+HealtheConnections,UHS-SOARIAN,United Health Services (UHS),High,Chenango Memorial; Delaware Valley; UHS Binghamton General; UHS Wilson,Soarian likely source EHR
+HealtheConnections,UPSTATE,SUNY Upstate Medical University / Upstate University Hospital,High,University Hospital SUNY; Upstate Community General,
+HEALTHeLINK,1108,Catholic Health - Mercy Hospital,Medium,Mercy Hospital Orchard Park; Mercy Hospital of Buffalo,Numeric authority; organization inferred from facilities
+HEALTHeLINK,1133,Kaleida Health,High,Buffalo General; Golisano Children's; Millard Fillmore Suburban,Numeric authority; common facility ownership
+HEALTHeLINK,1160,United Memorial Medical Center,High,United Memorial Bank Street; United Memorial North Street,
+HEALTHeLINK,CHSEPI,Catholic Health System,High,Kenmore Mercy; Lockport Memorial; Mercy Orchard Park; Mercy of Buffalo; Mount St. Marys; Sisters of Charity; Sisters of Charity St. Joseph,
+HEALTHeLINK,KHS,Kaleida Health,High,,Included from user example; no facilities explicitly attached to this code
+HEALTHeLINK,KHSEPI,Kaleida Health,High,Buffalo General; Brooks-TLC; Cuba Memorial; Golisano Children's; Millard Fillmore Suburban; Olean General,
+HEALTHeLINK,UMMC,United Memorial Medical Center,High,United Memorial Bank Street; United Memorial North Street,
+Healthix,BIPD,Mount Sinai Beth Israel,Medium,Mount Sinai Beth Israel; Mount Sinai Behavioral Health,BIPD expansion not independently verified
+Healthix,CAL,Calvary Hospital,High,Calvary Hospital (2 records),
+Healthix,GC,Glen Cove Hospital (Northwell Health),High,Glen Cove Hospital; Glen Head STARS Program,
+Healthix,GCV,Glen Cove Hospital (Northwell Health),High,Glen Cove Hospital; Glen Head STARS Program,
+Healthix,LIJ,Long Island Jewish Medical Center (Northwell Health),High,Long Island Jewish Medical Center and 13 satellite locations,
+Healthix,LIJMC,Long Island Jewish Medical Center (Northwell Health),High,Long Island Jewish Medical Center and 13 satellite locations,
+Healthix,LXHH,Lenox Hill Hospital (Northwell Health),High,Lenox Hill Hospital; Northwell Greenwich Village,
+Healthix,MSKCC,Memorial Sloan Kettering Cancer Center,High,Koch Center; Memorial Hospital for Cancer,
+Healthix,MSSN,Mount Sinai South Nassau,High,Mount Sinai South Nassau; South Nassau ED,
+Healthix,NHSUH,North Shore University Hospital (Northwell Health),High,North Shore University Hospital and imaging centers,
+Healthix,NSUH,North Shore University Hospital (Northwell Health),High,North Shore University Hospital and imaging centers,
+Healthix,NYUTISCH,NYU Langone Health,Medium,NYU Langone Steinberg; NYU Langone Hospitals,Exact site indicated by TISCH portion may be Tisch Hospital
+Healthix,OBHS,One Brooklyn Health System,High,Brookdale; Interfaith; Kingsbrook Jewish,
+Healthix,SIUH,Staten Island University Hospital (Northwell Health),High,Staten Island University North; Prince's Bay,
+Healthix,SNCH,Mount Sinai South Nassau,High,Mount Sinai South Nassau; South Nassau ED,
+Healthix,WHMC,Wyckoff Heights Medical Center,High,Wyckoff Heights and 4 extension clinics,
+Hixny,ADIRMED,Adirondack Health / Adirondack Medical Center,High,Adirondack Medical Lake Placid; Saranac Lake,
+Hixny,AMHSAMCH,Albany Medical Center Hospital (Albany Med Health System),High,Albany Medical Center South; Albany Medical Center Hospital,
+Hixny,ELLS,Ellis Medicine,High,Ellis Hospital; Ellis Bellevue Women's Care,
+Hixny,MIB,Bassett Healthcare Network,Medium,Fox Memorial; Tri-Town; Cobleskill; Little Falls; Bassett; O'Connor,MIB abbreviation itself not verified
+Hixny,STPL,St. Peter's Health Partners,High,Samaritan Hospital; St. Peter's SPARC,
+Rochester RHIO,AOMC,Arnot Ogden Medical Center / Arnot Health,High,Arnot Ogden; St. Josephs,
+Rochester RHIO,FLH,Finger Lakes Health,High,Geneva General; Soldiers & Sailors,
+Rochester RHIO,RGHS,Rochester Regional Health System,High,Rochester Regional Health (10 facilities),
+Rochester RHIO,SMH,Strong Memorial Hospital / University of Rochester Medical Center,High,Strong Memorial; URMC Strong West,

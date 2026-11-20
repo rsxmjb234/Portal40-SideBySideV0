@@ -1,0 +1,1351 @@
+{
+  "scanned_bytes": 50724028402,
+  "scanned_gb": 47.2404,
+  "row_count": 168,
+  "rows": [
+    {
+      "date": "2026-10-18",
+      "qe": "bronx",
+      "ccd_in_pdr": "10205",
+      "trn_in_pdr": "18444",
+      "lab_in_pdr": "24809",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-18",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "46065",
+      "trn_in_pdr": "46842",
+      "lab_in_pdr": "88578",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-18",
+      "qe": "healthix",
+      "ccd_in_pdr": "84902",
+      "trn_in_pdr": "58511",
+      "lab_in_pdr": "117510",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-18",
+      "qe": "hixny",
+      "ccd_in_pdr": "36713",
+      "trn_in_pdr": "2978",
+      "lab_in_pdr": "25058",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-18",
+      "qe": "rochester",
+      "ccd_in_pdr": "15922",
+      "trn_in_pdr": "7556",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-18",
+      "qe": "techbd",
+      "ccd_in_pdr": "12672",
+      "trn_in_pdr": "12970",
+      "lab_in_pdr": "35192",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-19",
+      "qe": "bronx",
+      "ccd_in_pdr": "18245",
+      "trn_in_pdr": "52117",
+      "lab_in_pdr": "47207",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-19",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "169144",
+      "trn_in_pdr": "130988",
+      "lab_in_pdr": "188743",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-19",
+      "qe": "healthix",
+      "ccd_in_pdr": "265051",
+      "trn_in_pdr": "167602",
+      "lab_in_pdr": "213882",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-19",
+      "qe": "hixny",
+      "ccd_in_pdr": "100937",
+      "trn_in_pdr": "3133",
+      "lab_in_pdr": "48914",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-19",
+      "qe": "rochester",
+      "ccd_in_pdr": "45507",
+      "trn_in_pdr": "23779",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-19",
+      "qe": "techbd",
+      "ccd_in_pdr": "39750",
+      "trn_in_pdr": "38844",
+      "lab_in_pdr": "65785",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-20",
+      "qe": "bronx",
+      "ccd_in_pdr": "34033",
+      "trn_in_pdr": "52076",
+      "lab_in_pdr": "50832",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-20",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "186065",
+      "trn_in_pdr": "131911",
+      "lab_in_pdr": "208827",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-20",
+      "qe": "healthix",
+      "ccd_in_pdr": "351211",
+      "trn_in_pdr": "170432",
+      "lab_in_pdr": "240148",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-20",
+      "qe": "hixny",
+      "ccd_in_pdr": "131982",
+      "trn_in_pdr": "4347",
+      "lab_in_pdr": "68412",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-20",
+      "qe": "rochester",
+      "ccd_in_pdr": "58020",
+      "trn_in_pdr": "25050",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-20",
+      "qe": "techbd",
+      "ccd_in_pdr": "45124",
+      "trn_in_pdr": "38996",
+      "lab_in_pdr": "79848",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-21",
+      "qe": "bronx",
+      "ccd_in_pdr": "32242",
+      "trn_in_pdr": "51780",
+      "lab_in_pdr": "50915",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-21",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "182112",
+      "trn_in_pdr": "130213",
+      "lab_in_pdr": "210538",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-21",
+      "qe": "healthix",
+      "ccd_in_pdr": "297006",
+      "trn_in_pdr": "166427",
+      "lab_in_pdr": "246505",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-21",
+      "qe": "hixny",
+      "ccd_in_pdr": "128926",
+      "trn_in_pdr": "3920",
+      "lab_in_pdr": "57481",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-21",
+      "qe": "rochester",
+      "ccd_in_pdr": "55537",
+      "trn_in_pdr": "21005",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-21",
+      "qe": "techbd",
+      "ccd_in_pdr": "45670",
+      "trn_in_pdr": "37104",
+      "lab_in_pdr": "80569",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-22",
+      "qe": "bronx",
+      "ccd_in_pdr": "29496",
+      "trn_in_pdr": "48915",
+      "lab_in_pdr": "50154",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-22",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "183263",
+      "trn_in_pdr": "127484",
+      "lab_in_pdr": "212230",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-22",
+      "qe": "healthix",
+      "ccd_in_pdr": "324738",
+      "trn_in_pdr": "163216",
+      "lab_in_pdr": "251866",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-22",
+      "qe": "hixny",
+      "ccd_in_pdr": "108422",
+      "trn_in_pdr": "4164",
+      "lab_in_pdr": "57431",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-22",
+      "qe": "rochester",
+      "ccd_in_pdr": "33601",
+      "trn_in_pdr": "23913",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-22",
+      "qe": "techbd",
+      "ccd_in_pdr": "62469",
+      "trn_in_pdr": "37959",
+      "lab_in_pdr": "79311",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-23",
+      "qe": "bronx",
+      "ccd_in_pdr": "30016",
+      "trn_in_pdr": "47411",
+      "lab_in_pdr": "48177",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-23",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "165114",
+      "trn_in_pdr": "117546",
+      "lab_in_pdr": "199922",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-23",
+      "qe": "healthix",
+      "ccd_in_pdr": "264248",
+      "trn_in_pdr": "148120",
+      "lab_in_pdr": "237215",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-23",
+      "qe": "hixny",
+      "ccd_in_pdr": "103779",
+      "trn_in_pdr": "3884",
+      "lab_in_pdr": "54443",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-23",
+      "qe": "rochester",
+      "ccd_in_pdr": "71671",
+      "trn_in_pdr": "21910",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-23",
+      "qe": "techbd",
+      "ccd_in_pdr": "43206",
+      "trn_in_pdr": "33940",
+      "lab_in_pdr": "79769",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-24",
+      "qe": "bronx",
+      "ccd_in_pdr": "21429",
+      "trn_in_pdr": "18345",
+      "lab_in_pdr": "27946",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-24",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "65978",
+      "trn_in_pdr": "46901",
+      "lab_in_pdr": "110199",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-24",
+      "qe": "healthix",
+      "ccd_in_pdr": "118808",
+      "trn_in_pdr": "61002",
+      "lab_in_pdr": "154450",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-24",
+      "qe": "hixny",
+      "ccd_in_pdr": "50697",
+      "trn_in_pdr": "3298",
+      "lab_in_pdr": "30135",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-24",
+      "qe": "rochester",
+      "ccd_in_pdr": "30307",
+      "trn_in_pdr": "7797",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-24",
+      "qe": "techbd",
+      "ccd_in_pdr": "20633",
+      "trn_in_pdr": "17698",
+      "lab_in_pdr": "49932",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-25",
+      "qe": "bronx",
+      "ccd_in_pdr": "11303",
+      "trn_in_pdr": "18000",
+      "lab_in_pdr": "23911",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-25",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "47437",
+      "trn_in_pdr": "48170",
+      "lab_in_pdr": "94294",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-25",
+      "qe": "healthix",
+      "ccd_in_pdr": "81576",
+      "trn_in_pdr": "59982",
+      "lab_in_pdr": "115544",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-25",
+      "qe": "hixny",
+      "ccd_in_pdr": "33277",
+      "trn_in_pdr": "3083",
+      "lab_in_pdr": "24122",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-25",
+      "qe": "rochester",
+      "ccd_in_pdr": "16655",
+      "trn_in_pdr": "7932",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-25",
+      "qe": "techbd",
+      "ccd_in_pdr": "12779",
+      "trn_in_pdr": "14753",
+      "lab_in_pdr": "34342",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-26",
+      "qe": "bronx",
+      "ccd_in_pdr": "19585",
+      "trn_in_pdr": "49427",
+      "lab_in_pdr": "48056",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-26",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "168733",
+      "trn_in_pdr": "133527",
+      "lab_in_pdr": "195574",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-26",
+      "qe": "healthix",
+      "ccd_in_pdr": "267064",
+      "trn_in_pdr": "169464",
+      "lab_in_pdr": "214909",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-26",
+      "qe": "hixny",
+      "ccd_in_pdr": "135895",
+      "trn_in_pdr": "2898",
+      "lab_in_pdr": "47222",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-26",
+      "qe": "rochester",
+      "ccd_in_pdr": "46243",
+      "trn_in_pdr": "23208",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-26",
+      "qe": "techbd",
+      "ccd_in_pdr": "42079",
+      "trn_in_pdr": "51445",
+      "lab_in_pdr": "66297",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-27",
+      "qe": "bronx",
+      "ccd_in_pdr": "31462",
+      "trn_in_pdr": "56569",
+      "lab_in_pdr": "52115",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-27",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "190436",
+      "trn_in_pdr": "133432",
+      "lab_in_pdr": "208321",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-27",
+      "qe": "healthix",
+      "ccd_in_pdr": "333870",
+      "trn_in_pdr": "169776",
+      "lab_in_pdr": "245819",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-27",
+      "qe": "hixny",
+      "ccd_in_pdr": "146423",
+      "trn_in_pdr": "4652",
+      "lab_in_pdr": "68332",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-27",
+      "qe": "rochester",
+      "ccd_in_pdr": "56141",
+      "trn_in_pdr": "25302",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-27",
+      "qe": "techbd",
+      "ccd_in_pdr": "44569",
+      "trn_in_pdr": "45973",
+      "lab_in_pdr": "77231",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-28",
+      "qe": "bronx",
+      "ccd_in_pdr": "31414",
+      "trn_in_pdr": "52395",
+      "lab_in_pdr": "51500",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-28",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "188832",
+      "trn_in_pdr": "130454",
+      "lab_in_pdr": "208672",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-28",
+      "qe": "healthix",
+      "ccd_in_pdr": "319532",
+      "trn_in_pdr": "166467",
+      "lab_in_pdr": "251014",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-28",
+      "qe": "hixny",
+      "ccd_in_pdr": "136903",
+      "trn_in_pdr": "3701",
+      "lab_in_pdr": "56334",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-28",
+      "qe": "rochester",
+      "ccd_in_pdr": "55928",
+      "trn_in_pdr": "23332",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-28",
+      "qe": "techbd",
+      "ccd_in_pdr": "42804",
+      "trn_in_pdr": "43307",
+      "lab_in_pdr": "79331",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-29",
+      "qe": "bronx",
+      "ccd_in_pdr": "29069",
+      "trn_in_pdr": "50633",
+      "lab_in_pdr": "51330",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-29",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "183991",
+      "trn_in_pdr": "127861",
+      "lab_in_pdr": "205520",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-29",
+      "qe": "healthix",
+      "ccd_in_pdr": "323756",
+      "trn_in_pdr": "164736",
+      "lab_in_pdr": "247137",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-29",
+      "qe": "hixny",
+      "ccd_in_pdr": "133028",
+      "trn_in_pdr": "3642",
+      "lab_in_pdr": "57184",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-29",
+      "qe": "rochester",
+      "ccd_in_pdr": "52961",
+      "trn_in_pdr": "23501",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-29",
+      "qe": "techbd",
+      "ccd_in_pdr": "44410",
+      "trn_in_pdr": "43606",
+      "lab_in_pdr": "79820",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-30",
+      "qe": "bronx",
+      "ccd_in_pdr": "29678",
+      "trn_in_pdr": "46501",
+      "lab_in_pdr": "48137",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-30",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "165892",
+      "trn_in_pdr": "115701",
+      "lab_in_pdr": "196600",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-30",
+      "qe": "healthix",
+      "ccd_in_pdr": "277823",
+      "trn_in_pdr": "148837",
+      "lab_in_pdr": "242661",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-30",
+      "qe": "hixny",
+      "ccd_in_pdr": "128914",
+      "trn_in_pdr": "3975",
+      "lab_in_pdr": "56212",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-30",
+      "qe": "rochester",
+      "ccd_in_pdr": "49391",
+      "trn_in_pdr": "21678",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-30",
+      "qe": "techbd",
+      "ccd_in_pdr": "41021",
+      "trn_in_pdr": "39162",
+      "lab_in_pdr": "75187",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-31",
+      "qe": "bronx",
+      "ccd_in_pdr": "16352",
+      "trn_in_pdr": "18449",
+      "lab_in_pdr": "27588",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-31",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "67816",
+      "trn_in_pdr": "45732",
+      "lab_in_pdr": "114231",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-31",
+      "qe": "healthix",
+      "ccd_in_pdr": "117369",
+      "trn_in_pdr": "61228",
+      "lab_in_pdr": "151939",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-31",
+      "qe": "hixny",
+      "ccd_in_pdr": "67163",
+      "trn_in_pdr": "2921",
+      "lab_in_pdr": "28749",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-31",
+      "qe": "rochester",
+      "ccd_in_pdr": "23861",
+      "trn_in_pdr": "6608",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-10-31",
+      "qe": "techbd",
+      "ccd_in_pdr": "20735",
+      "trn_in_pdr": "18078",
+      "lab_in_pdr": "48096",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-01",
+      "qe": "bronx",
+      "ccd_in_pdr": "13867",
+      "trn_in_pdr": "17712",
+      "lab_in_pdr": "23636",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-01",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "50891",
+      "trn_in_pdr": "48027",
+      "lab_in_pdr": "89697",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-01",
+      "qe": "healthix",
+      "ccd_in_pdr": "88992",
+      "trn_in_pdr": "60612",
+      "lab_in_pdr": "121185",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-01",
+      "qe": "hixny",
+      "ccd_in_pdr": "39705",
+      "trn_in_pdr": "3030",
+      "lab_in_pdr": "24182",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-01",
+      "qe": "rochester",
+      "ccd_in_pdr": "16838",
+      "trn_in_pdr": "8843",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-01",
+      "qe": "techbd",
+      "ccd_in_pdr": "12719",
+      "trn_in_pdr": "16074",
+      "lab_in_pdr": "32857",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-02",
+      "qe": "bronx",
+      "ccd_in_pdr": "22225",
+      "trn_in_pdr": "51998",
+      "lab_in_pdr": "45986",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-02",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "174124",
+      "trn_in_pdr": "130268",
+      "lab_in_pdr": "194209",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-02",
+      "qe": "healthix",
+      "ccd_in_pdr": "265423",
+      "trn_in_pdr": "167499",
+      "lab_in_pdr": "212253",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-02",
+      "qe": "hixny",
+      "ccd_in_pdr": "103253",
+      "trn_in_pdr": "3730",
+      "lab_in_pdr": "53615",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-02",
+      "qe": "rochester",
+      "ccd_in_pdr": "49500",
+      "trn_in_pdr": "24813",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-02",
+      "qe": "techbd",
+      "ccd_in_pdr": "38236",
+      "trn_in_pdr": "50581",
+      "lab_in_pdr": "66553",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-03",
+      "qe": "bronx",
+      "ccd_in_pdr": "33808",
+      "trn_in_pdr": "52831",
+      "lab_in_pdr": "52202",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-03",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "185351",
+      "trn_in_pdr": "134537",
+      "lab_in_pdr": "211357",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-03",
+      "qe": "healthix",
+      "ccd_in_pdr": "313960",
+      "trn_in_pdr": "131676",
+      "lab_in_pdr": "226958",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-03",
+      "qe": "hixny",
+      "ccd_in_pdr": "30236",
+      "trn_in_pdr": "4493",
+      "lab_in_pdr": "64332",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-03",
+      "qe": "rochester",
+      "ccd_in_pdr": "53825",
+      "trn_in_pdr": "26210",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-03",
+      "qe": "techbd",
+      "ccd_in_pdr": "45302",
+      "trn_in_pdr": "45455",
+      "lab_in_pdr": "79512",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-04",
+      "qe": "bronx",
+      "ccd_in_pdr": "33180",
+      "trn_in_pdr": "51798",
+      "lab_in_pdr": "53705",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-04",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "181148",
+      "trn_in_pdr": "128982",
+      "lab_in_pdr": "216427",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-04",
+      "qe": "healthix",
+      "ccd_in_pdr": "335985",
+      "trn_in_pdr": "169501",
+      "lab_in_pdr": "249611",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-04",
+      "qe": "hixny",
+      "ccd_in_pdr": "196710",
+      "trn_in_pdr": "3337",
+      "lab_in_pdr": "56342",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-04",
+      "qe": "rochester",
+      "ccd_in_pdr": "50511",
+      "trn_in_pdr": "24203",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-04",
+      "qe": "techbd",
+      "ccd_in_pdr": "44101",
+      "trn_in_pdr": "45616",
+      "lab_in_pdr": "81140",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-05",
+      "qe": "bronx",
+      "ccd_in_pdr": "30836",
+      "trn_in_pdr": "51079",
+      "lab_in_pdr": "54273",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-05",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "185821",
+      "trn_in_pdr": "132397",
+      "lab_in_pdr": "214777",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-05",
+      "qe": "healthix",
+      "ccd_in_pdr": "329562",
+      "trn_in_pdr": "167897",
+      "lab_in_pdr": "254197",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-05",
+      "qe": "hixny",
+      "ccd_in_pdr": "152145",
+      "trn_in_pdr": "4195",
+      "lab_in_pdr": "61290",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-05",
+      "qe": "rochester",
+      "ccd_in_pdr": "48851",
+      "trn_in_pdr": "100504",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-05",
+      "qe": "techbd",
+      "ccd_in_pdr": "44141",
+      "trn_in_pdr": "44800",
+      "lab_in_pdr": "79974",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-06",
+      "qe": "bronx",
+      "ccd_in_pdr": "32368",
+      "trn_in_pdr": "46232",
+      "lab_in_pdr": "50345",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-06",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "173500",
+      "trn_in_pdr": "110283",
+      "lab_in_pdr": "188203",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-06",
+      "qe": "healthix",
+      "ccd_in_pdr": "268790",
+      "trn_in_pdr": "151533",
+      "lab_in_pdr": "242688",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-06",
+      "qe": "hixny",
+      "ccd_in_pdr": "124789",
+      "trn_in_pdr": "3778",
+      "lab_in_pdr": "56398",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-06",
+      "qe": "rochester",
+      "ccd_in_pdr": "45770",
+      "trn_in_pdr": "22171",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-06",
+      "qe": "techbd",
+      "ccd_in_pdr": "39550",
+      "trn_in_pdr": "40300",
+      "lab_in_pdr": "79394",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-07",
+      "qe": "bronx",
+      "ccd_in_pdr": "22085",
+      "trn_in_pdr": "18820",
+      "lab_in_pdr": "28816",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-07",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "74547",
+      "trn_in_pdr": "56556",
+      "lab_in_pdr": "143033",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-07",
+      "qe": "healthix",
+      "ccd_in_pdr": "124378",
+      "trn_in_pdr": "63029",
+      "lab_in_pdr": "153757",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-07",
+      "qe": "hixny",
+      "ccd_in_pdr": "46192",
+      "trn_in_pdr": "3212",
+      "lab_in_pdr": "30414",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-07",
+      "qe": "rochester",
+      "ccd_in_pdr": "22681",
+      "trn_in_pdr": "8251",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-07",
+      "qe": "techbd",
+      "ccd_in_pdr": "19157",
+      "trn_in_pdr": "18941",
+      "lab_in_pdr": "52993",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-08",
+      "qe": "bronx",
+      "ccd_in_pdr": "99160",
+      "trn_in_pdr": "18073",
+      "lab_in_pdr": "24718",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-08",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "57270",
+      "trn_in_pdr": "48388",
+      "lab_in_pdr": "91545",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-08",
+      "qe": "healthix",
+      "ccd_in_pdr": "81611",
+      "trn_in_pdr": "61418",
+      "lab_in_pdr": "122210",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-08",
+      "qe": "hixny",
+      "ccd_in_pdr": "50578",
+      "trn_in_pdr": "2899",
+      "lab_in_pdr": "25913",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-08",
+      "qe": "rochester",
+      "ccd_in_pdr": "14325",
+      "trn_in_pdr": "8345",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-08",
+      "qe": "techbd",
+      "ccd_in_pdr": "12779",
+      "trn_in_pdr": "15700",
+      "lab_in_pdr": "34432",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-09",
+      "qe": "bronx",
+      "ccd_in_pdr": "49077",
+      "trn_in_pdr": "56652",
+      "lab_in_pdr": "47777",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-09",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "174988",
+      "trn_in_pdr": "133813",
+      "lab_in_pdr": "197333",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-09",
+      "qe": "healthix",
+      "ccd_in_pdr": "263682",
+      "trn_in_pdr": "169058",
+      "lab_in_pdr": "214051",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-09",
+      "qe": "hixny",
+      "ccd_in_pdr": "115943",
+      "trn_in_pdr": "3728",
+      "lab_in_pdr": "54443",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-09",
+      "qe": "rochester",
+      "ccd_in_pdr": "38361",
+      "trn_in_pdr": "25173",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-09",
+      "qe": "techbd",
+      "ccd_in_pdr": "39419",
+      "trn_in_pdr": "47266",
+      "lab_in_pdr": "65017",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-10",
+      "qe": "bronx",
+      "ccd_in_pdr": "34764",
+      "trn_in_pdr": "60056",
+      "lab_in_pdr": "52065",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-10",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "196430",
+      "trn_in_pdr": "136170",
+      "lab_in_pdr": "214464",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-10",
+      "qe": "healthix",
+      "ccd_in_pdr": "306290",
+      "trn_in_pdr": "175960",
+      "lab_in_pdr": "247535",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-10",
+      "qe": "hixny",
+      "ccd_in_pdr": "149033",
+      "trn_in_pdr": "3904",
+      "lab_in_pdr": "55621",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-10",
+      "qe": "rochester",
+      "ccd_in_pdr": "51400",
+      "trn_in_pdr": "26647",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-10",
+      "qe": "techbd",
+      "ccd_in_pdr": "43175",
+      "trn_in_pdr": "46684",
+      "lab_in_pdr": "79802",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-11",
+      "qe": "bronx",
+      "ccd_in_pdr": "33890",
+      "trn_in_pdr": "57519",
+      "lab_in_pdr": "51591",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-11",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "178486",
+      "trn_in_pdr": "129132",
+      "lab_in_pdr": "213966",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-11",
+      "qe": "healthix",
+      "ccd_in_pdr": "327677",
+      "trn_in_pdr": "126082",
+      "lab_in_pdr": "228765",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-11",
+      "qe": "hixny",
+      "ccd_in_pdr": "12867",
+      "trn_in_pdr": "24",
+      "lab_in_pdr": "4527",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-11",
+      "qe": "rochester",
+      "ccd_in_pdr": "41041",
+      "trn_in_pdr": "24543",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-11",
+      "qe": "techbd",
+      "ccd_in_pdr": "43885",
+      "trn_in_pdr": "43192",
+      "lab_in_pdr": "79717",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-12",
+      "qe": "bronx",
+      "ccd_in_pdr": "29330",
+      "trn_in_pdr": "56815",
+      "lab_in_pdr": "48412",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-12",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "182615",
+      "trn_in_pdr": "130092",
+      "lab_in_pdr": "213099",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-12",
+      "qe": "healthix",
+      "ccd_in_pdr": "294514",
+      "trn_in_pdr": "166219",
+      "lab_in_pdr": "241781",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-12",
+      "qe": "hixny",
+      "ccd_in_pdr": "15789",
+      "trn_in_pdr": "12",
+      "lab_in_pdr": "4339",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-12",
+      "qe": "rochester",
+      "ccd_in_pdr": "34269",
+      "trn_in_pdr": "62840",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-12",
+      "qe": "techbd",
+      "ccd_in_pdr": "45177",
+      "trn_in_pdr": "44634",
+      "lab_in_pdr": "77199",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-13",
+      "qe": "bronx",
+      "ccd_in_pdr": "33857",
+      "trn_in_pdr": "52916",
+      "lab_in_pdr": "48548",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-13",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "182673",
+      "trn_in_pdr": "116394",
+      "lab_in_pdr": "198791",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-13",
+      "qe": "healthix",
+      "ccd_in_pdr": "306958",
+      "trn_in_pdr": "147423",
+      "lab_in_pdr": "233573",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-13",
+      "qe": "hixny",
+      "ccd_in_pdr": "13196",
+      "trn_in_pdr": "17",
+      "lab_in_pdr": "4058",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-13",
+      "qe": "rochester",
+      "ccd_in_pdr": "47384",
+      "trn_in_pdr": "22671",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-13",
+      "qe": "techbd",
+      "ccd_in_pdr": "39376",
+      "trn_in_pdr": "40677",
+      "lab_in_pdr": "73862",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-14",
+      "qe": "bronx",
+      "ccd_in_pdr": "19510",
+      "trn_in_pdr": "18436",
+      "lab_in_pdr": "24909",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-14",
+      "qe": "healtheconnections",
+      "ccd_in_pdr": "55512",
+      "trn_in_pdr": "44388",
+      "lab_in_pdr": "111317",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-14",
+      "qe": "healthix",
+      "ccd_in_pdr": "121411",
+      "trn_in_pdr": "58195",
+      "lab_in_pdr": "143016",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-14",
+      "qe": "hixny",
+      "ccd_in_pdr": "4406",
+      "trn_in_pdr": "13",
+      "lab_in_pdr": "2004",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-14",
+      "qe": "rochester",
+      "ccd_in_pdr": "33166",
+      "trn_in_pdr": "8227",
+      "lab_in_pdr": "0",
+      "adt_in_pdr": "0"
+    },
+    {
+      "date": "2026-11-14",
+      "qe": "techbd",
+      "ccd_in_pdr": "16652",
+      "trn_in_pdr": "15947",
+      "lab_in_pdr": "44804",
+      "adt_in_pdr": "0"
+    }
+  ]
+}
