@@ -143,7 +143,8 @@ for entry in lookup:
     # Chain name from lookup
     chain = chain_map.get((qe, primary_aa), '')
 
-    rows.append([qe, hospital, primary_aa, ccd_count, trn_count, lab_count, adt_count, fid, chain])
+    rows.append([qe, hospital, primary_aa, ccd_count, trn_count, lab_count, adt_count, fid, chain,
+                    ccd_aa, trn_aa, lab_aa, adt_aa])
 
 # Sort and compute QE totals
 tot = defaultdict(int)

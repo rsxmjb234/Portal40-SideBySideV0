@@ -169,6 +169,8 @@ EXTRA_CSS = """
   .qe-tab.active { color:#fff; }
   .hosp-badge { display:inline-block; background:#ecfdf5; color:#059669; font-size:12px;
     font-weight:700; padding:3px 10px; border-radius:999px; margin-bottom:12px; }
+  .hosp-badge.warn {{ background:#fef3c7; color:#b45309; }}
+  .hosp-badge.miss {{ background:#fee2e2; color:#dc2626; }}
   .hosp-wrap { overflow-x:auto; max-height:460px; overflow-y:auto;
     border:1px solid var(--line); border-radius:8px; }
   .hosp-tbl { width:100%; border-collapse:collapse; font-size:12.5px; }
@@ -207,6 +209,12 @@ EXTRA_CSS = """
   .hosp-tbl td.bar-cell .bar-bg { position:absolute; left:0; top:3px; bottom:3px;
     background:#e0f2fe; border-radius:2px; z-index:0; }
   .hosp-tbl td.bar-cell span { position:relative; z-index:1; }
+  /* data presence colors */
+  .hosp-tbl td.no-data { color:#d1d5db; }
+  .hosp-tbl td.aa-pill { font-family:ui-monospace,monospace; font-size:9px;
+    color:#98a2b3; text-align:center; padding:2px 4px; letter-spacing:-.2px; }
+  .hosp-tbl td.aa-pill.active { color:#065f46; background:#ecfdf5; border-radius:3px; }
+  .hosp-tbl td.aa-pill.miss { color:#9ca3af; background:#f9fafb; border-radius:3px; }
 
   /* expand to fullscreen */
   .expand-btn { position:absolute; top:16px; right:16px; width:30px; height:30px;
@@ -259,7 +267,7 @@ VOLUME_SECTION = """
         <div class="hosp-wrap">
           <table class="hosp-tbl">
             <thead><tr>
-              <th>Hospital</th><th>AA&nbsp;Code</th>
+              <th>Hospital</th>
               <th class="r">CCD</th><th class="r">TRN</th><th class="r">LAB</th><th class="r">ADT</th><th class="r">Total</th>
             </tr></thead>
             <tbody id="hosp-tbody"></tbody>
@@ -401,15 +409,31 @@ REPORT2_SCRIPT = """
       return n.toLocaleString();
     }
 
+    function countCell(val, aa) {
+      var cls = val <= 0 ? 'r no-data' : 'r';
+      var txt = fmtC(val);
+      var clr = val > 0 ? '#98a2b3' : '#d1d5db';
+      if (aa) txt += '<br><span style="font-family:ui-monospace,monospace;font-size:9px;color:' + clr + '">' + aa + '</span>';
+      return '<td class="' + cls + '">' + txt + '</td>';
+    }
+
+    function badgeCls(count, total) {
+      var p = total > 0 ? count / total * 100 : 0;
+      if (p >= 70) return 'hosp-badge';
+      if (p >= 30) return 'hosp-badge warn';
+      return 'hosp-badge miss';
+    }
+
     function render(qe) {
       var rows = HOSP.rows.filter(function(r) { return r[0] === qe; });
 
-      // Group by AA code, preserving SQL order (total DESC, aa ASC, org ASC)
+      // Group by primary AA, preserving SQL order (total DESC, aa ASC, org ASC)
       var seen = {}, groups = [];
       rows.forEach(function(r) {
         var aa = r[2];
         if (!seen[aa]) {
-          seen[aa] = { aa: aa, ccd: r[3], trn: r[4], lab: r[5], adt: r[6], chain: r[8] || '', items: [] };
+          seen[aa] = { aa: aa, ccd: r[3], trn: r[4], lab: r[5], adt: r[6], chain: r[8] || '',
+                       ccd_aa: r[9]||'', trn_aa: r[10]||'', lab_aa: r[11]||'', adt_aa: r[12]||'', items: [] };
           groups.push(seen[aa]);
         }
         seen[aa].items.push({ name: r[1], fid: r[7] || '' });
@@ -429,44 +453,42 @@ REPORT2_SCRIPT = """
       var adtN = groups.filter(function(g) { return g.adt > 0; }).length;
       function pct(v) { return n > 0 ? Math.round(v / n * 100) + '%' : '0%'; }
       document.getElementById('hosp-badge').innerHTML =
-        '<span class="hosp-badge">CCD: ' + ccdN + '/' + n + ' (' + pct(ccdN) + ')</span> ' +
-        '<span class="hosp-badge">TRN: ' + trnN + '/' + n + ' (' + pct(trnN) + ')</span> ' +
-        '<span class="hosp-badge">LAB: ' + labN + '/' + n + ' (' + pct(labN) + ')</span> ' +
-        '<span class="hosp-badge">ADT: ' + adtN + '/' + n + ' (' + pct(adtN) + ')</span>';
+        '<span class="' + badgeCls(ccdN, n) + '">CCD: ' + ccdN + '/' + n + ' (' + pct(ccdN) + ')</span> ' +
+        '<span class="' + badgeCls(trnN, n) + '">TRN: ' + trnN + '/' + n + ' (' + pct(trnN) + ')</span> ' +
+        '<span class="' + badgeCls(labN, n) + '">LAB: ' + labN + '/' + n + ' (' + pct(labN) + ')</span> ' +
+        '<span class="' + badgeCls(adtN, n) + '">ADT: ' + adtN + '/' + n + ' (' + pct(adtN) + ')</span>';
 
       var html = '';
       groups.forEach(function(g) {
         var tot = g.ccd + g.trn + g.lab + g.adt;
 
         if (g.items.length === 1) {
-          // Single hospital â€” clean flat row
+          // Single hospital — clean flat row
           var it = g.items[0];
           var pct = maxTot > 0 ? (tot / maxTot * 100).toFixed(1) : 0;
           html += '<tr>'
             + '<td class="hname">' + titleCase(it.name) + (it.fid ? '<span class="fid">#' + it.fid + '</span>' : '') + '</td>'
-            + '<td class="code">' + g.aa + '</td>'
-            + '<td class="r">' + fmtC(g.ccd) + '</td>'
-            + '<td class="r">' + fmtC(g.trn) + '</td>'
-            + '<td class="r">' + fmtC(g.lab) + '</td>'
-            + '<td class="r">' + fmtC(g.adt) + '</td>'
+            + countCell(g.ccd, g.ccd_aa)
+            + countCell(g.trn, g.trn_aa)
+            + countCell(g.lab, g.lab_aa)
+            + countCell(g.adt, g.adt_aa)
             + '<td class="r tot bar-cell"><div class="bar-bg" style="width:' + pct + '%"></div><span>' + fmt(tot) + '</span></td>'
             + '</tr>';
         } else {
-          // Multiple hospitals share this AA â€” group header + sub-rows
+          // Multiple hospitals share this AA — group header + sub-rows
           var pctG = maxTot > 0 ? (tot / maxTot * 100).toFixed(1) : 0;
           html += '<tr class="aa-grp">'
-            + '<td class="aa-head">' + (g.chain ? '<b>' + g.chain + '</b> ' : '') + '<span class="aa-count">' + g.items.length + ' hospitals</span></td>'
-            + '<td class="code"><span class="aa-label">' + g.aa + '</span></td>'
-            + '<td class="r">' + fmtC(g.ccd) + '</td>'
-            + '<td class="r">' + fmtC(g.trn) + '</td>'
-            + '<td class="r">' + fmtC(g.lab) + '</td>'
-            + '<td class="r">' + fmtC(g.adt) + '</td>'
+            + '<td class="aa-head">' + (g.chain ? '<b>' + g.chain + '</b> ' : '') + '<span class="aa-label">' + g.aa + '</span><span class="aa-count">' + g.items.length + ' hospitals</span></td>'
+            + countCell(g.ccd, g.ccd_aa)
+            + countCell(g.trn, g.trn_aa)
+            + countCell(g.lab, g.lab_aa)
+            + countCell(g.adt, g.adt_aa)
             + '<td class="r tot bar-cell"><div class="bar-bg" style="width:' + pctG + '%"></div><span>' + fmt(tot) + '</span></td>'
             + '</tr>';
-          g.items.forEach(function(it, idx) {
+          g.items.forEach(function(it) {
             html += '<tr class="aa-sub">'
               + '<td class="sub-name">' + titleCase(it.name) + (it.fid ? '<span class="fid">#' + it.fid + '</span>' : '') + '</td>'
-              + '<td colspan="6"></td>'
+              + '<td colspan="5"></td>'
               + '</tr>';
           });
         }
