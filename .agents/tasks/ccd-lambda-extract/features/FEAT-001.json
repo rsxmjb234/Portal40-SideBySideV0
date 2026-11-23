@@ -1,0 +1,25 @@
+{
+  "id": "FEAT-001",
+  "type": "feat",
+  "description": "Extract parsing logic from ccda_parse.py into a self-contained Lambda package under lambda/ccd_parser/. This creates two files: ccd_parser.py (the pure parsing module — verbatim copy of the parsing functions from ccda_parse.py with no external dependencies) and handler.py (the Lambda entry point that accepts CCD/ORU/TRN documents and returns structured JSON). FEAT-002 (deploy) and FEAT-003 (tests) depend on this.",
+  "status": "completed",
+  "steps": [
+    "1. Create lambda/ccd_parser/ccd_parser.py by copying ALL parsing functions from ccda_parse.py verbatim. Specifically copy: fmt_date, _med_more, _HL7_FLAG dict, parse_ccd, load_oru (the FHIR NDJSON version — keep for completeness but it won't be used by the Lambda handler), load_oru_hl7, _reconcile_oru, _dedup, _dedup_person, merge_by_person. Do NOT copy: med_extra, lab_extra, oru_extra, extra_attr (those are HTML rendering helpers, not parsing logic). The module must use only stdlib imports (os, glob, json, xml.etree.ElementTree, datetime, re). Add a top-level convenience function parse_documents(ccd_xmls: list[str], oru_hl7s: list[str] = None, trn_xmls: list[str] = None) -> dict that: (a) writes each string to a tempfile, (b) calls parse_ccd on each CCD and TRN tempfile, (c) calls load_oru_hl7 to attach ORU results, (d) calls merge_by_person, (e) returns the first merged patient dict (since all docs are for one person). This function is what the handler calls.",
+    "2. Create lambda/ccd_parser/handler.py as the Lambda entry point. The handler function lambda_handler(event, context) accepts an event with either: (a) 's3' key containing {'bucket': str, 'ccd_keys': [str], 'oru_keys': [str], 'trn_keys': [str]} — it fetches docs from S3 using boto3, or (b) 'documents' key containing {'ccds': [base64-encoded-str], 'orus': [base64-encoded-str], 'trns': [base64-encoded-str]} — inline content. It decodes/fetches the documents, calls ccd_parser.parse_documents(), and returns {'statusCode': 200, 'body': <the parsed JSON dict>}. On error, return {'statusCode': 500, 'body': {'error': str(e)}}. Import boto3 only inside the S3 branch (boto3 is available in Lambda runtime but not locally).",
+    "3. Create lambda/ccd_parser/__init__.py (empty) so the directory is a Python package — not strictly required for Lambda but useful for local test imports.",
+    "4. Verify the module imports cleanly by running: python -c \"import sys; sys.path.insert(0,'lambda/ccd_parser'); import ccd_parser; print('OK')\" from the repo root."
+  ],
+  "acceptance_criteria": [
+    "lambda/ccd_parser/ccd_parser.py exists and contains parse_ccd, load_oru_hl7, merge_by_person, _dedup_person, _reconcile_oru, fmt_date, parse_documents",
+    "lambda/ccd_parser/handler.py exists with lambda_handler that accepts both S3 and inline document modes",
+    "python -c \"import sys; sys.path.insert(0,'lambda/ccd_parser'); import ccd_parser; print(ccd_parser.parse_ccd.__doc__ or 'ok')\" runs without import errors",
+    "The parse_documents function in ccd_parser.py accepts XML strings (not file paths) and returns a dict matching the shape in developer-spec/04-pdr-data-model.md"
+  ],
+  "verification": [
+    "Run: python -c \"import sys; sys.path.insert(0,'lambda/ccd_parser'); import ccd_parser; print('ccd_parser OK')\" and confirm it prints 'ccd_parser OK' with no errors",
+    "Run: python -c \"import sys; sys.path.insert(0,'lambda/ccd_parser'); import handler; print('handler OK')\" and confirm it prints 'handler OK' with no errors (boto3 import is conditional, so this works locally)",
+    "Run a quick smoke test: python -c \"import sys,glob; sys.path.insert(0,'lambda/ccd_parser'); from ccd_parser import parse_ccd; p=parse_ccd(glob.glob('sample_patients/marcus_evans/bronx/ccda/*.xml')[0]); print(p['given'], p['family'], len(p['problems']), 'problems')\" and confirm it prints Marcus Evans with a problem count > 0"
+  ],
+  "blocked_reason": null,
+  "findings": "Lambda module created at lambda/ccd_parser/ with ccd_parser.py (all parsing functions + parse_documents), handler.py (Lambda entry point with S3 and inline modes), and __init__.py. All imports verified clean. Smoke test confirmed: parse_ccd returns Marcus Evans with 20 problems from bronx/ccda. parse_documents convenience function writes XML/HL7 strings to tempfiles, runs the full parse+merge pipeline, and cleans up. handler.py defers boto3 import to S3 branch only."
+}
