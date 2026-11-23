@@ -439,6 +439,16 @@ REPORT2_SCRIPT = """
         seen[aa].items.push({ name: r[1], fid: r[7] || '' });
       });
 
+      // For display: if a doc-type AA is empty, fall back to the best available AA
+      // (ADT is most common, then TRN, LAB, CCD)
+      groups.forEach(function(g) {
+        var fallback = g.adt_aa || g.trn_aa || g.lab_aa || g.ccd_aa || g.aa || '';
+        if (!g.ccd_aa) g.ccd_aa = fallback;
+        if (!g.trn_aa) g.trn_aa = fallback;
+        if (!g.lab_aa) g.lab_aa = fallback;
+        if (!g.adt_aa) g.adt_aa = fallback;
+      });
+
       // Sort groups: AA total DESC, then AA name ASC
       groups.sort(function(a, b) {
         var ta = a.ccd + a.trn + a.lab + a.adt, tb = b.ccd + b.trn + b.lab + b.adt;
