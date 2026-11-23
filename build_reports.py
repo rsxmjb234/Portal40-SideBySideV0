@@ -1,14 +1,21 @@
 """
-build_reports.py - regenerate the page data files from the latest Athena JSON.
-Run after re-executing a report SQL:
-  SQLExamples/reportonhospitals.json     -> hosp_data.js
-  SQLExamples/reportonnonhospitals.json  -> nonhosp_data.js
+build_reports.py — regenerate the page data files from Athena JSON + unified AA lookup.
+
+The unified lookup (lookups/UnifiedHospitalAALookup.csv) is the source of truth for
+which AA maps to which hospital for each document type. Each hospital can have a
+different AA for CCD, TRN, LAB, and ADT.
+
+For Hixny, the CCD_AA column already includes the DOC suffix (e.g., AMHSAMCHDOC),
+so no hardcoded stripping is needed.
+
+Run after refreshing the Athena JSON or the unified lookup:
+  python build_reports.py
 """
-import json
+import json, csv, os
 from collections import defaultdict
 
 
-def load(path):
+def load_json(path):
     with open(path) as f:
         return json.load(f)
 
@@ -22,15 +29,49 @@ def write_js(dest, var, payload, note):
     return len(js)
 
 
-# QEs excluded from the demo (no Marcus data for these)
+def load_unified_lookup(path='lookups/UnifiedHospitalAALookup.csv'):
+    """Load the unified hospital AA lookup.
+    Returns a list of dicts with: qe, hospital_name, nys_facility_id,
+    CCD_AA, TRN_AA, LAB_AA, ADT_AA.
+    """
+    rows = []
+    with open(path, encoding='utf-8-sig') as f:
+        for r in csv.DictReader(f):
+            rows.append(r)
+    return rows
+
+
+def build_aa_counts(raw_rows):
+    """Build a dict of (qe, aa) -> {ccd, trn, lab, adt} from the raw Athena data.
+    When the same (qe, aa) appears multiple times (multiple facilities sharing one AA),
+    we take the max count for each doc type since the SQL already aggregates at the AA level.
+    """
+    counts = {}
+    for r in raw_rows:
+        qe = r['qe_name']
+        aa = r['assigning_authority']
+        key = (qe, aa)
+        ccd = int(r['ccd_count'])
+        trn = int(r['trn_count'])
+        lab = int(r['lab_count'])
+        adt = int(r['adt_count'])
+        if key not in counts:
+            counts[key] = {'ccd': ccd, 'trn': trn, 'lab': lab, 'adt': adt}
+        else:
+            # Same AA, same QE — take the max (counts are per-AA, same across hospitals)
+            c = counts[key]
+            c['ccd'] = max(c['ccd'], ccd)
+            c['trn'] = max(c['trn'], trn)
+            c['lab'] = max(c['lab'], lab)
+            c['adt'] = max(c['adt'], adt)
+    return counts
+
+
+# QEs excluded from the demo
 EXCLUDE_QES = {'Rochester RHIO'}
 
-# ---------------- hospitals ----------------
-raw = load('SQLExamples/reportonhospitals.json')
-
 # Load chain/system names for multi-hospital AAs
-import csv
-chain_map = {}  # key = (qe, aa) -> system name
+chain_map = {}
 try:
     with open('ChainCheetSheetTemp.csv', encoding='utf-8-sig') as f:
         for row in csv.DictReader(f):
@@ -42,30 +83,97 @@ try:
 except FileNotFoundError:
     pass
 
-rows = [[r['qe_name'], r['organization_name'], r['assigning_authority'],
-         int(r['ccd_count']), int(r['trn_count']), int(r['lab_count']), int(r['adt_count']),
-         r.get('nys_facility_id', ''),
-         chain_map.get((r['qe_name'], r['assigning_authority']), '')]
-        for r in raw['rows']
-        if r['qe_name'] not in EXCLUDE_QES]
+
+# ============================================================
+# Hospitals — built from unified lookup + Athena counts
+# ============================================================
+print('--- Hospital Report ---')
+raw = load_json('SQLExamples/reportonhospitals.json')
+aa_counts = build_aa_counts(raw['rows'])
+lookup = load_unified_lookup()
+
+# Output rows: [qe, hospital_name, primary_aa, ccd, trn, lab, adt, facility_id, chain]
+# primary_aa = the AA used for grouping in the front end (first non-empty AA)
+rows = []
+unmatched_aas = set()
+
+for entry in lookup:
+    qe = entry['qe']
+    if qe in EXCLUDE_QES:
+        continue
+
+    hospital = entry['hospital_name']
+    fid = entry.get('nys_facility_id', '')
+    ccd_aa = entry.get('CCD_AA', '').strip()
+    trn_aa = entry.get('TRN_AA', '').strip()
+    lab_aa = entry.get('LAB_AA', '').strip()
+    adt_aa = entry.get('ADT_AA', '').strip()
+
+    # Look up counts from Athena for each AA
+    # For Hixny CCD, the lookup has the DOC suffix but Athena may have stripped it
+    ccd_count = 0
+    if ccd_aa:
+        c = aa_counts.get((qe, ccd_aa), {})
+        ccd_count = c.get('ccd', 0)
+        if ccd_count == 0 and ccd_aa.endswith('DOC'):
+            # Athena strips DOC suffix — try the base AA
+            c = aa_counts.get((qe, ccd_aa[:-3]), {})
+            ccd_count = c.get('ccd', 0)
+    trn_count = aa_counts.get((qe, trn_aa), {}).get('trn', 0) if trn_aa else 0
+    lab_count = aa_counts.get((qe, lab_aa), {}).get('lab', 0) if lab_aa else 0
+    adt_count = aa_counts.get((qe, adt_aa), {}).get('adt', 0) if adt_aa else 0
+
+    # Track unmatched AAs for diagnostics (but skip Hixny DOC CCDs — handled by fallback)
+    for aa, label in [(ccd_aa, 'CCD'), (trn_aa, 'TRN'), (lab_aa, 'LAB'), (adt_aa, 'ADT')]:
+        if aa and (qe, aa) not in aa_counts:
+            # Don't warn for Hixny DOC suffix — the fallback resolves these
+            if label == 'CCD' and aa.endswith('DOC') and (qe, aa[:-3]) in aa_counts:
+                continue
+            unmatched_aas.add((qe, aa, label))
+
+    # Skip rows with zero across all types
+    if ccd_count == 0 and trn_count == 0 and lab_count == 0 and adt_count == 0:
+        continue
+
+    # Primary AA for grouping: prefer the AA that carries the most data
+    aa_candidates = [(ccd_aa, ccd_count), (trn_aa, trn_count),
+                     (lab_aa, lab_count), (adt_aa, adt_count)]
+    primary_aa = max([a for a in aa_candidates if a[0]], key=lambda x: x[1], default=('', 0))[0]
+
+    # Chain name from lookup
+    chain = chain_map.get((qe, primary_aa), '')
+
+    rows.append([qe, hospital, primary_aa, ccd_count, trn_count, lab_count, adt_count, fid, chain])
+
+# Sort and compute QE totals
 tot = defaultdict(int)
 for r in rows:
     tot[r[0]] += r[3] + r[4] + r[5] + r[6]
 qes = sorted(tot, key=lambda q: -tot[q])
+
 n = write_js('hosp_data.js', 'HOSP',
              {'qes': qes, 'rows': rows,
               'meta': {'scanned_gb': raw['scanned_gb'], 'row_count': raw['row_count'],
-                       'source_sql': 'reportonhospitals.sql'}},
-             'Re-run build_reports.py after refreshing SQLExamples/reportonhospitals.json')
+                       'source_sql': 'reportonhospitals.sql',
+                       'lookup': 'lookups/UnifiedHospitalAALookup.csv'}},
+             'Re-run build_reports.py after refreshing Athena JSON or the unified lookup')
 print(f'Wrote hosp_data.js  ({n:,} chars, {len(qes)} QEs, {len(rows)} hospitals)')
 
-# ---------------- non-hospitals ----------------
+if unmatched_aas:
+    print(f'\n  Warning: {len(unmatched_aas)} AAs in the unified lookup had no Athena data:')
+    for qe, aa, label in sorted(unmatched_aas):
+        print(f'    {qe} / {aa} ({label})')
+
+
+# ============================================================
+# Non-hospitals — unchanged (from SQL, not lookup)
+# ============================================================
+print('\n--- Non-Hospital Report ---')
 QE_LABEL = {
     'healthix': 'Healthix', 'healtheconnections': 'HealtheConnections', 'hixny': 'Hixny',
     'rochester': 'Rochester RHIO', 'healthelink': 'HEALTHeLINK', 'bronx': 'Bronx RHIO',
 }
-raw = load('SQLExamples/reportonnonhospitals.json')
-# [qe, name, aa, type, in_sfdc(1/0), sfdc_org_count, ccd, trn, lab, adt]
+raw = load_json('SQLExamples/reportonnonhospitals.json')
 rows = [[QE_LABEL.get(r['qe'], r['qe']), r['organization_name'], r['assigning_authority'],
          r['organization_type'], 1 if r['sfdc_status'] == 'In SFDC' else 0,
          int(r['sfdc_org_count']), int(r['ccd_count']), int(r['trn_count']),
@@ -83,13 +191,16 @@ n = write_js('nonhosp_data.js', 'NONHOSP',
              'Re-run build_reports.py after refreshing SQLExamples/reportonnonhospitals.json')
 print(f'Wrote nonhosp_data.js ({n:,} chars, {len(qes)} QEs, {len(rows)} sources)')
 
-# ---------------- ADT (from lookup_adt_counts snapshot) ----------------
+
+# ============================================================
+# ADT — unchanged (from SQL, not lookup)
+# ============================================================
+print('\n--- ADT Report ---')
 QE_LABEL_ADT = {
     'healthix': 'Healthix', 'healtheconnections': 'HealtheConnections', 'hixny': 'Hixny',
     'rochester': 'Rochester RHIO', 'healthelink': 'HEALTHeLINK', 'bronx': 'Bronx RHIO',
 }
-raw = load('SQLExamples/reportonadt.json')
-# [qe, aa, facility_id, facility_name, adt_count]
+raw = load_json('SQLExamples/reportonadt.json')
 rows = [[QE_LABEL_ADT.get(r['qe'], r['qe']), r['assigning_authority'],
          r['facility_id'], r['facility_name'], int(r['adt_count'])]
         for r in raw['rows']
