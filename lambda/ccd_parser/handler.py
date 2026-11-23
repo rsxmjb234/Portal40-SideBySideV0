@@ -4,6 +4,14 @@ Accepts either inline base64-encoded documents or S3 object references,
 runs them through the same parsing pipeline the local build scripts use,
 and returns structured clinical JSON.
 
+Payload-size note
+-----------------
+Lambda's synchronous invoke limit is 6 MB (request + response).  Callers
+should batch documents **per QE** (one invoke per Qualified Entity) so
+that neither the request payload nor the response body exceeds ~5.5 MB.
+If the incoming event is larger than that, the handler returns a 413
+without attempting to parse.
+
 Event formats
 -------------
 Inline mode::
@@ -28,15 +36,44 @@ S3 mode::
     }
 """
 import json
+import sys
 import base64
+import logging
 import traceback
 
 from ccd_parser import parse_documents
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+
+# ~5.5 MB safety margin under Lambda's 6 MB synchronous invoke limit.
+# Callers should batch per-QE so payloads stay well below this threshold.
+MAX_PAYLOAD_BYTES = 5_500_000
 
 
 def lambda_handler(event, context):
     """Lambda entry point."""
     try:
+        # --- payload-size guard (Issue #4) ---
+        # sys.getsizeof is a rough proxy for the serialised event; it errs
+        # on the side of caution.  A json.dumps round-trip would be exact
+        # but adds latency for large payloads.
+        event_size = len(json.dumps(event))
+        if event_size > MAX_PAYLOAD_BYTES:
+            return {
+                'statusCode': 413,
+                'body': {
+                    'error': 'PayloadTooLarge',
+                    'message': (
+                        f'Input event is ~{event_size / 1_000_000:.1f} MB, '
+                        f'which exceeds the ~5.5 MB safety limit for Lambda '
+                        f'synchronous invoke.  Batch documents per QE '
+                        f'(one invoke per Qualified Entity) to stay under '
+                        f'the 6 MB ceiling.'
+                    ),
+                }
+            }
+
         ccd_xmls = []
         oru_hl7s = []
         trn_xmls = []
@@ -80,7 +117,15 @@ def lambda_handler(event, context):
         }
 
     except Exception as e:
+        # Log the full traceback to CloudWatch for debugging, but return
+        # only a generic error type + message to the caller — no stack
+        # frames, no internal file paths.
+        logger.error("CCD parser failed: %s\n%s", e, traceback.format_exc())
         return {
             'statusCode': 500,
-            'body': {'error': str(e), 'trace': traceback.format_exc()}
+            'body': {
+                'error': type(e).__name__,
+                'message': 'An internal error occurred while parsing the documents. '
+                           'Check CloudWatch logs for details.',
+            }
         }

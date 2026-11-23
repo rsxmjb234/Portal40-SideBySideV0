@@ -10,7 +10,6 @@ All imports are stdlib only.
 import os
 import glob
 import json
-import re
 import tempfile
 import xml.etree.ElementTree as ET
 from datetime import datetime, date
