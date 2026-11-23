@@ -67,7 +67,8 @@ sample_patients/
       oru-hl7/    HL7 v2.5.1 ORU^R01 lab messages
       trn/        C-CDA Discharge Summary (TRN) documents
     mpi/
-      {patient_id}_mpi.csv   MPI anchor rows
+      {patient_id}_mpi.csv           MPI anchor rows (CSV)
+      {QE}_{SOURCE}_{MRN}.json       Patient Match API POST body (one per MRN)
 ```
 
 ## Generation

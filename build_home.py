@@ -696,8 +696,8 @@ INDEX = f"""<!DOCTYPE html>
     font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
     display:flex; flex-direction:column; }}
   .top {{ background:linear-gradient(90deg,var(--brand-2),var(--brand)); color:#fff;
-    padding:28px 24px 32px; text-align:center; }}
-  .top h1 {{ margin:0; font-size:24px; letter-spacing:.2px; font-weight:700; }}
+    padding:14px 24px 6px; text-align:center; }}
+  .top h1 {{ margin:0; font-size:20px; letter-spacing:.2px; font-weight:700; }}
 
   .wrap {{ max-width:1000px; margin:24px auto 0; padding:0 20px 30px; width:100%; }}
   .sec-h {{ font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.6px;
@@ -725,7 +725,7 @@ INDEX = f"""<!DOCTYPE html>
   .mark svg {{ width:26px; height:26px; }}
 
   /* â”€â”€ Page nav â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
-  .page-nav {{ display:flex; justify-content:center; gap:8px; padding:0 20px 16px;
+  .page-nav {{ display:flex; justify-content:center; gap:8px; padding:4px 20px 10px;
     background:linear-gradient(90deg,var(--brand-2),var(--brand)); flex-wrap:wrap; }}
   .page-nav a {{ color:rgba(255,255,255,.75); text-decoration:none; font-size:12.5px;
     font-weight:600; padding:6px 18px; border-radius:999px;
