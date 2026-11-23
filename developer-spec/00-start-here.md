@@ -6,7 +6,7 @@ Read this first if you are a model or developer joining cold. It explains what e
 
 A proof-of-concept viewer for the **Public Health / SHIN-NY Community Health Record**. It answers one question: can the same person's merged record be shown inside each Qualified Entity's (QE) own look and workflow, with the same underlying data and the same rules?
 
-The demo shows one synthetic patient, **Marcus Evans**, in three QE styles (Hixny, HEALTHeLINK, Bronx RHIO / IMAT). Three more QEs (Healthix, HealtheConnections, Rochester RHIO) are placeholders on the home page.
+The demo shows 10 synthetic patients, led by **Marcus Evans**, in five QE styles (Hixny, HEALTHeLINK, Bronx RHIO / IMAT, Healthix, HealtheConnections). The build defaults to Marcus but can render any patient via `python build_home.py <patient_id>`.
 
 The new build is a **secure portal**. It gets its data from PDR. The demo does not: it read static files. This documentation set assumes PDR supplies person data shaped like [04-pdr-data-model.md](04-pdr-data-model.md), and does not describe how to fetch it.
 
@@ -27,7 +27,7 @@ The new build is a **secure portal**. It gets its data from PDR. The demo does n
 
 ## 3. Decisions already made (do not reopen without the product owner)
 
-1. **One person across many sources.** Marcus has 10 MRNs in 10 sources across 5 QEs. The first attempt used five different people and was rejected, because the point is one person with many MRNs.
+1. **One person across many sources.** Marcus has 10 MRNs in 10 sources across 5 QEs. The first attempt used five different people and was rejected, because the point is one person with many MRNs. 10 patient archetypes now exist (defined in `patient_profiles.json`), each with their own conditions and QE assignments.
 2. **Distinct documents, one condition list.** The 10 source documents differ in labs, vitals and so on (real variety), but share one identity and one five-condition list. Identical clones were rejected.
 3. **Each QE gets its own look.** Not one shared theme. Imitate the real product (see `QE-Example-Materials/` for the references we have).
 4. **Missing data, direction A** ("QE has it, PDR does not") auto-fills QE to the view's QE. **Direction B** ("PDR has it, QE does not") pre-fills QE, Source and MRN read-only and takes a pasted Data ID.
@@ -72,6 +72,8 @@ Repo: https://github.com/rsxmjb234/Portal40-SideBySideV0. Live demo: https://mai
 | `bug_widget.py` | MRN Array, Missing data, copy icon and drill-in widget (HTML, CSS and JS in one file) |
 | `build_home.py` | Home page and build orchestration |
 | `make_person.py` | Generates the Marcus test data. Not needed in the new build |
+| `generate_patients.py` | Generates all 10 synthetic patients into `sample_patients/` |
+| `patient_profiles.json` | Defines 10 patient archetypes (conditions, QE assignments, identity) |
 | `export_fixture.py` | Exports `fixtures/marcus_evans.json` |
 
 The demo builds static HTML pages from Python. The new build is a dynamic secure app. Port behavior, not architecture.

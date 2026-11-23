@@ -1,6 +1,6 @@
 # Portal 4.0 — QE PDR Viewer
 
-Five Qualified Entity portal views rendering the same synthetic patient (Marcus Evans) in each QE's own style, plus volume reports showing real PDR data by assigning authority.
+Five Qualified Entity portal views rendering synthetic patients in each QE's own style, plus volume reports showing real PDR data by assigning authority. 10 patient archetypes available, led by Marcus Evans.
 
 ## Live site
 
@@ -26,19 +26,22 @@ Each QE view shows **only that QE's data** — different MRNs, encounters, labs,
 4. **ADT Volume by Facility** — from `lookup_adt_counts` snapshot
 
 ### Synthetic Patient Data
-Marcus Evans — 5 QEs × 3 sources each = 15 CCDs + 15 ORUs + 15 TRNs (45 files). Generated from 10 Synthea base records, re-stamped with Marcus's identity.
+10 patient archetypes defined in `patient_profiles.json`, each with clinically coherent conditions, labs, and encounters. Patient data is generated into `sample_patients/{patient_id}/{qe}/{ccda,oru-hl7,trn}/` by `generate_patients.py`. Marcus Evans is patient #1 (default) with 5 QEs × 3 sources each.
 
 ## Build
 
 ```powershell
-# Generate Marcus data (45 files into marcus_bundle/)
-python.exe build_marcus_bundle.py
+# Generate patient data (10 patients into sample_patients/)
+python.exe generate_patients.py
 
 # Generate report data files (hosp_data.js, nonhosp_data.js, adt_data.js)
 python.exe build_reports.py
 
-# Build all 5 QE views + index.html
+# Build all 5 QE views + index.html (default patient: marcus_evans)
 python.exe build_home.py
+
+# Build for a different patient
+python.exe build_home.py cardiac_patient
 ```
 
 ## Deploy
@@ -76,12 +79,13 @@ build_bronx.py             Bronx RHIO renderer (IMAT)
 build_healtheconn.py       HealtheConnections renderer (HEC Portal)
 ccda_parse.py              Shared C-CDA + ORU parser, merge, dedup
 bug_widget.py              Missing-data logging widget
-build_marcus_bundle.py     Generates 45 synthetic data files
+generate_patients.py       Generates synthetic patient data for all 10 patients
+patient_profiles.json      Defines 10 patient archetypes (conditions, QE assignments)
 build_reports.py           Generates JS data from Athena JSON
 athena_hello_world.py      Athena query runner
 deploy_amplify.ps1         Zip + upload to AWS Amplify
 ccds/                      10 Synthea base CCD templates
-marcus_bundle/             Per-QE patient data (5 QEs × 3 sources)
+sample_patients/           Per-patient, per-QE data (10 patients × 3-5 QEs × 3 sources)
 SQLExamples/               4 SQL queries + saved JSON results
 docs/                      Report specs, plans
 ```

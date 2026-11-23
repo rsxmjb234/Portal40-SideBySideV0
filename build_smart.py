@@ -21,7 +21,7 @@ def dextra(pairs):
     return f' data-extra="{html.escape(json.dumps(p))}"' if p else ''
 
 # Data source is configurable so the same renderer can build either the base
-# demo (ccds/ + FHIR ORU) or the Marcus cohort (marcus_bundle + HL7 ORU).
+# demo (ccds/ + FHIR ORU) or the patient cohort (sample_patients + HL7 ORU).
 CCD_DIR = os.environ.get('CHART_CCD_DIR', 'ccds')
 OUT = os.environ.get('CHART_OUT', 'patient_chart_smart.html')
 ORU_HL7_DIR = os.environ.get('CHART_ORU_HL7', '')   # if set, load HL7 ORU from here

@@ -1,5 +1,6 @@
 # Rebuild the demo site and (re)deploy it to AWS Amplify in one step.
 # Requires the sandbox AWS profile to be active (run updatesandbox.bat first).
+# Pre-requisite: run `python generate_patients.py` to generate sample_patients/ data.
 # Usage: powershell -ExecutionPolicy Bypass -File .\deploy_amplify.ps1
 param(
   [string]$AppId = 'd3pz3oj6iuj9t4',

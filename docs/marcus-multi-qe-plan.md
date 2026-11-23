@@ -39,21 +39,24 @@ Each QE view filters to **only that QE's MRNs and clinical data**. When you open
 Rather than tagging every parsed item with a source QE and filtering on render, reorganize the data into per-QE folders and point each build at the right folder. This matches how a real QE works: they only have their own data.
 
 ```
-marcus_bundle/
-  hixny/
-    ccda/    (3 CCDs)
-    oru-hl7/ (3 ORUs)
-    trn/     (3 TRNs)
-  healthelink/
-    ccda/    oru-hl7/    trn/
-  healthix/
-    ccda/    oru-hl7/    trn/
-  healtheconn/
-    ccda/    oru-hl7/    trn/
-  bronx/
-    ccda/    oru-hl7/    trn/
-  mpi/marcus_mpi.csv
-  README.md
+sample_patients/
+  marcus_evans/
+    hixny/
+      ccda/    (3 CCDs)
+      oru-hl7/ (3 ORUs)
+      trn/     (3 TRNs)
+    healthelink/
+      ccda/    oru-hl7/    trn/
+    healthix/
+      ccda/    oru-hl7/    trn/
+    healtheconn/
+      ccda/    oru-hl7/    trn/
+    bronx/
+      ccda/    oru-hl7/    trn/
+    mpi/marcus_evans_mpi.csv
+  cardiac_patient/
+    ...
+  ...  (10 patients total)
 ```
 
 ## Tasks

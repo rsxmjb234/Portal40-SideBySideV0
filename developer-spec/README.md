@@ -57,6 +57,6 @@ Each requirement is tagged where it matters:
 
 - Live: https://main.d3pz3oj6iuj9t4.amplifyapp.com
 - Code: https://github.com/rsxmjb234/Portal40-SideBySideV0
-- One synthetic patient, **Marcus Evans** (DOB 06/01/1950, M), appears in 10 sources across 5 QEs, rendered in three QE styles from the same merged data.
+- 10 synthetic patients, led by **Marcus Evans** (DOB 06/01/1950, M), each with clinically coherent conditions, labs, and encounters. Marcus appears in 10 sources across 5 QEs, rendered in five QE styles from the same merged data.
 
 The demo is static HTML generated at build time. The secure portal is dynamic. Treat the demo as the behavioral reference and these documents as the requirements. File map: [00-start-here.md](00-start-here.md), section 6.

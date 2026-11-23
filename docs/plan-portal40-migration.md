@@ -20,20 +20,21 @@ Create a clean new repo with only what we're actively using. Leave behind 10,500
 ### Data generation
 | File | Purpose |
 |---|---|
-| `build_marcus_bundle.py` | Generates 45 synthetic data files (15 CCD + 15 ORU + 15 TRN) |
+| `generate_patients.py` | Generates synthetic patient data for all 10 patients |
+| `patient_profiles.json` | Defines 10 patient archetypes (conditions, QE assignments) |
 | `build_reports.py` | Generates hosp_data.js, nonhosp_data.js, adt_data.js from Athena JSON |
-| `ccds/` (10 XML files) | Synthea base CCD templates used by build_marcus_bundle.py |
+| `ccds/` (10 XML files) | Synthea base CCD templates used by generate_patients.py |
 
-### Marcus patient data
+### Synthetic patient data
 | Path | Files | Purpose |
 |---|---|---|
-| `marcus_bundle/hixny/` | 9 | 3 CCD + 3 ORU + 3 TRN for Hixny |
-| `marcus_bundle/healthelink/` | 9 | 3 CCD + 3 ORU + 3 TRN for HEALTHeLINK |
-| `marcus_bundle/healthix/` | 9 | 3 CCD + 3 ORU + 3 TRN for Healthix |
-| `marcus_bundle/healtheconn/` | 9 | 3 CCD + 3 ORU + 3 TRN for HealtheConnections |
-| `marcus_bundle/bronx/` | 9 | 3 CCD + 3 ORU + 3 TRN for Bronx RHIO |
-| `marcus_bundle/mpi/marcus_mpi.csv` | 1 | MPI anchor rows |
-| `marcus_bundle/README.md` | 1 | Documentation |
+| `sample_patients/marcus_evans/hixny/` | 9 | 3 CCD + 3 ORU + 3 TRN for Hixny |
+| `sample_patients/marcus_evans/healthelink/` | 9 | 3 CCD + 3 ORU + 3 TRN for HEALTHeLINK |
+| `sample_patients/marcus_evans/healthix/` | 9 | 3 CCD + 3 ORU + 3 TRN for Healthix |
+| `sample_patients/marcus_evans/healtheconn/` | 9 | 3 CCD + 3 ORU + 3 TRN for HealtheConnections |
+| `sample_patients/marcus_evans/bronx/` | 9 | 3 CCD + 3 ORU + 3 TRN for Bronx RHIO |
+| `sample_patients/marcus_evans/mpi/` | 1 | MPI anchor rows |
+| `sample_patients/*/` | ... | 9 more patients with same structure |
 
 ### Athena reports (SQL + saved results)
 | Path | Purpose |
@@ -117,7 +118,7 @@ Copy only the files listed above. Don't copy — just enumerate them in a script
 - How to build: `python.exe build_home.py`
 - How to deploy: `deploy_amplify.ps1`
 - How to refresh reports: `python.exe build_reports.py`
-- How to regenerate Marcus data: `python.exe build_marcus_bundle.py`
+- How to regenerate patient data: `python.exe generate_patients.py`
 - Structure overview
 
 ### 4. Write a new .gitignore

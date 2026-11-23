@@ -1,25 +1,41 @@
 ﻿"""
 Build 5 per-QE portal view emulators + index.html landing page.
-Each QE reads from its own subfolder under marcus_bundle/{qe_lower}/.
-  - HixnyEmulator.html         HIXNY       (SMART on FHIR style)
-  - HEALTHeLINKEmulator.html       HEALTHeLINK (Fusion style)
-  - HealthixEmulator.html     Healthix    (SMART on FHIR style)
-  - HealtheConnectionsEmulator.html  HealtheConnections (SMART on FHIR style)
-  - BronxEmulator.html        Bronx RHIO  (IMAT style)
-  - index.html               landing page
+Each QE reads from its own subfolder under sample_patients/{patient_id}/{qe_lower}/.
+  - HixnyEmulator.html                HIXNY              (SMART on FHIR style)
+  - HEALTHeLINKEmulator.html          HEALTHeLINK        (Fusion style)
+  - HealthixEmulator.html              Healthix           (SMART on FHIR style)
+  - HealtheConnectionsEmulator.html    HealtheConnections (SMART on FHIR style)
+  - BronxEmulator.html                 Bronx RHIO         (IMAT style)
+  - index.html                         landing page
+
+Usage:
+    python build_home.py                   # builds for marcus_evans (default)
+    python build_home.py cardiac_patient   # builds for a different patient
 """
 import os
+import sys
+import json
 import importlib
 import html
 
 E = html.escape
 
+# ---- Patient selection ------------------------------------------------
+PATIENT_ID = sys.argv[1] if len(sys.argv) > 1 else os.environ.get('PATIENT_ID', 'marcus_evans')
 
-def _set_env(qe_folder, out_file, qe_name, title=''):
+with open('patient_profiles.json', encoding='utf-8') as _pf:
+    _profiles = {p['id']: p for p in json.load(_pf)['patients']}
+_patient = _profiles.get(PATIENT_ID, {})
+_patient_name = f"{_patient.get('first_name', '')} {_patient.get('last_name', '')}".strip() or PATIENT_ID
+_patient_index = list(_profiles.keys()).index(PATIENT_ID) + 1 if PATIENT_ID in _profiles else 0
+_patient_total = len(_profiles)
+
+
+def _set_env(patient_id, qe_folder, out_file, qe_name, title=''):
     """Set env vars for a per-QE build."""
-    os.environ['CHART_CCD_DIR'] = os.path.join('marcus_bundle', qe_folder, 'ccda')
-    os.environ['CHART_ORU_HL7'] = os.path.join('marcus_bundle', qe_folder, 'oru-hl7')
-    os.environ['CHART_TRN_DIR'] = os.path.join('marcus_bundle', qe_folder, 'trn')
+    os.environ['CHART_CCD_DIR'] = os.path.join('sample_patients', patient_id, qe_folder, 'ccda')
+    os.environ['CHART_ORU_HL7'] = os.path.join('sample_patients', patient_id, qe_folder, 'oru-hl7')
+    os.environ['CHART_TRN_DIR'] = os.path.join('sample_patients', patient_id, qe_folder, 'trn')
     os.environ['CHART_OUT'] = out_file
     os.environ['CHART_QE'] = qe_name
     if title:
@@ -27,23 +43,23 @@ def _set_env(qe_folder, out_file, qe_name, title=''):
 
 
 # ---- HIXNY: SMART on FHIR style (first import) ----
-_set_env('hixny', 'HixnyEmulator.html', 'HIXNY', 'SHIN-NY Community Health Record')
+_set_env(PATIENT_ID, 'hixny', 'HixnyEmulator.html', 'HIXNY', 'SHIN-NY Community Health Record')
 import build_smart  # noqa: E402,F401
 
 # ---- HEALTHeLINK: Fusion style ----
-_set_env('healthelink', 'HEALTHeLINKEmulator.html', 'HEALTHELINK')
+_set_env(PATIENT_ID, 'healthelink', 'HEALTHeLINKEmulator.html', 'HEALTHELINK')
 import build_chart  # noqa: E402,F401
 
 # ---- Healthix: SMART on FHIR style (reload) ----
-_set_env('healthix', 'HealthixEmulator.html', 'HEALTHIX', 'SHIN-NY Community Health Record')
+_set_env(PATIENT_ID, 'healthix', 'HealthixEmulator.html', 'HEALTHIX', 'SHIN-NY Community Health Record')
 importlib.reload(build_smart)
 
 # ---- HealtheConnections: dedicated HEC renderer ----
-_set_env('healtheconn', 'HealtheConnectionsEmulator.html', 'HEALTHECONN')
+_set_env(PATIENT_ID, 'healtheconn', 'HealtheConnectionsEmulator.html', 'HEALTHECONN')
 import build_healtheconn  # noqa: E402,F401
 
 # ---- Bronx RHIO: IMAT style ----
-_set_env('bronx', 'BronxEmulator.html', 'BRONX')
+_set_env(PATIENT_ID, 'bronx', 'BronxEmulator.html', 'BRONX')
 import build_bronx  # noqa: E402,F401
 
 n_people = len(build_smart.patients)
@@ -700,9 +716,11 @@ INDEX = f"""<!DOCTYPE html>
     </div>
 
     <div class="note">
-      Each QE renders <b>Marcus</b> in its own look &amp; feel using <b>only that QE&rsquo;s data</b>.
-      Every QE folder contains 3 C-CDA documents, 3 HL7&nbsp;v2.5.1 ORU lab feeds, and 3 TRN
-      (discharge summary) encounter records &mdash; 9 files per QE, 45 total across 5 QEs. The same
+      Currently viewing: <b>{E(_patient_name)}</b> (Patient {_patient_index} of {_patient_total}).
+      Run <code>python build_home.py &lt;patient_id&gt;</code> to switch.<br>
+      Each QE renders the selected patient in its own look &amp; feel using <b>only that QE&rsquo;s data</b>.
+      Every QE folder contains C-CDA documents, HL7&nbsp;v2.5.1 ORU lab feeds, and TRN
+      (discharge summary) encounter records. The same
       parser and de-duplication rules apply everywhere: an ORU result matching a CCD lab on
       LOINC&nbsp;+&nbsp;date is shown as <b>preferred</b> and the duplicate CCD value is
       <b>crossed off, never deleted</b>.
@@ -724,5 +742,6 @@ INDEX = f"""<!DOCTYPE html>
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(INDEX)
 
-print('Wrote: index.html, HixnyEmulator.html, HEALTHeLINKEmulator.html, HealthixEmulator.html, HealtheConnectionsEmulator.html, BronxEmulator.html')
+print(f'Wrote: index.html, HixnyEmulator.html, HEALTHeLINKEmulator.html, HealthixEmulator.html, HealtheConnectionsEmulator.html, BronxEmulator.html')
+print(f'Patient: {_patient_name} ({PATIENT_ID})')
 print(f'Patients per QE view: {n_people}')

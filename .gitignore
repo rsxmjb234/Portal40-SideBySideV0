@@ -2,15 +2,14 @@
 index.html
 *Emulator.html
 
-# Generated data (rebuilt by build_marcus_bundle.py / build_reports.py)
+# Generated data (rebuilt by generate_patients.py / build_reports.py)
 *.xml
 *.hl7
 *.ndjson
-marcus_bundle/*/ccda/
-marcus_bundle/*/oru-hl7/
-marcus_bundle/*/trn/
-marcus_bundle/mpi/
-sample_patients/
+sample_patients/*/*/ccda/
+sample_patients/*/*/oru-hl7/
+sample_patients/*/*/trn/
+sample_patients/*/mpi/
 # Keep the Synthea base templates
 !ccds/
 
