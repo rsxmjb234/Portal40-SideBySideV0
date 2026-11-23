@@ -526,6 +526,165 @@ def flatten_sources(patient):
     return all_sources
 
 
+def generate_patient_match_json(patient, all_sources):
+    """Generate one Patient Match JSON per QE|SOURCE|MRN, for loading into Verato/MPI.
+
+    Each file is a self-contained POST body for the Patient Match identity API.
+    Files land in sample_patients/{patient_id}/mpi/{QE}_{SOURCE}_{MRN}.json
+    """
+    patient_id = patient['id']
+    first = patient['first_name']
+    last = patient['last_name']
+    dob = patient['dob']
+    gender = 'MALE' if patient['gender'] == 'M' else 'FEMALE'
+    addr = patient.get('addr', ['', '', '', ''])
+    mpid = patient['mpid']
+
+    mpi_dir = os.path.join(OUT, patient_id, 'mpi')
+    os.makedirs(mpi_dir, exist_ok=True)
+    count = 0
+
+    for src in all_sources:
+        qe = src['qe']
+        source = src['source']
+        mrn = src['mrn']
+        eid = src.get('eid', '')
+        facility = src.get('facility_name', '')
+
+        doc = {
+            "content": {
+                "identity": {
+                    "addresses": [
+                        {
+                            "country": "US",
+                            "city": addr[1] if len(addr) > 1 else "",
+                            "postalCode": addr[3] if len(addr) > 3 else "",
+                            "state": addr[2] if len(addr) > 2 else "",
+                            "type": "home",
+                            "line2": "",
+                            "line1": addr[0] if len(addr) > 0 else ""
+                        }
+                    ],
+                    "sources": [
+                        {
+                            "date": "",
+                            "metadata": {
+                                "transactionType": "A04",
+                                "sourceLoginName": "",
+                                "sourceUserName": "",
+                                "location": facility
+                            },
+                            "name": f"{qe}|{source}",
+                            "id": mrn
+                        }
+                    ],
+                    "genders": [
+                        gender
+                    ],
+                    "guarantor": [
+                        {
+                            "zip": "",
+                            "lastName": "",
+                            "city": "",
+                            "suffix": "",
+                            "ssn": "",
+                            "firstName": "",
+                            "phone": "",
+                            "dob": "",
+                            "addressLine1": "",
+                            "middleName": "",
+                            "addressLine2": "",
+                            "state": "",
+                            "relationship": ""
+                        }
+                    ],
+                    "datesOfBirth": [
+                        dob
+                    ],
+                    "phoneNumbers": [
+                        {
+                            "number": "",
+                            "areaCode": "",
+                            "extension": "",
+                            "countryCode": "",
+                            "type": ""
+                        }
+                    ],
+                    "deathDetails": [
+                        {
+                            "country": "",
+                            "deceased": "",
+                            "dateOfDeath": "",
+                            "city": "",
+                            "county": "",
+                            "state": ""
+                        }
+                    ],
+                    "custom.attributes": [
+                        {
+                            "race": "",
+                            "ethnicity": "",
+                            "maritalstatus": "",
+                            "source.hie": qe
+                        }
+                    ],
+                    "emails": [],
+                    "names": [
+                        {
+                            "middle": "",
+                            "last": last,
+                            "suffix": "",
+                            "first": first
+                        }
+                    ],
+                    "ssns": [],
+                    "alternateIdentifiers": [
+                        {
+                            "endDate": "",
+                            "type": "QE MPIID",
+                            "value": mpid,
+                            "issuer": qe,
+                            "startDate": ""
+                        },
+                        {
+                            "endDate": "",
+                            "type": "ENCOUNTER ID",
+                            "value": eid,
+                            "issuer": f"{qe}|{source}",
+                            "startDate": ""
+                        }
+                    ],
+                    "multipleBirthIndicator": [
+                        {
+                            "multipleBirthIndicator": ""
+                        }
+                    ],
+                    "healthInsuranceCoverage": [
+                        {
+                            "sequenceNumber": "",
+                            "planType": "",
+                            "endDate": "",
+                            "payerName": "",
+                            "subscriberId": "",
+                            "idNumber": "",
+                            "groupNumber": "",
+                            "effectiveDate": ""
+                        }
+                    ]
+                }
+            },
+            "trackingId": f"{patient_id}_{qe}_{source}_{mrn}"
+        }
+
+        filename = f"{qe}_{source}_{mrn}.json"
+        filepath = os.path.join(mpi_dir, filename)
+        with open(filepath, 'w', encoding='utf-8') as f:
+            json.dump(doc, f, indent=2)
+        count += 1
+
+    return count
+
+
 def generate_patient(patient, profiles):
     """Generate all data (CCD, ORU, TRN, MPI) for one patient."""
     patient_id = patient['id']
@@ -584,11 +743,15 @@ def generate_patient(patient, profiles):
             f.write(f"{s['qe']},{s['source']},{s['mrn']},{s['eid']},{patient['mpid']},"
                     f"{first},{last},{patient['dob']},{patient['gender']}\n")
 
+    # ---- Patient Match JSON (one per QE|SOURCE|MRN) ----
+    pm_count = generate_patient_match_json(patient, all_sources)
+
     return {
         'patient_id': patient_id,
         'ccds': ccd_count,
         'orus': oru_count,
         'trns': trn_count,
+        'patient_match': pm_count,
         'qes': qe_names,
         'sources': len(all_sources),
     }
@@ -624,7 +787,8 @@ def write_readme(profiles):
         '      oru-hl7/    HL7 v2.5.1 ORU^R01 lab messages',
         '      trn/        C-CDA Discharge Summary (TRN) documents',
         '    mpi/',
-        '      {patient_id}_mpi.csv   MPI anchor rows',
+        '      {patient_id}_mpi.csv           MPI anchor rows (CSV)',
+        '      {QE}_{SOURCE}_{MRN}.json       Patient Match API POST body (one per MRN)',
         '```\n',
         '## Generation\n',
         '```',
@@ -668,7 +832,8 @@ def main():
         result = generate_patient(p, profiles)
         results.append(result)
         print(f'  {result["patient_id"]}: {result["ccds"]} CCDs, {result["orus"]} ORUs, '
-              f'{result["trns"]} TRNs across {len(result["qes"])} QEs ({result["sources"]} sources)')
+              f'{result["trns"]} TRNs, {result["patient_match"]} Patient Match JSONs '
+              f'across {len(result["qes"])} QEs ({result["sources"]} sources)')
 
     write_readme(profiles)
 
@@ -676,7 +841,8 @@ def main():
     total_ccds = sum(r['ccds'] for r in results)
     total_orus = sum(r['orus'] for r in results)
     total_trns = sum(r['trns'] for r in results)
-    print(f'  Total: {total_ccds} CCDs, {total_orus} ORUs, {total_trns} TRNs')
+    total_pm = sum(r['patient_match'] for r in results)
+    print(f'  Total: {total_ccds} CCDs, {total_orus} ORUs, {total_trns} TRNs, {total_pm} Patient Match JSONs')
 
 
 if __name__ == '__main__':
