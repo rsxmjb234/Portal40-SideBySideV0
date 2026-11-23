@@ -1,11 +1,11 @@
 ﻿"""
-Build 5 per-QE Marcus portal views + index.html landing page.
+Build 5 per-QE portal view emulators + index.html landing page.
 Each QE reads from its own subfolder under marcus_bundle/{qe_lower}/.
-  - marcus_fhir.html         HIXNY       (SMART on FHIR style)
-  - marcus_fusion.html       HEALTHeLINK (Fusion style)
-  - marcus_healthix.html     Healthix    (SMART on FHIR style)
-  - marcus_healtheconn.html  HealtheConnections (SMART on FHIR style)
-  - marcus_bronx.html        Bronx RHIO  (IMAT style)
+  - HixnyEmulator.html         HIXNY       (SMART on FHIR style)
+  - HEALTHeLINKEmulator.html       HEALTHeLINK (Fusion style)
+  - HealthixEmulator.html     Healthix    (SMART on FHIR style)
+  - HealtheConnectionsEmulator.html  HealtheConnections (SMART on FHIR style)
+  - BronxEmulator.html        Bronx RHIO  (IMAT style)
   - index.html               landing page
 """
 import os
@@ -27,23 +27,23 @@ def _set_env(qe_folder, out_file, qe_name, title=''):
 
 
 # ---- HIXNY: SMART on FHIR style (first import) ----
-_set_env('hixny', 'marcus_fhir.html', 'HIXNY', 'SHIN-NY Community Health Record')
+_set_env('hixny', 'HixnyEmulator.html', 'HIXNY', 'SHIN-NY Community Health Record')
 import build_smart  # noqa: E402,F401
 
 # ---- HEALTHeLINK: Fusion style ----
-_set_env('healthelink', 'marcus_fusion.html', 'HEALTHELINK')
+_set_env('healthelink', 'HEALTHeLINKEmulator.html', 'HEALTHELINK')
 import build_chart  # noqa: E402,F401
 
 # ---- Healthix: SMART on FHIR style (reload) ----
-_set_env('healthix', 'marcus_healthix.html', 'HEALTHIX', 'SHIN-NY Community Health Record')
+_set_env('healthix', 'HealthixEmulator.html', 'HEALTHIX', 'SHIN-NY Community Health Record')
 importlib.reload(build_smart)
 
 # ---- HealtheConnections: dedicated HEC renderer ----
-_set_env('healtheconn', 'marcus_healtheconn.html', 'HEALTHECONN')
+_set_env('healtheconn', 'HealtheConnectionsEmulator.html', 'HEALTHECONN')
 import build_healtheconn  # noqa: E402,F401
 
 # ---- Bronx RHIO: IMAT style ----
-_set_env('bronx', 'marcus_bronx.html', 'BRONX')
+_set_env('bronx', 'BronxEmulator.html', 'BRONX')
 import build_bronx  # noqa: E402,F401
 
 n_people = len(build_smart.patients)
@@ -51,15 +51,15 @@ n_people = len(build_smart.patients)
 # ---- home screen: one view per NY Qualified Entity (QE); some live, rest coming soon ----
 QES = [
     {'name': 'Hixny', 'region': 'Capital Region', 'color': '#0e7490',
-     'site': 'https://hixny.org', 'href': 'marcus_fhir.html', 'live': True},
+     'site': 'https://hixny.org', 'href': 'HixnyEmulator.html', 'live': True},
     {'name': 'HEALTHeLINK', 'region': 'Western New York', 'color': '#1d4ed8',
-     'site': 'https://wnyhealthelink.com', 'href': 'marcus_fusion.html', 'live': True},
+     'site': 'https://wnyhealthelink.com', 'href': 'HEALTHeLINKEmulator.html', 'live': True},
     {'name': 'Healthix', 'region': 'NYC & Long Island', 'color': '#059669',
-     'site': 'https://healthix.org', 'href': 'marcus_healthix.html', 'live': True},
+     'site': 'https://healthix.org', 'href': 'HealthixEmulator.html', 'live': True},
     {'name': 'HealtheConnections', 'region': 'Central NY, North Country & more', 'color': '#ea580c',
-     'site': 'https://www.healtheconnections.org', 'href': 'marcus_healtheconn.html', 'live': True},
+     'site': 'https://www.healtheconnections.org', 'href': 'HealtheConnectionsEmulator.html', 'live': True},
     {'name': 'Bronx RHIO', 'region': 'The Bronx (IMAT Solutions)', 'color': '#b91c1c',
-     'site': 'https://bronxrhio.org', 'href': 'marcus_bronx.html', 'live': True},
+     'site': 'https://bronxrhio.org', 'href': 'BronxEmulator.html', 'live': True},
 ]
 
 
@@ -724,5 +724,5 @@ INDEX = f"""<!DOCTYPE html>
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(INDEX)
 
-print('Wrote: index.html, marcus_fhir.html, marcus_fusion.html, marcus_healthix.html, marcus_healtheconn.html, marcus_bronx.html')
+print('Wrote: index.html, HixnyEmulator.html, HEALTHeLINKEmulator.html, HealthixEmulator.html, HealtheConnectionsEmulator.html, BronxEmulator.html')
 print(f'Patients per QE view: {n_people}')

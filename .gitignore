@@ -1,6 +1,6 @@
 # Generated HTML (rebuilt by build_home.py)
 index.html
-marcus_*.html
+*Emulator.html
 
 # Generated data (rebuilt by build_marcus_bundle.py / build_reports.py)
 *.xml

@@ -1,6 +1,6 @@
 # Bronx RHIO (IMAT Solutions) – QE-specific requirements
 
-Status: **Live in demo** (`marcus_bronx.html`, built by `build_bronx.py`).
+Status: **Live in demo** (`BronxEmulator.html`, built by `build_bronx.py`).
 Region: The Bronx. Site: https://bronxrhio.org. Accent `#b91c1c`.
 QE code in data and tickets: `BRONX`. Source in sample data: `BRONX|BXLEB`.
 Technology partner: **IMAT Solutions**. The product is a browser-based **Provider Clinical Viewer** that assembles local, statewide and other sources into a **Virtual Health Record**.

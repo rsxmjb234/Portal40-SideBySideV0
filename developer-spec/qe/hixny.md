@@ -1,6 +1,6 @@
 # Hixny – QE-specific requirements
 
-Status: **Live in demo** (`marcus_fhir.html`, built by `build_smart.py`).
+Status: **Live in demo** (`HixnyEmulator.html`, built by `build_smart.py`).
 Region: Capital Region (and into Vermont). Site: https://hixny.org. Accent `#0e7490`.
 QE code in data and tickets: `HIXNY`. Sources in sample data: `HIXNY|SPLPCPRIME`, `HIXNY|ALBMC`.
 Common rules (processing, drill-in, Missing data) are in docs 02 and 03. This file lists only what is specific to Hixny.

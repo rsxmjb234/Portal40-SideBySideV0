@@ -1,6 +1,6 @@
 # HEALTHeLINK – QE-specific requirements
 
-Status: **Live in demo** (`marcus_fusion.html`, built by `build_chart.py`).
+Status: **Live in demo** (`HEALTHeLINKEmulator.html`, built by `build_chart.py`).
 Region: Western New York (Buffalo area). Site: https://wnyhealthelink.com. Accent `#1d4ed8`.
 QE code in data and tickets: `HEALTHELINK`. Sources in sample data: `HEALTHELINK|KINGSB`, `HEALTHELINK|ECMC`.
 Product: **HEALTHeLINK Fusion** (the HealthShare clinical viewer), reached through the HEALTHeCOMMUNITY Portal.
