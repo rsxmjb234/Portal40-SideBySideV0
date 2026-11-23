@@ -1,0 +1,23 @@
+{
+  "id": "FEAT-003",
+  "type": "test",
+  "description": "Write comparison test scripts that parse Marcus Evans's CCDs locally using the existing ccda_parse.py logic, invoke the Lambda with the same CCDs, and compare outputs field by field. Depends on FEAT-001 (parsing module) and FEAT-002 (deployed Lambda). Independent of the front end.",
+  "status": "completed",
+  "steps": [
+    "1. Create tests/test_lambda_vs_local.py. The script: (a) Finds all Marcus Evans CCDs across all 5 QEs: sample_patients/marcus_evans/{bronx,healtheconn,healthelink,healthix,hixny}/ccda/*.xml. Also finds matching ORU HL7 files from oru-hl7/*.hl7 and TRN files from trn/*.xml. (b) LOCAL parse: imports ccda_parse (the original module at repo root), calls parse_ccd on each CCD and TRN, initializes oru=[] on each, calls load_oru_hl7 to attach ORU data, calls merge_by_person to get the merged record. (c) LAMBDA parse: reads the same files, base64 encodes them, constructs the Lambda event {\"documents\": {\"ccds\": [...], \"orus\": [...], \"trns\": [...]}}, invokes pdr-ccd-parser-dev via aws lambda invoke (using subprocess to call AWS CLI with --profile 304507007699_AWSPowerUserAccess --region us-east-1), and parses the response JSON. (d) Compares the two outputs field by field across: demographics (given, family, gender, dob, age), mrn_list count, problems (names and count), meds (names and count), labs (panel count and total component count), oru (count and test names), vitals count, imms count, procs count, encs count, allergies count. (e) Reports differences with clear PASS/FAIL per section and a summary at the end. Exit code 0 if all pass, 1 if any fail.",
+    "2. Create tests/__init__.py (empty).",
+    "3. Run the test script from the repo root: python tests/test_lambda_vs_local.py. Document the results in findings."
+  ],
+  "acceptance_criteria": [
+    "tests/test_lambda_vs_local.py exists and is runnable via python tests/test_lambda_vs_local.py from the repo root",
+    "The test compares at least these sections: demographics, mrn_list, problems, meds, labs, oru, vitals, imms, procs, encs, allergies",
+    "The test invokes the Lambda function pdr-ccd-parser-dev and compares its output to the local ccda_parse.py output",
+    "The test reports PASS/FAIL per section with clear difference details when there is a mismatch",
+    "The test passes with exit code 0 (Lambda and local produce identical results for Marcus Evans)"
+  ],
+  "verification": [
+    "Run: python tests/test_lambda_vs_local.py from the repo root and confirm all sections report PASS and exit code is 0"
+  ],
+  "blocked_reason": null,
+  "findings": "All 11 comparison sections PASS (exit code 0). Local: 310 problems, 185 meds, 15 MRNs, 195 ORU results. Lambda (per-QE batching, 5 invocations ~1.8 MB each): identical counts after merge. Payload split across 5 QE invocations because full payload (8.97 MB) exceeds Lambda 6 MB sync limit. Per-QE results merged locally using merge_by_person (same code as Lambda). Sections tested: demographics (given, family, gender, dob, age), mrn_list (count + sorted contents), problems (count + sorted names), meds (count + sorted names), labs (panel count + total component count), oru (count + sorted test names), vitals count, imms count, procs count, encs count, allergies count."
+}
