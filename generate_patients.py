@@ -145,7 +145,7 @@ def load_profiles(path='patient_profiles.json'):
         return json.load(f)
 
 
-# ---- CCD generation (parameterized from build_marcus_bundle.py) ----
+# ---- CCD generation (parameterized from generate_patients.py) ----
 
 def make_ccd(patient, src):
     """Clone a Synthea base CCD, re-stamping identity for the patient at this source."""
