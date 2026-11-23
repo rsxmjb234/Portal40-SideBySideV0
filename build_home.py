@@ -352,7 +352,7 @@ REPORT2_SCRIPT = """
     function fmt(n) { return n > 0 ? n.toLocaleString() : '\u2014'; }
 
     function titleCase(s) {
-      return s.replace(/\w\S*/g, function(t) {
+      return s.replace(/\\w\\S*/g, function(t) {
         if (t.length <= 2 && t === t.toUpperCase()) return t; // keep "OF", "AT" etc short
         return t.charAt(0).toUpperCase() + t.substr(1).toLowerCase();
       });
