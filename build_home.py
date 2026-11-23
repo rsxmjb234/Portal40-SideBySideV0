@@ -1,6 +1,8 @@
 ﻿"""
 Build 5 per-QE portal view emulators + index.html landing page.
-Each QE reads from its own subfolder under sample_patients/{patient_id}/{qe_lower}/.
+Each QE merges data from ALL patients in sample_patients/ so the emulator
+pages contain a patient dropdown with every available person.
+
   - HixnyEmulator.html                HIXNY              (SMART on FHIR style)
   - HEALTHeLINKEmulator.html          HEALTHeLINK        (Fusion style)
   - HealthixEmulator.html              Healthix           (SMART on FHIR style)
@@ -9,33 +11,63 @@ Each QE reads from its own subfolder under sample_patients/{patient_id}/{qe_lowe
   - index.html                         landing page
 
 Usage:
-    python build_home.py                   # builds for marcus_evans (default)
-    python build_home.py cardiac_patient   # builds for a different patient
+    python build_home.py                   # builds with ALL patients (default)
+    python build_home.py marcus_evans      # builds for one patient only
 """
 import os
 import sys
 import json
+import shutil
+import tempfile
 import importlib
 import html
 
 E = html.escape
 
 # ---- Patient selection ------------------------------------------------
-PATIENT_ID = sys.argv[1] if len(sys.argv) > 1 else os.environ.get('PATIENT_ID', 'marcus_evans')
+SINGLE_PATIENT = sys.argv[1] if len(sys.argv) > 1 else os.environ.get('PATIENT_ID', '')
 
 with open('patient_profiles.json', encoding='utf-8') as _pf:
-    _profiles = {p['id']: p for p in json.load(_pf)['patients']}
-_patient = _profiles.get(PATIENT_ID, {})
-_patient_name = f"{_patient.get('first_name', '')} {_patient.get('last_name', '')}".strip() or PATIENT_ID
-_patient_index = list(_profiles.keys()).index(PATIENT_ID) + 1 if PATIENT_ID in _profiles else 0
+    _all_profiles = json.load(_pf)['patients']
+    _profiles = {p['id']: p for p in _all_profiles}
+
+if SINGLE_PATIENT:
+    _selected_patients = [SINGLE_PATIENT]
+    _patient = _profiles.get(SINGLE_PATIENT, {})
+    _patient_label = f"{_patient.get('first_name', '')} {_patient.get('last_name', '')}".strip() or SINGLE_PATIENT
+else:
+    _selected_patients = list(_profiles.keys())
+    _patient_label = f"All {len(_selected_patients)} patients"
+
 _patient_total = len(_profiles)
+_tmp_dirs = []  # track temp dirs for cleanup
 
 
-def _set_env(patient_id, qe_folder, out_file, qe_name, title=''):
-    """Set env vars for a per-QE build."""
-    os.environ['CHART_CCD_DIR'] = os.path.join('sample_patients', patient_id, qe_folder, 'ccda')
-    os.environ['CHART_ORU_HL7'] = os.path.join('sample_patients', patient_id, qe_folder, 'oru-hl7')
-    os.environ['CHART_TRN_DIR'] = os.path.join('sample_patients', patient_id, qe_folder, 'trn')
+def _merge_qe_data(qe_folder):
+    """Create a temp dir merging all selected patients' data for one QE."""
+    tmp = tempfile.mkdtemp(prefix=f'qe_{qe_folder}_')
+    _tmp_dirs.append(tmp)
+    for sub in ('ccda', 'oru-hl7', 'trn'):
+        os.makedirs(os.path.join(tmp, sub), exist_ok=True)
+
+    for patient_id in _selected_patients:
+        src_base = os.path.join('sample_patients', patient_id, qe_folder)
+        if not os.path.isdir(src_base):
+            continue
+        for sub in ('ccda', 'oru-hl7', 'trn'):
+            src_dir = os.path.join(src_base, sub)
+            if os.path.isdir(src_dir):
+                for f in os.listdir(src_dir):
+                    shutil.copy2(os.path.join(src_dir, f), os.path.join(tmp, sub, f))
+    return tmp
+
+
+def _set_env(qe_folder, out_file, qe_name, title=''):
+    """Set env vars for a per-QE build, merging all patients."""
+    merged = _merge_qe_data(qe_folder)
+    os.environ['CHART_CCD_DIR'] = os.path.join(merged, 'ccda')
+    os.environ['CHART_ORU_HL7'] = os.path.join(merged, 'oru-hl7')
+    os.environ['CHART_TRN_DIR'] = os.path.join(merged, 'trn')
     os.environ['CHART_OUT'] = out_file
     os.environ['CHART_QE'] = qe_name
     if title:
@@ -43,26 +75,30 @@ def _set_env(patient_id, qe_folder, out_file, qe_name, title=''):
 
 
 # ---- HIXNY: SMART on FHIR style (first import) ----
-_set_env(PATIENT_ID, 'hixny', 'HixnyEmulator.html', 'HIXNY', 'SHIN-NY Community Health Record')
+_set_env('hixny', 'HixnyEmulator.html', 'HIXNY', 'SHIN-NY Community Health Record')
 import build_smart  # noqa: E402,F401
 
 # ---- HEALTHeLINK: Fusion style ----
-_set_env(PATIENT_ID, 'healthelink', 'HEALTHeLINKEmulator.html', 'HEALTHELINK')
+_set_env('healthelink', 'HEALTHeLINKEmulator.html', 'HEALTHELINK')
 import build_chart  # noqa: E402,F401
 
 # ---- Healthix: SMART on FHIR style (reload) ----
-_set_env(PATIENT_ID, 'healthix', 'HealthixEmulator.html', 'HEALTHIX', 'SHIN-NY Community Health Record')
+_set_env('healthix', 'HealthixEmulator.html', 'HEALTHIX', 'SHIN-NY Community Health Record')
 importlib.reload(build_smart)
 
 # ---- HealtheConnections: dedicated HEC renderer ----
-_set_env(PATIENT_ID, 'healtheconn', 'HealtheConnectionsEmulator.html', 'HEALTHECONN')
+_set_env('healtheconn', 'HealtheConnectionsEmulator.html', 'HEALTHECONN')
 import build_healtheconn  # noqa: E402,F401
 
 # ---- Bronx RHIO: IMAT style ----
-_set_env(PATIENT_ID, 'bronx', 'BronxEmulator.html', 'BRONX')
+_set_env('bronx', 'BronxEmulator.html', 'BRONX')
 import build_bronx  # noqa: E402,F401
 
 n_people = len(build_smart.patients)
+
+# Clean up temp dirs
+for d in _tmp_dirs:
+    shutil.rmtree(d, ignore_errors=True)
 
 # ---- home screen: one view per NY Qualified Entity (QE); some live, rest coming soon ----
 QES = [
@@ -716,8 +752,9 @@ INDEX = f"""<!DOCTYPE html>
     </div>
 
     <div class="note">
-      Currently viewing: <b>{E(_patient_name)}</b> (Patient {_patient_index} of {_patient_total}).
-      Run <code>python build_home.py &lt;patient_id&gt;</code> to switch.<br>
+      Viewing: <b>{E(_patient_label)}</b> ({_patient_total} in patient_profiles.json).
+      Run <code>python build_home.py</code> for all patients or
+      <code>python build_home.py &lt;patient_id&gt;</code> for one.<br>
       Each QE renders the selected patient in its own look &amp; feel using <b>only that QE&rsquo;s data</b>.
       Every QE folder contains C-CDA documents, HL7&nbsp;v2.5.1 ORU lab feeds, and TRN
       (discharge summary) encounter records. The same
@@ -743,5 +780,5 @@ with open('index.html', 'w', encoding='utf-8') as f:
     f.write(INDEX)
 
 print(f'Wrote: index.html, HixnyEmulator.html, HEALTHeLINKEmulator.html, HealthixEmulator.html, HealtheConnectionsEmulator.html, BronxEmulator.html')
-print(f'Patient: {_patient_name} ({PATIENT_ID})')
+print(f'Patients: {_patient_label}')
 print(f'Patients per QE view: {n_people}')
