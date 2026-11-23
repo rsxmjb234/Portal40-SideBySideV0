@@ -1,0 +1,551 @@
+{
+  "patients": [
+    {
+      "id": "marcus_evans",
+      "first_name": "Marcus",
+      "last_name": "Evans",
+      "dob": "19500601",
+      "gender": "M",
+      "mpid": "MARCUS-GOLDEN-0001",
+      "addr": ["179 Bednar Knoll Suite 2", "New York", "NY", "11367"],
+      "conditions": [
+        {"snomed_code": "44054006", "display_name": "Diabetes mellitus type 2"},
+        {"snomed_code": "59621000", "display_name": "Essential hypertension"},
+        {"snomed_code": "55822004", "display_name": "Hyperlipidemia"},
+        {"snomed_code": "431855005", "display_name": "Chronic kidney disease stage 3"},
+        {"snomed_code": "396275006", "display_name": "Osteoarthritis"}
+      ],
+      "qe_assignments": [
+        {
+          "qe": "HIXNY",
+          "sources": [
+            {"source": "SPLPCPRIME", "mrn": "956304", "eid": "HI-EID-5976", "base_ccd": "BRONX-MPID-000032_Dwain139_Hartmann983_e6b63232-7089-e00b-b09c-7fec1e30a1e6.xml", "facility_name": "SPLPC Primary Care", "trn_admit_date": "20250110", "trn_enc_type": "Inpatient"},
+            {"source": "ALBMC", "mrn": "945947", "eid": "HI-EID-5392", "base_ccd": "BRONX-MPID-000053_Deshawn686_Wilkinson796_6357b2bc-ccf3-bd9d-36a1-21e38ba7b8e5.xml", "facility_name": "Albany Medical Center", "trn_admit_date": "20241205", "trn_enc_type": "Emergency"},
+            {"source": "ELLS", "mrn": "671234", "eid": "HI-EID-6012", "base_ccd": "BRONX-MPID-000068_Shenita872_Osinski784_eb4a5007-18fc-ba60-2811-54dd5820fde0.xml", "facility_name": "Ellis Hospital", "trn_admit_date": "20250218", "trn_enc_type": "Observation"}
+          ]
+        },
+        {
+          "qe": "HEALTHELINK",
+          "sources": [
+            {"source": "KINGSB", "mrn": "832368", "eid": "HE-EID-9965", "base_ccd": "BRONX-MPID-000024_Peter292_Olson653_1dea7120-75ab-3049-0e6c-42721886f034.xml", "facility_name": "Kingsbrook Jewish Medical Center", "trn_admit_date": "20241115", "trn_enc_type": "Inpatient"},
+            {"source": "ECMC", "mrn": "881691", "eid": "HE-EID-9109", "base_ccd": "BRONX-MPID-000031_Millard193_Beahan375_ab53fbf2-df39-cfce-bd37-05c891d6114e.xml", "facility_name": "Erie County Medical Center", "trn_admit_date": "20250301", "trn_enc_type": "Emergency"},
+            {"source": "RPCI", "mrn": "748293", "eid": "HE-EID-7541", "base_ccd": "BRONX-MPID-000092_Janeth814_Loree183_Schmitt836_4dcf8aea-5afd-c06f-1518-52dfa8ccf531.xml", "facility_name": "Roswell Park Comprehensive Cancer", "trn_admit_date": "20240920", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "HEALTHIX",
+          "sources": [
+            {"source": "MSSM", "mrn": "340474", "eid": "HE-EID-8304", "base_ccd": "BRONX-MPID-000003_Lessie363_Cartwright189_3d8cfae0-76e6-8b05-3421-f81320276a38.xml", "facility_name": "Mount Sinai Hospital", "trn_admit_date": "20250105", "trn_enc_type": "Observation"},
+            {"source": "NYP", "mrn": "811058", "eid": "HE-EID-6843", "base_ccd": "BRONX-MPID-000005_Cary869_Mante251_94f83860-c645-ca9d-ba62-ec22edb1cc5b.xml", "facility_name": "NewYork-Presbyterian Hospital", "trn_admit_date": "20241010", "trn_enc_type": "Emergency"},
+            {"source": "BELLEVUE", "mrn": "529417", "eid": "HE-EID-4218", "base_ccd": "BRONX-MPID-000094_Haydee844_Elna874_Beahan375_0c7cfb67-ad2f-4381-ff1b-c7e334dc0c85.xml", "facility_name": "Bellevue Hospital Center", "trn_admit_date": "20250220", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "HEALTHECONN",
+          "sources": [
+            {"source": "UHS", "mrn": "826608", "eid": "HE-EID-2717", "base_ccd": "BRONX-MPID-000101_Carly657_Sparkle906_Bins636_880bba7a-b046-c5b7-4995-579eee711aa5.xml", "facility_name": "UHS Wilson Medical Center", "trn_admit_date": "20241201", "trn_enc_type": "Observation"},
+            {"source": "SJHHC", "mrn": "413856", "eid": "HE-EID-3298", "base_ccd": "BRONX-MPID-000003_Lessie363_Cartwright189_3d8cfae0-76e6-8b05-3421-f81320276a38.xml", "facility_name": "St. Joseph Hospital Health Center", "trn_admit_date": "20250115", "trn_enc_type": "Emergency"},
+            {"source": "UPSTATE", "mrn": "697215", "eid": "HE-EID-5107", "base_ccd": "BRONX-MPID-000031_Millard193_Beahan375_ab53fbf2-df39-cfce-bd37-05c891d6114e.xml", "facility_name": "SUNY Upstate Medical University", "trn_admit_date": "20240825", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "BRONX",
+          "sources": [
+            {"source": "BXLEB", "mrn": "515366", "eid": "BR-EID-1665", "base_ccd": "BRONX-MPID-000094_Haydee844_Elna874_Beahan375_0c7cfb67-ad2f-4381-ff1b-c7e334dc0c85.xml", "facility_name": "Bronx-Lebanon Hospital", "trn_admit_date": "20250305", "trn_enc_type": "Emergency"},
+            {"source": "SBH", "mrn": "284731", "eid": "BR-EID-2194", "base_ccd": "BRONX-MPID-000024_Peter292_Olson653_1dea7120-75ab-3049-0e6c-42721886f034.xml", "facility_name": "St. Barnabas Hospital", "trn_admit_date": "20241020", "trn_enc_type": "Inpatient"},
+            {"source": "MMC", "mrn": "362948", "eid": "BR-EID-3017", "base_ccd": "BRONX-MPID-000053_Deshawn686_Wilkinson796_6357b2bc-ccf3-bd9d-36a1-21e38ba7b8e5.xml", "facility_name": "Montefiore Medical Center", "trn_admit_date": "20250125", "trn_enc_type": "Observation"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gloria_washington",
+      "first_name": "Gloria",
+      "last_name": "Washington",
+      "dob": "19481215",
+      "gender": "F",
+      "mpid": "GLORIA-GOLDEN-0002",
+      "addr": ["42 E 138th St Apt 5B", "Bronx", "NY", "10451"],
+      "conditions": [
+        {"snomed_code": "42343007", "display_name": "Congestive heart failure"},
+        {"snomed_code": "49436004", "display_name": "Atrial fibrillation"},
+        {"snomed_code": "53741008", "display_name": "Coronary arteriosclerosis"},
+        {"snomed_code": "59621000", "display_name": "Essential hypertension"}
+      ],
+      "qe_assignments": [
+        {
+          "qe": "HIXNY",
+          "sources": [
+            {"source": "SPLPCPRIME", "mrn": "121034", "eid": "HI-EID-2101", "base_ccd": "BRONX-MPID-000003_Lessie363_Cartwright189_3d8cfae0-76e6-8b05-3421-f81320276a38.xml", "facility_name": "SPLPC Primary Care", "trn_admit_date": "20241012", "trn_enc_type": "Inpatient"},
+            {"source": "ALBMC", "mrn": "232145", "eid": "HI-EID-2102", "base_ccd": "BRONX-MPID-000005_Cary869_Mante251_94f83860-c645-ca9d-ba62-ec22edb1cc5b.xml", "facility_name": "Albany Medical Center", "trn_admit_date": "20250130", "trn_enc_type": "Emergency"}
+          ]
+        },
+        {
+          "qe": "HEALTHIX",
+          "sources": [
+            {"source": "MSSM", "mrn": "343256", "eid": "HE-EID-2103", "base_ccd": "BRONX-MPID-000024_Peter292_Olson653_1dea7120-75ab-3049-0e6c-42721886f034.xml", "facility_name": "Mount Sinai Hospital", "trn_admit_date": "20240918", "trn_enc_type": "Observation"},
+            {"source": "NYP", "mrn": "454367", "eid": "HE-EID-2104", "base_ccd": "BRONX-MPID-000031_Millard193_Beahan375_ab53fbf2-df39-cfce-bd37-05c891d6114e.xml", "facility_name": "NewYork-Presbyterian Hospital", "trn_admit_date": "20250215", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "HEALTHECONN",
+          "sources": [
+            {"source": "UHS", "mrn": "565478", "eid": "HE-EID-2105", "base_ccd": "BRONX-MPID-000032_Dwain139_Hartmann983_e6b63232-7089-e00b-b09c-7fec1e30a1e6.xml", "facility_name": "UHS Wilson Medical Center", "trn_admit_date": "20241105", "trn_enc_type": "Emergency"},
+            {"source": "UPSTATE", "mrn": "676589", "eid": "HE-EID-2106", "base_ccd": "BRONX-MPID-000053_Deshawn686_Wilkinson796_6357b2bc-ccf3-bd9d-36a1-21e38ba7b8e5.xml", "facility_name": "SUNY Upstate Medical University", "trn_admit_date": "20250310", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "BRONX",
+          "sources": [
+            {"source": "BXLEB", "mrn": "787690", "eid": "BR-EID-2107", "base_ccd": "BRONX-MPID-000068_Shenita872_Osinski784_eb4a5007-18fc-ba60-2811-54dd5820fde0.xml", "facility_name": "Bronx-Lebanon Hospital", "trn_admit_date": "20241228", "trn_enc_type": "Observation"},
+            {"source": "SBH", "mrn": "898701", "eid": "BR-EID-2108", "base_ccd": "BRONX-MPID-000092_Janeth814_Loree183_Schmitt836_4dcf8aea-5afd-c06f-1518-52dfa8ccf531.xml", "facility_name": "St. Barnabas Hospital", "trn_admit_date": "20250120", "trn_enc_type": "Emergency"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "robert_chen",
+      "first_name": "Robert",
+      "last_name": "Chen",
+      "dob": "19551030",
+      "gender": "M",
+      "mpid": "ROBERT-GOLDEN-0003",
+      "addr": ["218 Canal St Apt 3A", "New York", "NY", "10013"],
+      "conditions": [
+        {"snomed_code": "13645005", "display_name": "Chronic obstructive lung disease"},
+        {"snomed_code": "195967001", "display_name": "Asthma"},
+        {"snomed_code": "70995007", "display_name": "Pulmonary hypertension"},
+        {"snomed_code": "59621000", "display_name": "Essential hypertension"}
+      ],
+      "qe_assignments": [
+        {
+          "qe": "HIXNY",
+          "sources": [
+            {"source": "ALBMC", "mrn": "112345", "eid": "HI-EID-3101", "base_ccd": "BRONX-MPID-000094_Haydee844_Elna874_Beahan375_0c7cfb67-ad2f-4381-ff1b-c7e334dc0c85.xml", "facility_name": "Albany Medical Center", "trn_admit_date": "20240825", "trn_enc_type": "Inpatient"},
+            {"source": "SPLPCPRIME", "mrn": "223456", "eid": "HI-EID-3102", "base_ccd": "BRONX-MPID-000101_Carly657_Sparkle906_Bins636_880bba7a-b046-c5b7-4995-579eee711aa5.xml", "facility_name": "SPLPC Primary Care", "trn_admit_date": "20250203", "trn_enc_type": "Emergency"}
+          ]
+        },
+        {
+          "qe": "HEALTHELINK",
+          "sources": [
+            {"source": "ECMC", "mrn": "334567", "eid": "HE-EID-3103", "base_ccd": "BRONX-MPID-000003_Lessie363_Cartwright189_3d8cfae0-76e6-8b05-3421-f81320276a38.xml", "facility_name": "Erie County Medical Center", "trn_admit_date": "20241110", "trn_enc_type": "Observation"},
+            {"source": "RPCI", "mrn": "445678", "eid": "HE-EID-3104", "base_ccd": "BRONX-MPID-000005_Cary869_Mante251_94f83860-c645-ca9d-ba62-ec22edb1cc5b.xml", "facility_name": "Roswell Park Comprehensive Cancer", "trn_admit_date": "20250115", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "HEALTHIX",
+          "sources": [
+            {"source": "BELLEVUE", "mrn": "556789", "eid": "HE-EID-3105", "base_ccd": "BRONX-MPID-000024_Peter292_Olson653_1dea7120-75ab-3049-0e6c-42721886f034.xml", "facility_name": "Bellevue Hospital Center", "trn_admit_date": "20240930", "trn_enc_type": "Emergency"},
+            {"source": "MSSM", "mrn": "667890", "eid": "HE-EID-3106", "base_ccd": "BRONX-MPID-000031_Millard193_Beahan375_ab53fbf2-df39-cfce-bd37-05c891d6114e.xml", "facility_name": "Mount Sinai Hospital", "trn_admit_date": "20250225", "trn_enc_type": "Observation"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dolores_ramirez",
+      "first_name": "Dolores",
+      "last_name": "Ramirez",
+      "dob": "19620414",
+      "gender": "F",
+      "mpid": "DOLORES-GOLDEN-0004",
+      "addr": ["1035 Southern Blvd", "Bronx", "NY", "10459"],
+      "conditions": [
+        {"snomed_code": "431857002", "display_name": "Chronic kidney disease stage 4"},
+        {"snomed_code": "44054006", "display_name": "Diabetes mellitus type 2"},
+        {"snomed_code": "59621000", "display_name": "Essential hypertension"},
+        {"snomed_code": "271737000", "display_name": "Anemia"},
+        {"snomed_code": "55822004", "display_name": "Hyperlipidemia"}
+      ],
+      "qe_assignments": [
+        {
+          "qe": "HEALTHELINK",
+          "sources": [
+            {"source": "KINGSB", "mrn": "113344", "eid": "HE-EID-4101", "base_ccd": "BRONX-MPID-000032_Dwain139_Hartmann983_e6b63232-7089-e00b-b09c-7fec1e30a1e6.xml", "facility_name": "Kingsbrook Jewish Medical Center", "trn_admit_date": "20240910", "trn_enc_type": "Inpatient"},
+            {"source": "ECMC", "mrn": "224455", "eid": "HE-EID-4102", "base_ccd": "BRONX-MPID-000053_Deshawn686_Wilkinson796_6357b2bc-ccf3-bd9d-36a1-21e38ba7b8e5.xml", "facility_name": "Erie County Medical Center", "trn_admit_date": "20250205", "trn_enc_type": "Emergency"}
+          ]
+        },
+        {
+          "qe": "HEALTHIX",
+          "sources": [
+            {"source": "NYP", "mrn": "335566", "eid": "HE-EID-4103", "base_ccd": "BRONX-MPID-000068_Shenita872_Osinski784_eb4a5007-18fc-ba60-2811-54dd5820fde0.xml", "facility_name": "NewYork-Presbyterian Hospital", "trn_admit_date": "20241020", "trn_enc_type": "Observation"},
+            {"source": "BELLEVUE", "mrn": "446677", "eid": "HE-EID-4104", "base_ccd": "BRONX-MPID-000092_Janeth814_Loree183_Schmitt836_4dcf8aea-5afd-c06f-1518-52dfa8ccf531.xml", "facility_name": "Bellevue Hospital Center", "trn_admit_date": "20250310", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "HEALTHECONN",
+          "sources": [
+            {"source": "SJHHC", "mrn": "557788", "eid": "HE-EID-4105", "base_ccd": "BRONX-MPID-000094_Haydee844_Elna874_Beahan375_0c7cfb67-ad2f-4381-ff1b-c7e334dc0c85.xml", "facility_name": "St. Joseph Hospital Health Center", "trn_admit_date": "20241130", "trn_enc_type": "Emergency"},
+            {"source": "UPSTATE", "mrn": "668899", "eid": "HE-EID-4106", "base_ccd": "BRONX-MPID-000101_Carly657_Sparkle906_Bins636_880bba7a-b046-c5b7-4995-579eee711aa5.xml", "facility_name": "SUNY Upstate Medical University", "trn_admit_date": "20250120", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "BRONX",
+          "sources": [
+            {"source": "MMC", "mrn": "779900", "eid": "BR-EID-4107", "base_ccd": "BRONX-MPID-000003_Lessie363_Cartwright189_3d8cfae0-76e6-8b05-3421-f81320276a38.xml", "facility_name": "Montefiore Medical Center", "trn_admit_date": "20241215", "trn_enc_type": "Observation"},
+            {"source": "BXLEB", "mrn": "880011", "eid": "BR-EID-4108", "base_ccd": "BRONX-MPID-000005_Cary869_Mante251_94f83860-c645-ca9d-ba62-ec22edb1cc5b.xml", "facility_name": "Bronx-Lebanon Hospital", "trn_admit_date": "20250225", "trn_enc_type": "Emergency"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "james_thompson",
+      "first_name": "James",
+      "last_name": "Thompson",
+      "dob": "19580722",
+      "gender": "M",
+      "mpid": "JAMES-GOLDEN-0005",
+      "addr": ["514 W 213th St", "New York", "NY", "10034"],
+      "conditions": [
+        {"snomed_code": "230690007", "display_name": "Cerebrovascular accident"},
+        {"snomed_code": "84757009", "display_name": "Epilepsy"},
+        {"snomed_code": "59621000", "display_name": "Essential hypertension"},
+        {"snomed_code": "55822004", "display_name": "Hyperlipidemia"}
+      ],
+      "qe_assignments": [
+        {
+          "qe": "HIXNY",
+          "sources": [
+            {"source": "SPLPCPRIME", "mrn": "119876", "eid": "HI-EID-5101", "base_ccd": "BRONX-MPID-000024_Peter292_Olson653_1dea7120-75ab-3049-0e6c-42721886f034.xml", "facility_name": "SPLPC Primary Care", "trn_admit_date": "20241005", "trn_enc_type": "Emergency"},
+            {"source": "ALBMC", "mrn": "228765", "eid": "HI-EID-5102", "base_ccd": "BRONX-MPID-000031_Millard193_Beahan375_ab53fbf2-df39-cfce-bd37-05c891d6114e.xml", "facility_name": "Albany Medical Center", "trn_admit_date": "20250118", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "HEALTHELINK",
+          "sources": [
+            {"source": "ECMC", "mrn": "337654", "eid": "HE-EID-5103", "base_ccd": "BRONX-MPID-000032_Dwain139_Hartmann983_e6b63232-7089-e00b-b09c-7fec1e30a1e6.xml", "facility_name": "Erie County Medical Center", "trn_admit_date": "20240815", "trn_enc_type": "Observation"},
+            {"source": "KINGSB", "mrn": "446543", "eid": "HE-EID-5104", "base_ccd": "BRONX-MPID-000053_Deshawn686_Wilkinson796_6357b2bc-ccf3-bd9d-36a1-21e38ba7b8e5.xml", "facility_name": "Kingsbrook Jewish Medical Center", "trn_admit_date": "20250228", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "BRONX",
+          "sources": [
+            {"source": "SBH", "mrn": "555432", "eid": "BR-EID-5105", "base_ccd": "BRONX-MPID-000068_Shenita872_Osinski784_eb4a5007-18fc-ba60-2811-54dd5820fde0.xml", "facility_name": "St. Barnabas Hospital", "trn_admit_date": "20241110", "trn_enc_type": "Emergency"},
+            {"source": "MMC", "mrn": "664321", "eid": "BR-EID-5106", "base_ccd": "BRONX-MPID-000092_Janeth814_Loree183_Schmitt836_4dcf8aea-5afd-c06f-1518-52dfa8ccf531.xml", "facility_name": "Montefiore Medical Center", "trn_admit_date": "20250315", "trn_enc_type": "Observation"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sonia_petrova",
+      "first_name": "Sonia",
+      "last_name": "Petrova",
+      "dob": "19701108",
+      "gender": "F",
+      "mpid": "SONIA-GOLDEN-0006",
+      "addr": ["78-12 Roosevelt Ave", "Jackson Heights", "NY", "11372"],
+      "conditions": [
+        {"snomed_code": "34000006", "display_name": "Crohn's disease"},
+        {"snomed_code": "19943007", "display_name": "Cirrhosis of liver"},
+        {"snomed_code": "34742003", "display_name": "Portal hypertension"},
+        {"snomed_code": "271737000", "display_name": "Anemia"}
+      ],
+      "qe_assignments": [
+        {
+          "qe": "HIXNY",
+          "sources": [
+            {"source": "ELLS", "mrn": "117654", "eid": "HI-EID-6101", "base_ccd": "BRONX-MPID-000094_Haydee844_Elna874_Beahan375_0c7cfb67-ad2f-4381-ff1b-c7e334dc0c85.xml", "facility_name": "Ellis Hospital", "trn_admit_date": "20240905", "trn_enc_type": "Inpatient"},
+            {"source": "ALBMC", "mrn": "226543", "eid": "HI-EID-6102", "base_ccd": "BRONX-MPID-000101_Carly657_Sparkle906_Bins636_880bba7a-b046-c5b7-4995-579eee711aa5.xml", "facility_name": "Albany Medical Center", "trn_admit_date": "20250212", "trn_enc_type": "Emergency"}
+          ]
+        },
+        {
+          "qe": "HEALTHIX",
+          "sources": [
+            {"source": "MSSM", "mrn": "335432", "eid": "HE-EID-6103", "base_ccd": "BRONX-MPID-000003_Lessie363_Cartwright189_3d8cfae0-76e6-8b05-3421-f81320276a38.xml", "facility_name": "Mount Sinai Hospital", "trn_admit_date": "20241025", "trn_enc_type": "Observation"},
+            {"source": "BELLEVUE", "mrn": "444321", "eid": "HE-EID-6104", "base_ccd": "BRONX-MPID-000005_Cary869_Mante251_94f83860-c645-ca9d-ba62-ec22edb1cc5b.xml", "facility_name": "Bellevue Hospital Center", "trn_admit_date": "20250108", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "HEALTHECONN",
+          "sources": [
+            {"source": "UHS", "mrn": "553210", "eid": "HE-EID-6105", "base_ccd": "BRONX-MPID-000024_Peter292_Olson653_1dea7120-75ab-3049-0e6c-42721886f034.xml", "facility_name": "UHS Wilson Medical Center", "trn_admit_date": "20241218", "trn_enc_type": "Emergency"},
+            {"source": "SJHHC", "mrn": "662109", "eid": "HE-EID-6106", "base_ccd": "BRONX-MPID-000031_Millard193_Beahan375_ab53fbf2-df39-cfce-bd37-05c891d6114e.xml", "facility_name": "St. Joseph Hospital Health Center", "trn_admit_date": "20250302", "trn_enc_type": "Observation"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "angela_mitchell",
+      "first_name": "Angela",
+      "last_name": "Mitchell",
+      "dob": "19750325",
+      "gender": "F",
+      "mpid": "ANGELA-GOLDEN-0007",
+      "addr": ["305 E Gun Hill Rd", "Bronx", "NY", "10467"],
+      "conditions": [
+        {"snomed_code": "69896004", "display_name": "Rheumatoid arthritis"},
+        {"snomed_code": "55464009", "display_name": "Systemic lupus erythematosus"},
+        {"snomed_code": "709044004", "display_name": "Chronic kidney disease stage 2"},
+        {"snomed_code": "59621000", "display_name": "Essential hypertension"}
+      ],
+      "qe_assignments": [
+        {
+          "qe": "HEALTHELINK",
+          "sources": [
+            {"source": "RPCI", "mrn": "118765", "eid": "HE-EID-7101", "base_ccd": "BRONX-MPID-000032_Dwain139_Hartmann983_e6b63232-7089-e00b-b09c-7fec1e30a1e6.xml", "facility_name": "Roswell Park Comprehensive Cancer", "trn_admit_date": "20240920", "trn_enc_type": "Inpatient"},
+            {"source": "KINGSB", "mrn": "227654", "eid": "HE-EID-7102", "base_ccd": "BRONX-MPID-000053_Deshawn686_Wilkinson796_6357b2bc-ccf3-bd9d-36a1-21e38ba7b8e5.xml", "facility_name": "Kingsbrook Jewish Medical Center", "trn_admit_date": "20250110", "trn_enc_type": "Emergency"}
+          ]
+        },
+        {
+          "qe": "HEALTHIX",
+          "sources": [
+            {"source": "NYP", "mrn": "336543", "eid": "HE-EID-7103", "base_ccd": "BRONX-MPID-000068_Shenita872_Osinski784_eb4a5007-18fc-ba60-2811-54dd5820fde0.xml", "facility_name": "NewYork-Presbyterian Hospital", "trn_admit_date": "20241030", "trn_enc_type": "Observation"},
+            {"source": "MSSM", "mrn": "445432", "eid": "HE-EID-7104", "base_ccd": "BRONX-MPID-000092_Janeth814_Loree183_Schmitt836_4dcf8aea-5afd-c06f-1518-52dfa8ccf531.xml", "facility_name": "Mount Sinai Hospital", "trn_admit_date": "20250222", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "HEALTHECONN",
+          "sources": [
+            {"source": "UPSTATE", "mrn": "554321", "eid": "HE-EID-7105", "base_ccd": "BRONX-MPID-000094_Haydee844_Elna874_Beahan375_0c7cfb67-ad2f-4381-ff1b-c7e334dc0c85.xml", "facility_name": "SUNY Upstate Medical University", "trn_admit_date": "20241115", "trn_enc_type": "Emergency"},
+            {"source": "SJHHC", "mrn": "663210", "eid": "HE-EID-7106", "base_ccd": "BRONX-MPID-000101_Carly657_Sparkle906_Bins636_880bba7a-b046-c5b7-4995-579eee711aa5.xml", "facility_name": "St. Joseph Hospital Health Center", "trn_admit_date": "20250305", "trn_enc_type": "Observation"}
+          ]
+        },
+        {
+          "qe": "BRONX",
+          "sources": [
+            {"source": "BXLEB", "mrn": "772109", "eid": "BR-EID-7107", "base_ccd": "BRONX-MPID-000003_Lessie363_Cartwright189_3d8cfae0-76e6-8b05-3421-f81320276a38.xml", "facility_name": "Bronx-Lebanon Hospital", "trn_admit_date": "20241228", "trn_enc_type": "Inpatient"},
+            {"source": "MMC", "mrn": "881098", "eid": "BR-EID-7108", "base_ccd": "BRONX-MPID-000005_Cary869_Mante251_94f83860-c645-ca9d-ba62-ec22edb1cc5b.xml", "facility_name": "Montefiore Medical Center", "trn_admit_date": "20250120", "trn_enc_type": "Emergency"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "david_park",
+      "first_name": "David",
+      "last_name": "Park",
+      "dob": "19830917",
+      "gender": "M",
+      "mpid": "DAVID-GOLDEN-0008",
+      "addr": ["156-20 Northern Blvd", "Flushing", "NY", "11354"],
+      "conditions": [
+        {"snomed_code": "46635009", "display_name": "Diabetes mellitus type 1"},
+        {"snomed_code": "40930008", "display_name": "Hypothyroidism"},
+        {"snomed_code": "238136002", "display_name": "Obesity"},
+        {"snomed_code": "55822004", "display_name": "Hyperlipidemia"}
+      ],
+      "qe_assignments": [
+        {
+          "qe": "HIXNY",
+          "sources": [
+            {"source": "SPLPCPRIME", "mrn": "119234", "eid": "HI-EID-8101", "base_ccd": "BRONX-MPID-000024_Peter292_Olson653_1dea7120-75ab-3049-0e6c-42721886f034.xml", "facility_name": "SPLPC Primary Care", "trn_admit_date": "20241002", "trn_enc_type": "Emergency"},
+            {"source": "ELLS", "mrn": "228345", "eid": "HI-EID-8102", "base_ccd": "BRONX-MPID-000031_Millard193_Beahan375_ab53fbf2-df39-cfce-bd37-05c891d6114e.xml", "facility_name": "Ellis Hospital", "trn_admit_date": "20250215", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "HEALTHELINK",
+          "sources": [
+            {"source": "ECMC", "mrn": "337456", "eid": "HE-EID-8103", "base_ccd": "BRONX-MPID-000032_Dwain139_Hartmann983_e6b63232-7089-e00b-b09c-7fec1e30a1e6.xml", "facility_name": "Erie County Medical Center", "trn_admit_date": "20240828", "trn_enc_type": "Observation"},
+            {"source": "RPCI", "mrn": "446567", "eid": "HE-EID-8104", "base_ccd": "BRONX-MPID-000053_Deshawn686_Wilkinson796_6357b2bc-ccf3-bd9d-36a1-21e38ba7b8e5.xml", "facility_name": "Roswell Park Comprehensive Cancer", "trn_admit_date": "20250118", "trn_enc_type": "Emergency"}
+          ]
+        },
+        {
+          "qe": "BRONX",
+          "sources": [
+            {"source": "SBH", "mrn": "555678", "eid": "BR-EID-8105", "base_ccd": "BRONX-MPID-000068_Shenita872_Osinski784_eb4a5007-18fc-ba60-2811-54dd5820fde0.xml", "facility_name": "St. Barnabas Hospital", "trn_admit_date": "20241120", "trn_enc_type": "Inpatient"},
+            {"source": "BXLEB", "mrn": "664789", "eid": "BR-EID-8106", "base_ccd": "BRONX-MPID-000092_Janeth814_Loree183_Schmitt836_4dcf8aea-5afd-c06f-1518-52dfa8ccf531.xml", "facility_name": "Bronx-Lebanon Hospital", "trn_admit_date": "20250310", "trn_enc_type": "Observation"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "william_harris",
+      "first_name": "William",
+      "last_name": "Harris",
+      "dob": "19450603",
+      "gender": "M",
+      "mpid": "WILLIAM-GOLDEN-0009",
+      "addr": ["892 Amsterdam Ave", "New York", "NY", "10025"],
+      "conditions": [
+        {"snomed_code": "363406005", "display_name": "Malignant neoplasm of colon"},
+        {"snomed_code": "271737000", "display_name": "Anemia"},
+        {"snomed_code": "128053003", "display_name": "Deep venous thrombosis"},
+        {"snomed_code": "59621000", "display_name": "Essential hypertension"}
+      ],
+      "qe_assignments": [
+        {
+          "qe": "HIXNY",
+          "sources": [
+            {"source": "ALBMC", "mrn": "117123", "eid": "HI-EID-9101", "base_ccd": "BRONX-MPID-000094_Haydee844_Elna874_Beahan375_0c7cfb67-ad2f-4381-ff1b-c7e334dc0c85.xml", "facility_name": "Albany Medical Center", "trn_admit_date": "20240912", "trn_enc_type": "Inpatient"},
+            {"source": "SPLPCPRIME", "mrn": "226234", "eid": "HI-EID-9102", "base_ccd": "BRONX-MPID-000101_Carly657_Sparkle906_Bins636_880bba7a-b046-c5b7-4995-579eee711aa5.xml", "facility_name": "SPLPC Primary Care", "trn_admit_date": "20250130", "trn_enc_type": "Emergency"}
+          ]
+        },
+        {
+          "qe": "HEALTHIX",
+          "sources": [
+            {"source": "BELLEVUE", "mrn": "335345", "eid": "HE-EID-9103", "base_ccd": "BRONX-MPID-000003_Lessie363_Cartwright189_3d8cfae0-76e6-8b05-3421-f81320276a38.xml", "facility_name": "Bellevue Hospital Center", "trn_admit_date": "20241018", "trn_enc_type": "Observation"},
+            {"source": "NYP", "mrn": "444456", "eid": "HE-EID-9104", "base_ccd": "BRONX-MPID-000005_Cary869_Mante251_94f83860-c645-ca9d-ba62-ec22edb1cc5b.xml", "facility_name": "NewYork-Presbyterian Hospital", "trn_admit_date": "20250224", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "HEALTHECONN",
+          "sources": [
+            {"source": "UHS", "mrn": "553567", "eid": "HE-EID-9105", "base_ccd": "BRONX-MPID-000024_Peter292_Olson653_1dea7120-75ab-3049-0e6c-42721886f034.xml", "facility_name": "UHS Wilson Medical Center", "trn_admit_date": "20241205", "trn_enc_type": "Emergency"},
+            {"source": "UPSTATE", "mrn": "662678", "eid": "HE-EID-9106", "base_ccd": "BRONX-MPID-000031_Millard193_Beahan375_ab53fbf2-df39-cfce-bd37-05c891d6114e.xml", "facility_name": "SUNY Upstate Medical University", "trn_admit_date": "20250310", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "BRONX",
+          "sources": [
+            {"source": "SBH", "mrn": "771789", "eid": "BR-EID-9107", "base_ccd": "BRONX-MPID-000032_Dwain139_Hartmann983_e6b63232-7089-e00b-b09c-7fec1e30a1e6.xml", "facility_name": "St. Barnabas Hospital", "trn_admit_date": "20241022", "trn_enc_type": "Observation"},
+            {"source": "MMC", "mrn": "880890", "eid": "BR-EID-9108", "base_ccd": "BRONX-MPID-000053_Deshawn686_Wilkinson796_6357b2bc-ccf3-bd9d-36a1-21e38ba7b8e5.xml", "facility_name": "Montefiore Medical Center", "trn_admit_date": "20250218", "trn_enc_type": "Emergency"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evelyn_rodriguez",
+      "first_name": "Evelyn",
+      "last_name": "Rodriguez",
+      "dob": "19400218",
+      "gender": "F",
+      "mpid": "EVELYN-GOLDEN-0010",
+      "addr": ["2140 Grand Concourse", "Bronx", "NY", "10457"],
+      "conditions": [
+        {"snomed_code": "42343007", "display_name": "Congestive heart failure"},
+        {"snomed_code": "13645005", "display_name": "Chronic obstructive lung disease"},
+        {"snomed_code": "44054006", "display_name": "Diabetes mellitus type 2"},
+        {"snomed_code": "431855005", "display_name": "Chronic kidney disease stage 3"},
+        {"snomed_code": "49436004", "display_name": "Atrial fibrillation"},
+        {"snomed_code": "64859006", "display_name": "Osteoporosis"}
+      ],
+      "qe_assignments": [
+        {
+          "qe": "HIXNY",
+          "sources": [
+            {"source": "SPLPCPRIME", "mrn": "118567", "eid": "HI-EID-A101", "base_ccd": "BRONX-MPID-000068_Shenita872_Osinski784_eb4a5007-18fc-ba60-2811-54dd5820fde0.xml", "facility_name": "SPLPC Primary Care", "trn_admit_date": "20240820", "trn_enc_type": "Inpatient"},
+            {"source": "ALBMC", "mrn": "227678", "eid": "HI-EID-A102", "base_ccd": "BRONX-MPID-000092_Janeth814_Loree183_Schmitt836_4dcf8aea-5afd-c06f-1518-52dfa8ccf531.xml", "facility_name": "Albany Medical Center", "trn_admit_date": "20250105", "trn_enc_type": "Emergency"}
+          ]
+        },
+        {
+          "qe": "HEALTHELINK",
+          "sources": [
+            {"source": "KINGSB", "mrn": "445890", "eid": "HE-EID-A103", "base_ccd": "BRONX-MPID-000094_Haydee844_Elna874_Beahan375_0c7cfb67-ad2f-4381-ff1b-c7e334dc0c85.xml", "facility_name": "Kingsbrook Jewish Medical Center", "trn_admit_date": "20241015", "trn_enc_type": "Observation"},
+            {"source": "ECMC", "mrn": "554901", "eid": "HE-EID-A104", "base_ccd": "BRONX-MPID-000101_Carly657_Sparkle906_Bins636_880bba7a-b046-c5b7-4995-579eee711aa5.xml", "facility_name": "Erie County Medical Center", "trn_admit_date": "20250210", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "HEALTHIX",
+          "sources": [
+            {"source": "MSSM", "mrn": "663012", "eid": "HE-EID-A105", "base_ccd": "BRONX-MPID-000003_Lessie363_Cartwright189_3d8cfae0-76e6-8b05-3421-f81320276a38.xml", "facility_name": "Mount Sinai Hospital", "trn_admit_date": "20240930", "trn_enc_type": "Emergency"},
+            {"source": "NYP", "mrn": "772123", "eid": "HE-EID-A106", "base_ccd": "BRONX-MPID-000005_Cary869_Mante251_94f83860-c645-ca9d-ba62-ec22edb1cc5b.xml", "facility_name": "NewYork-Presbyterian Hospital", "trn_admit_date": "20250128", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "HEALTHECONN",
+          "sources": [
+            {"source": "UHS", "mrn": "881234", "eid": "HE-EID-A107", "base_ccd": "BRONX-MPID-000024_Peter292_Olson653_1dea7120-75ab-3049-0e6c-42721886f034.xml", "facility_name": "UHS Wilson Medical Center", "trn_admit_date": "20241125", "trn_enc_type": "Observation"},
+            {"source": "SJHHC", "mrn": "990345", "eid": "HE-EID-A108", "base_ccd": "BRONX-MPID-000031_Millard193_Beahan375_ab53fbf2-df39-cfce-bd37-05c891d6114e.xml", "facility_name": "St. Joseph Hospital Health Center", "trn_admit_date": "20250305", "trn_enc_type": "Emergency"},
+            {"source": "UPSTATE", "mrn": "109456", "eid": "HE-EID-A109", "base_ccd": "BRONX-MPID-000032_Dwain139_Hartmann983_e6b63232-7089-e00b-b09c-7fec1e30a1e6.xml", "facility_name": "SUNY Upstate Medical University", "trn_admit_date": "20250115", "trn_enc_type": "Inpatient"}
+          ]
+        },
+        {
+          "qe": "BRONX",
+          "sources": [
+            {"source": "BXLEB", "mrn": "218567", "eid": "BR-EID-A110", "base_ccd": "BRONX-MPID-000053_Deshawn686_Wilkinson796_6357b2bc-ccf3-bd9d-36a1-21e38ba7b8e5.xml", "facility_name": "Bronx-Lebanon Hospital", "trn_admit_date": "20241210", "trn_enc_type": "Inpatient"},
+            {"source": "SBH", "mrn": "327678", "eid": "BR-EID-A111", "base_ccd": "BRONX-MPID-000068_Shenita872_Osinski784_eb4a5007-18fc-ba60-2811-54dd5820fde0.xml", "facility_name": "St. Barnabas Hospital", "trn_admit_date": "20250220", "trn_enc_type": "Emergency"}
+          ]
+        }
+      ]
+    }
+  ],
+  "condition_lab_map": {
+    "44054006": ["bmp", "hba1c"],
+    "46635009": ["bmp", "hba1c"],
+    "431855005": ["bmp", "gfr", "microalbumin"],
+    "431857002": ["bmp", "gfr", "microalbumin"],
+    "709044004": ["bmp", "gfr", "microalbumin"],
+    "55822004": ["lipid"],
+    "42343007": ["troponin", "bnp", "lipid"],
+    "49436004": ["bnp"],
+    "53741008": ["troponin", "lipid"],
+    "13645005": ["abg", "cbc"],
+    "195967001": ["abg", "cbc"],
+    "70995007": ["abg", "bnp"],
+    "271737000": ["cbc", "iron", "reticulocyte"],
+    "19943007": ["hepatic", "inr"],
+    "34000006": ["hepatic", "cbc"],
+    "34742003": ["cbc", "hepatic"],
+    "69896004": ["ana_panel", "cbc"],
+    "55464009": ["ana_panel", "cbc"],
+    "40930008": ["thyroid"],
+    "363406005": ["cbc", "cea"],
+    "128053003": ["inr"],
+    "230690007": ["cbc", "lipid"],
+    "84757009": ["bmp", "cbc"],
+    "59621000": ["bmp"],
+    "396275006": [],
+    "238136002": [],
+    "64859006": []
+  },
+  "lab_panel_defs": {
+    "bmp": [
+      {"loinc": "2339-0", "test_name": "Glucose", "unit": "mg/dL", "ref_range": "70-99", "normal_low": 70, "normal_high": 99, "precision": 0},
+      {"loinc": "38483-4", "test_name": "Creatinine", "unit": "mg/dL", "ref_range": "0.70-1.30", "normal_low": 0.70, "normal_high": 1.30, "precision": 2},
+      {"loinc": "2947-0", "test_name": "Sodium", "unit": "mmol/L", "ref_range": "136-145", "normal_low": 136, "normal_high": 145, "precision": 0},
+      {"loinc": "6298-4", "test_name": "Potassium", "unit": "mmol/L", "ref_range": "3.5-5.0", "normal_low": 3.5, "normal_high": 5.0, "precision": 1},
+      {"loinc": "3094-0", "test_name": "BUN", "unit": "mg/dL", "ref_range": "7-20", "normal_low": 7, "normal_high": 20, "precision": 0},
+      {"loinc": "2028-9", "test_name": "CO2", "unit": "mmol/L", "ref_range": "22-29", "normal_low": 22, "normal_high": 29, "precision": 0}
+    ],
+    "hba1c": [
+      {"loinc": "4548-4", "test_name": "Hemoglobin A1c", "unit": "%", "ref_range": "4.0-5.6", "normal_low": 4.0, "normal_high": 5.6, "precision": 1}
+    ],
+    "lipid": [
+      {"loinc": "2093-3", "test_name": "Total Cholesterol", "unit": "mg/dL", "ref_range": "<200", "normal_low": 130, "normal_high": 199, "precision": 0},
+      {"loinc": "2571-8", "test_name": "Triglycerides", "unit": "mg/dL", "ref_range": "<150", "normal_low": 50, "normal_high": 149, "precision": 0},
+      {"loinc": "2085-9", "test_name": "HDL Cholesterol", "unit": "mg/dL", "ref_range": ">40", "normal_low": 40, "normal_high": 80, "precision": 0},
+      {"loinc": "13457-7", "test_name": "LDL Cholesterol", "unit": "mg/dL", "ref_range": "<100", "normal_low": 50, "normal_high": 99, "precision": 0}
+    ],
+    "troponin": [
+      {"loinc": "6598-7", "test_name": "Troponin T", "unit": "ng/mL", "ref_range": "<0.04", "normal_low": 0.00, "normal_high": 0.03, "precision": 3}
+    ],
+    "bnp": [
+      {"loinc": "30934-4", "test_name": "BNP", "unit": "pg/mL", "ref_range": "<100", "normal_low": 10, "normal_high": 99, "precision": 0}
+    ],
+    "cbc": [
+      {"loinc": "6690-2", "test_name": "WBC", "unit": "10*3/uL", "ref_range": "4.5-11.0", "normal_low": 4.5, "normal_high": 11.0, "precision": 1},
+      {"loinc": "718-7", "test_name": "Hemoglobin", "unit": "g/dL", "ref_range": "12.0-17.5", "normal_low": 12.0, "normal_high": 17.5, "precision": 1},
+      {"loinc": "4544-3", "test_name": "Hematocrit", "unit": "%", "ref_range": "36-52", "normal_low": 36, "normal_high": 52, "precision": 1},
+      {"loinc": "777-3", "test_name": "Platelets", "unit": "10*3/uL", "ref_range": "150-400", "normal_low": 150, "normal_high": 400, "precision": 0}
+    ],
+    "gfr": [
+      {"loinc": "33914-3", "test_name": "eGFR", "unit": "mL/min/1.73m2", "ref_range": ">60", "normal_low": 60, "normal_high": 120, "precision": 0}
+    ],
+    "microalbumin": [
+      {"loinc": "14959-1", "test_name": "Microalbumin", "unit": "mg/L", "ref_range": "<30", "normal_low": 0, "normal_high": 29, "precision": 1}
+    ],
+    "abg": [
+      {"loinc": "2744-1", "test_name": "pH", "unit": "", "ref_range": "7.35-7.45", "normal_low": 7.35, "normal_high": 7.45, "precision": 2},
+      {"loinc": "2019-8", "test_name": "pCO2", "unit": "mmHg", "ref_range": "35-45", "normal_low": 35, "normal_high": 45, "precision": 0},
+      {"loinc": "2703-7", "test_name": "pO2", "unit": "mmHg", "ref_range": "80-100", "normal_low": 80, "normal_high": 100, "precision": 0}
+    ],
+    "hepatic": [
+      {"loinc": "1920-8", "test_name": "AST", "unit": "U/L", "ref_range": "10-40", "normal_low": 10, "normal_high": 40, "precision": 0},
+      {"loinc": "1742-6", "test_name": "ALT", "unit": "U/L", "ref_range": "7-56", "normal_low": 7, "normal_high": 56, "precision": 0},
+      {"loinc": "1975-2", "test_name": "Total Bilirubin", "unit": "mg/dL", "ref_range": "0.1-1.2", "normal_low": 0.1, "normal_high": 1.2, "precision": 1},
+      {"loinc": "6768-6", "test_name": "Alkaline Phosphatase", "unit": "U/L", "ref_range": "44-147", "normal_low": 44, "normal_high": 147, "precision": 0},
+      {"loinc": "2885-2", "test_name": "Albumin", "unit": "g/dL", "ref_range": "3.5-5.5", "normal_low": 3.5, "normal_high": 5.5, "precision": 1}
+    ],
+    "inr": [
+      {"loinc": "6301-6", "test_name": "INR", "unit": "", "ref_range": "0.8-1.1", "normal_low": 0.8, "normal_high": 1.1, "precision": 1}
+    ],
+    "ana_panel": [
+      {"loinc": "8061-4", "test_name": "ANA Titer", "unit": "titer", "ref_range": "<1:40", "normal_low": 10, "normal_high": 40, "precision": 0},
+      {"loinc": "30341-2", "test_name": "ESR", "unit": "mm/hr", "ref_range": "0-20", "normal_low": 0, "normal_high": 20, "precision": 0},
+      {"loinc": "1988-5", "test_name": "CRP", "unit": "mg/L", "ref_range": "<3.0", "normal_low": 0.1, "normal_high": 2.9, "precision": 1}
+    ],
+    "iron": [
+      {"loinc": "2498-4", "test_name": "Iron", "unit": "mcg/dL", "ref_range": "60-170", "normal_low": 60, "normal_high": 170, "precision": 0},
+      {"loinc": "2500-7", "test_name": "TIBC", "unit": "mcg/dL", "ref_range": "250-370", "normal_low": 250, "normal_high": 370, "precision": 0},
+      {"loinc": "2276-4", "test_name": "Ferritin", "unit": "ng/mL", "ref_range": "12-300", "normal_low": 12, "normal_high": 300, "precision": 0}
+    ],
+    "thyroid": [
+      {"loinc": "3016-3", "test_name": "TSH", "unit": "mIU/L", "ref_range": "0.4-4.0", "normal_low": 0.4, "normal_high": 4.0, "precision": 2},
+      {"loinc": "3024-7", "test_name": "Free T4", "unit": "ng/dL", "ref_range": "0.8-1.8", "normal_low": 0.8, "normal_high": 1.8, "precision": 2}
+    ],
+    "cea": [
+      {"loinc": "2039-6", "test_name": "CEA", "unit": "ng/mL", "ref_range": "<3.0", "normal_low": 0.5, "normal_high": 2.9, "precision": 1}
+    ],
+    "reticulocyte": [
+      {"loinc": "17849-1", "test_name": "Reticulocyte Count", "unit": "%", "ref_range": "0.5-1.5", "normal_low": 0.5, "normal_high": 1.5, "precision": 1}
+    ]
+  }
+}

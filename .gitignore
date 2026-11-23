@@ -10,6 +10,7 @@ marcus_bundle/*/ccda/
 marcus_bundle/*/oru-hl7/
 marcus_bundle/*/trn/
 marcus_bundle/mpi/
+sample_patients/
 # Keep the Synthea base templates
 !ccds/
 
